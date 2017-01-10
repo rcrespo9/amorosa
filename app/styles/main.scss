@@ -1,10 +1,12 @@
 // bower:scss
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
 
 // Base
 @import 'base/_config';
 @import 'base/_helpers';
 @import 'base/_base';
+@import 'base/_typography';
 
 // Layout
 @import 'layout/_grid';

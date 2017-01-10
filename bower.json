@@ -3,10 +3,12 @@
   "private": true,
   "dependencies": {
     "modernizr": "~2.8.1",
-    "normalize-css": "normalize.css#^5.0.0"
+    "normalize-css": "normalize.css#^5.0.0",
+    "bourbon": "^4.2.7"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "modular-scale": "^2.1.3"
   }
 }
