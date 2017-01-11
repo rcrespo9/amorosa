@@ -3,9 +3,62 @@
 \*------------------------------------*/
 
 .page-header {
+	display: table;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: modular-scale(6);
 	background-color: $white;
 }
+
+	.header__inner {
+		display: table-row;
+		width: inherit;
+		height: 100%;
+	}
+
+		.header__logo,
+		.header__nav {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.header__logo {
+			margin: 0;
+		}
+
+			.logo__link {
+				display: block;
+				width: 12.5rem;
+			}
+
+		.header__nav {
+			text-align: right;
+		}
+
+			.nav__list {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+
+				.nav__item {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: modular-scale(1);
+
+					&:not(:last-child) {
+						margin-right: modular-scale(2);
+					}
+				}
+
+					.nav__link {
+						color: $dark-gray;
+						transition: color .5s ease-in-out;
+						@include font-weight(medium);
+
+						&:hover {
+							color: $pink;
+						}
+					}

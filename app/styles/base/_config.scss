@@ -4,11 +4,20 @@
 
 $white: #fff;
 
+$light-gray: #898989;
+$dark-gray: #403b3f;
+
+$pink: #FF7474;
+
 /*------------------------------------*\
   #TYPOGRAPHY
 \*------------------------------------*/
 
+$font-family-sans-serif: 'museo-sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Playfair Display', Georgia, Times, serif;
+
 $modular-scale-base: rem($em-base);
+$golden-ratio: 1rem, $golden;
 
 /*------------------------------------*\
   #BREAKPOINTS
