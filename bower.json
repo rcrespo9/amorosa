@@ -4,7 +4,8 @@
   "dependencies": {
     "modernizr": "~2.8.1",
     "normalize-css": "normalize.css#^5.0.0",
-    "bourbon": "^4.2.7"
+    "bourbon": "^4.2.7",
+    "picturefill": "^3.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
