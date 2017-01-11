@@ -25,13 +25,8 @@
 		}
 
 		.header__logo {
-			margin: 0;
+			width: 12.5rem;
 		}
-
-			.logo__link {
-				display: block;
-				width: 12.5rem;
-			}
 
 		.header__nav {
 			text-align: right;
@@ -46,7 +41,7 @@
 				.nav__item {
 					display: inline-block;
 					vertical-align: middle;
-					font-size: modular-scale(1);
+					font-size: modular-scale(0);
 
 					&:not(:last-child) {
 						margin-right: modular-scale(2);
@@ -55,8 +50,9 @@
 
 					.nav__link {
 						color: $dark-gray;
+						text-transform: uppercase;
 						transition: color .5s ease-in-out;
-						@include font-weight(medium);
+						@include font-weight(bold);
 
 						&:hover {
 							color: $pink;
