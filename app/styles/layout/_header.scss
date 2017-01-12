@@ -51,12 +51,14 @@
 
 					.nav__link {
 						color: $light-gray;
-						letter-spacing: modular-scale(-9);
-						text-transform: uppercase;
 						transition: color .5s ease-in-out;
-						@include font-weight(bold);
+						@include uppercase-text;
 
 						&:hover {
 							color: $pink;
 						}
+					}
+
+					.nav__link--contacto {
+						@include button;
 					}

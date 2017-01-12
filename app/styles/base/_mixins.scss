@@ -31,3 +31,25 @@
 
   font-weight: $output;
 }
+
+@mixin uppercase-text {
+	letter-spacing: modular-scale(-9);
+	text-transform: uppercase;
+	@include font-weight(bold);
+}
+
+@mixin button($font-size: modular-scale(0)) {
+	padding: modular-scale(0) modular-scale(3);
+	border-radius: 30px;
+	background-color: $pink;
+	color: $white;
+	font-size: $font-size;
+	text-align: center;
+	transition: background-color .5s ease-in-out;
+	@include uppercase-text;
+
+	&:hover {
+		color: $white;
+		background-color: darken($pink, 5%);
+	}
+}
