@@ -17,12 +17,12 @@
 
 	.hero__tagline {
 		margin-top: 0;
-		margin-bottom: modular-scale(4);
+		margin-bottom: modular-scale(5);
 		// color: $white;
 		color: $light-gray;
 		font-family: $font-family-serif;
-		font-size: modular-scale(5);
-		line-height: modular-scale(5);
+		font-size: modular-scale(6);
+		line-height: modular-scale(6);
 		@include font-weight(bold);
 	}
 
