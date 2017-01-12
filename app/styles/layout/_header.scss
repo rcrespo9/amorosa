@@ -5,10 +5,11 @@
 .page-header {
 	display: table;
 	position: fixed;
+	z-index: 9999;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: modular-scale(6);
+	height: $nav-height;
 	background-color: $white;
 }
 

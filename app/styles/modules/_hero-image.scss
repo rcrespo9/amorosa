@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  #HERO IMAGE
+\*------------------------------------*/
+
+.page-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: modular-scale(15, 1vh);
+	background-image: url(../images/Untitled-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+	.hero__tagline {
+		color: $white;
+		// font-family: $font-family-serif;
+		font-size: modular-scale(6);
+		text-align: center;
+		line-height: modular-scale(6);
+		@include font-weight(light);
+	}
