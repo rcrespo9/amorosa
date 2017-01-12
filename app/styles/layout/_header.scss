@@ -3,18 +3,18 @@
 \*------------------------------------*/
 
 .page-header {
-	display: table;
 	position: fixed;
 	z-index: 9999;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: $nav-height;
+	border-bottom: 1px solid lighten($light-gray, 30%);
 	background-color: $white;
 }
 
 	.header__inner {
-		display: table-row;
+		display: table;
 		width: inherit;
 		height: 100%;
 	}
