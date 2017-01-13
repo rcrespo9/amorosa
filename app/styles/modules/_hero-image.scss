@@ -8,22 +8,31 @@
 	align-items: center;
 	height: modular-scale(15, 1vh);
 	background-color: $white;
-	// background-image: url(../images/Untitled-1.jpg);
-	// background-repeat: no-repeat;
-	// background-position: center center;
-	// background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 	text-align: center;
 }
 
 	.hero__tagline {
 		margin-top: 0;
 		margin-bottom: modular-scale(5);
-		// color: $white;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		background-image: url(../images/Untitled-1-small.jpg);
 		color: $light-gray;
 		font-family: $font-family-serif;
 		font-size: modular-scale(6);
-		line-height: modular-scale(6);
+		line-height: modular-scale(7);
 		@include font-weight(bold);
+	}
+
+	.hero__tagline span {
+		display: block;
+
+		&:first-child {
+			margin-bottom: -(modular-scale(1));
+		}
 	}
 
 	.hero__btn {
