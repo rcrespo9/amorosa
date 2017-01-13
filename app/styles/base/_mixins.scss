@@ -40,9 +40,8 @@
 
 @mixin button($font-size: modular-scale(0)) {
 	padding: modular-scale(0) modular-scale(3);
-	border-radius: 4px;
 	background-color: $pink;
-  box-shadow: darken($pink, 7%) 0 3px;
+  border-radius: 3px;
 	color: $white;
 	font-size: $font-size;
 	text-align: center;
