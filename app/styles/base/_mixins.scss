@@ -40,16 +40,17 @@
 
 @mixin button($font-size: modular-scale(0)) {
 	padding: modular-scale(0) modular-scale(3);
-	border-radius: 30px;
+	border-radius: 4px;
 	background-color: $pink;
+  box-shadow: darken($pink, 7%) 0 3px;
 	color: $white;
 	font-size: $font-size;
 	text-align: center;
-	transition: background-color .5s ease-in-out;
+	transition: background-color .2s ease-in-out;
 	@include uppercase-text;
 
 	&:hover {
 		color: $white;
-		background-color: darken($pink, 5%);
+		background-color: darken($pink, 3%);
 	}
 }
