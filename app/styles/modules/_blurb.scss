@@ -6,9 +6,10 @@
 	background-color: $dark-pink;
 	color: $white;
 	text-align: center;
+	@include container;
 	@include text-content;
 }
 
 	.blurb__copy {
-		margin-bottom: 0;
+		margin: 0;
 	}
