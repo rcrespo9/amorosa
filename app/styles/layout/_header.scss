@@ -9,7 +9,7 @@
 	left: 0;
 	width: 100%;
 	height: $nav-height;
-	border-bottom: 1px solid lighten($light-gray, 30%);
+	border-bottom: 1px solid $light-gray;
 	background-color: $white;
 	@include container;
 }
@@ -51,7 +51,7 @@
 				}
 
 					.nav__link {
-						color: $light-gray;
+						color: $gray;
 						transition: color .5s ease-in-out;
 						@include uppercase-text;
 

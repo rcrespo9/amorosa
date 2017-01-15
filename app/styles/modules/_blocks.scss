@@ -19,16 +19,26 @@
 	}
 
 	.block__text {
-		padding-top: modular-scale(5);
-		padding-bottom: modular-scale(5);
 		@include container;
+		@include text-content;
 	}
 
 		.block__title {
 			margin-top: 0;
 			margin-bottom: modular-scale(2);
+			color: $dark-gray;
 			font-family: $font-family-serif;
 			font-size: modular-scale(4);
+			@include font-weight(bold);
+
+			&:after {
+				content: "";
+				display: block;
+				width: modular-scale(7);
+				height: modular-scale(-4);
+				margin-top: modular-scale(0);
+				background-color: $dark-pink;	
+			}
 		}
 
 		.block__copy {
