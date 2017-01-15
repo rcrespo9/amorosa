@@ -15,21 +15,21 @@
 }
 
 	.hero__tagline {
-		margin-top: 0;
-		margin-bottom: modular-scale(5);
+		margin: 0;
+		margin-bottom: modular-scale(1);
+		color: $light-gray;
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
 		background-image: url(../images/Untitled-1-small.jpg);
-		color: $light-gray;
 		font-family: $font-family-serif;
 		font-size: modular-scale(6);
 		@include font-weight(bold);
 	}
 
-	.hero__tagline span {
-		display: block;
+		.hero__tagline span {
+			display: block;
 
-		&:first-child {
-			margin-bottom: -(modular-scale(1));
+			&:first-child {
+				margin-bottom: -(modular-scale(1));
+			}
 		}
-	}
