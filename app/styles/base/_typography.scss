@@ -2,6 +2,17 @@
   #TYPOGRAPHY
 \*------------------------------------*/
 
+h2 {
+	font-family: $font-family-serif;
+	font-size: modular-scale(4);
+	@include font-weight(bold);
+}
+
+p {
+	font-size: modular-scale(1);
+	line-height: strip-units(modular-scale(2));
+}
+
 a {
 	text-decoration: none;
 }

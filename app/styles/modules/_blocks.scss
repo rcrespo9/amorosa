@@ -27,9 +27,6 @@
 			margin-top: 0;
 			margin-bottom: modular-scale(2);
 			color: $dark-gray;
-			font-family: $font-family-serif;
-			font-size: modular-scale(4);
-			@include font-weight(bold);
 
 			&:after {
 				content: "";
@@ -43,8 +40,6 @@
 
 		.block__copy {
 			margin: 0;
-			font-size: modular-scale(1);
-			line-height: 1.777;
 		}
 
 	.block__img {
