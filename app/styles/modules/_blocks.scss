@@ -24,8 +24,6 @@
 	}
 
 		.block__title {
-			margin-top: 0;
-			margin-bottom: modular-scale(2);
 			color: $dark-gray;
 
 			&:after {
@@ -39,7 +37,7 @@
 		}
 
 		.block__copy {
-			margin: 0;
+			margin-bottom: 0;
 		}
 
 	.block__img {

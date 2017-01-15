@@ -51,23 +51,3 @@
 	text-transform: uppercase;
 	@include font-weight(bold);
 }
-
-/*------------------------------------*\
-  #BUTTONS
-\*------------------------------------*/
-
-@mixin button($font-size: modular-scale(0)) {
-	padding: modular-scale(0) modular-scale(3);
-	background-color: $pink;
-	border-radius: 3px;
-	color: $white;
-	font-size: $font-size;
-	text-align: center;
-	transition: background-color .2s ease-in-out;
-	@include uppercase-text;
-
-	&:hover {
-		color: $white;
-		background-color: darken($pink, 3%);
-	}
-}

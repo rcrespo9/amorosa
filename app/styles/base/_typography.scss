@@ -2,13 +2,20 @@
   #TYPOGRAPHY
 \*------------------------------------*/
 
+h2,
+p {
+	margin-top: 0;
+}
+
 h2 {
+	margin-bottom: modular-scale(2);
 	font-family: $font-family-serif;
 	font-size: modular-scale(4);
 	@include font-weight(bold);
 }
 
 p {
+	margin-bottom: modular-scale(1);
 	font-size: modular-scale(1);
 	line-height: strip-units(modular-scale(2));
 }
