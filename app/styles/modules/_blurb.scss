@@ -11,5 +11,7 @@
 }
 
 	.blurb__copy {
-		margin: 0;
+		max-width: modular-scale(16);
+		margin: 0 auto;
+		@include font-weight(normal);
 	}
