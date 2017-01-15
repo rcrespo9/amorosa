@@ -1,0 +1,48 @@
+/*------------------------------------*\
+  #BLOCKS
+\*------------------------------------*/
+
+.blocks-row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+	.block {
+		display: flex;
+		flex: 0 0 auto;
+		flex-basis: 50%;
+		max-width: 50%;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.block__text {
+		padding-top: modular-scale(5);
+		padding-bottom: modular-scale(5);
+		@include container;
+	}
+
+		.block__title {
+			margin-top: 0;
+			margin-bottom: modular-scale(2);
+			font-family: $font-family-serif;
+			font-size: modular-scale(4);
+		}
+
+		.block__copy {
+			margin: 0;
+			font-size: modular-scale(1);
+			line-height: 1.777;
+		}
+
+	.block__img {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.block__img--bras {
+		background-image: url(../images/Untitled-1-small.jpg);
+	}

@@ -7,7 +7,7 @@
 	justify-content: center;
 	align-items: center;
 	height: modular-scale(15, 1vh);
-	background-color: $white;
+	background-color: $clouds;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -17,11 +17,12 @@
 
 	.hero__tagline {
 		margin: 0;
-		margin-bottom: modular-scale(1);
 		color: $light-gray;
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
-		background-image: url(../images/Untitled-1-small.jpg);
+		background-image: url(../images/woman-bed-web-small.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
 		font-family: $font-family-serif;
 		font-size: modular-scale(6);
 		@include font-weight(bold);
