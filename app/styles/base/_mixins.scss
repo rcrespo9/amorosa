@@ -1,5 +1,14 @@
 /*------------------------------------*\
-  #MIXINS
+  #GRID MIXINS
+\*------------------------------------*/
+
+@mixin container() {
+	padding-right: modular-scale(5);
+	padding-left: modular-scale(5);
+}
+
+/*------------------------------------*\
+  #TYPOGRAPHY MIXINS
 \*------------------------------------*/
 
 @mixin font-weight($weight) {
@@ -37,6 +46,10 @@
 	text-transform: uppercase;
 	@include font-weight(bold);
 }
+
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
 
 @mixin button($font-size: modular-scale(0)) {
 	padding: modular-scale(0) modular-scale(3);
