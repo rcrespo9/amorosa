@@ -19,7 +19,6 @@
 	}
 
 	.block__text {
-		@include container;
 		@include text-content;
 	}
 
