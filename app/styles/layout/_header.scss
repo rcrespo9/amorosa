@@ -51,11 +51,15 @@
 				}
 
 					.nav__link {
+						position: relative;
+						padding-bottom: modular-scale(-3);
+						border-bottom: 3px solid transparent;
 						color: $gray;
-						transition: color .5s ease-in-out;
+						transition: all .5s ease-in-out;
 						@include uppercase-text;
 
 						&:hover {
+							border-color: $pink;
 							color: $pink;
 						}
 					}
