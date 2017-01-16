@@ -48,7 +48,7 @@
 }
 
 @mixin uppercase-text {
-	letter-spacing: modular-scale(-9);
+	letter-spacing: modular-scale(-6, .875em);
 	text-transform: uppercase;
-	@include font-weight(bold);
+	@include font-weight(extra-bold);
 }

@@ -2,14 +2,21 @@
   #TYPOGRAPHY
 \*------------------------------------*/
 
+h1,
 h2,
+h3,
 p {
 	margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+	font-family: $font-family-serif;
+}
+
 h2 {
 	margin-bottom: modular-scale(2);
-	font-family: $font-family-serif;
 	font-size: modular-scale(4);
 	@include font-weight(bold);
 }

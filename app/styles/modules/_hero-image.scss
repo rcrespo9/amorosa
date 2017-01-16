@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: modular-scale(15, 1vh);
+	height: modular-scale(13);
 	background-color: $light-pink;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -16,15 +16,13 @@
 }
 
 	.hero__tagline {
-		margin-top: 0;
-		margin-bottom: modular-scale(2);
+		margin: 0;
 		color: $gray;
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
 		background-image: url(../images/Untitled-1-small.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
-		font-family: $font-family-serif;
 		font-size: modular-scale(6);
 		@include font-weight(bold);
 	}
@@ -33,7 +31,7 @@
 			display: block;
 
 			&:first-child {
-				margin-bottom: -(modular-scale(1));
+				margin-bottom: -(modular-scale(0));
 			}
 		}
 

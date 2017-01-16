@@ -10,7 +10,7 @@
 }
 
 	.blurb__copy {
-		max-width: modular-scale(15, 14px);
+		max-width: modular-scale(15);
 		margin: 0 auto;
 		font-size: modular-scale(3);
 		@include font-weight(normal);
