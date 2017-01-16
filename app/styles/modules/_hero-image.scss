@@ -16,7 +16,8 @@
 }
 
 	.hero__tagline {
-		margin: 0;
+		margin-top: 0;
+		margin-bottom: modular-scale(2);
 		color: $gray;
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
@@ -34,4 +35,9 @@
 			&:first-child {
 				margin-bottom: -(modular-scale(1));
 			}
+		}
+
+		.hero__blurb {
+			margin: 0 auto; 
+			max-width: modular-scale(13);
 		}
