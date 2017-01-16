@@ -4,8 +4,8 @@
 
 .page-footer {
 	background-color: $light-gray;
-	padding-top: modular-scale(1);
-	padding-bottom: modular-scale(0);
+	padding-top: modular-scale(2);
+	padding-bottom: modular-scale(1);
 	@include container;
 }
 
@@ -14,12 +14,16 @@
 		width: 100%;
 	}
 
-		.footer__copyright {
-			display: table-cell;
-			vertical-align: middle;
+	.footer__col {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+		.footer__text {
+			margin: 0;
+			font-size: modular-scale(0);
 		}
 
-			.copyright__text {
-				margin: 0;
-				font-size: modular-scale(-1);
-			}
+	.footer__col--attribution {
+		text-align: right;
+	}
