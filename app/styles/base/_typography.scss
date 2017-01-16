@@ -21,13 +21,12 @@ h2 {
 	@include font-weight(bold);
 }
 
-p {
+.page-content p {
 	margin-bottom: modular-scale(1);
 	font-size: modular-scale(1);
 	line-height: strip-units(modular-scale(2));
 }
 
 a {
-	color: $dark-pink;
 	text-decoration: none;
 }

@@ -23,6 +23,12 @@
 			margin: 0;
 			font-size: modular-scale(0);
 		}
+		
+		// temporary styles
+		.footer__text a {
+			color: inherit;
+		}
+		// end temporary styles
 
 	.footer__col--attribution {
 		text-align: right;
