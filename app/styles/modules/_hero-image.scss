@@ -4,21 +4,21 @@
 
 .page-hero {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: center;
-	height: modular-scale(15, 1vh);
+	height: modular-scale(13);
 	background-color: $light-pink;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	color: $pink;
-	text-align: left;
+	text-align: center;
 	@include container;
 }
 
 	.hero__tagline {
-		margin-bottom: modular-scale(1);
-		font-size: modular-scale(5);
+		margin-bottom: modular-scale(2);
+		font-size: modular-scale(6);
 		line-height: strip-units(modular-scale(0));
 		@include font-weight(bold);
 	}
@@ -28,6 +28,6 @@
 		}
 
 	p.hero__blurb {
-		margin-bottom: 0;
+		margin: 0 auto;
 		max-width: modular-scale(13);
 	}
