@@ -18,7 +18,7 @@
 	.hero__tagline {
 		margin-bottom: modular-scale(2);
 		color: $pink;
-		font-size: modular-scale(6);
+		font-size: modular-scale(5);
 		line-height: strip-units(modular-scale(0));
 		@include font-weight(bold);
 	}
@@ -27,8 +27,8 @@
 			display: block;
 		}
 
-		.hero__blurb {
-			margin: 0;
+		p.hero__blurb {
+			margin-bottom: 0;
 			max-width: modular-scale(13);
 			color: $pink;
 		}
