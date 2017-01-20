@@ -11,14 +11,14 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	color: $pink;
 	text-align: left;
 	@include container;
 }
 
 	.hero__tagline {
 		margin-bottom: modular-scale(2);
-		color: $pink;
-		font-size: modular-scale(5);
+		font-size: modular-scale(6);
 		line-height: strip-units(modular-scale(0));
 		@include font-weight(bold);
 	}
@@ -27,8 +27,7 @@
 			display: block;
 		}
 
-		p.hero__blurb {
-			margin-bottom: 0;
-			max-width: modular-scale(13);
-			color: $pink;
-		}
+	p.hero__blurb {
+		margin-bottom: 0;
+		max-width: modular-scale(13);
+	}
