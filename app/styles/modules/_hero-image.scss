@@ -4,38 +4,31 @@
 
 .page-hero {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
 	height: modular-scale(15, 1vh);
 	background-color: $light-pink;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	text-align: center;
+	text-align: left;
 	@include container;
 }
 
 	.hero__tagline {
-		margin: 0;
-		color: $gray;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-		background-image: url(../images/Untitled-1-small.jpg);
-		background-position: center center;
-		background-repeat: no-repeat;
+		margin-bottom: modular-scale(2);
+		color: $pink;
 		font-size: modular-scale(6);
+		line-height: strip-units(modular-scale(0));
 		@include font-weight(bold);
 	}
 
 		.hero__tagline span {
 			display: block;
-
-			&:first-child {
-				margin-bottom: -(modular-scale(0));
-			}
 		}
 
 		.hero__blurb {
-			margin: 0 auto; 
+			margin: 0;
 			max-width: modular-scale(13);
+			color: $pink;
 		}
