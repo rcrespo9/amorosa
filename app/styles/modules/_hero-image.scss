@@ -9,7 +9,7 @@
 	align-items: center;
 	height: 100vh;
 	padding-top: $nav-height;
-	background-image: url(../../images/spaghetti-strap.png);
+	background-image: url(../../images/woman-bed-web.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -37,10 +37,19 @@
 	}
 
 		.hero__tagline {
-			margin-bottom: modular-scale(2);
-			font-size: modular-scale(6);
+			margin-bottom: modular-scale(1);
+			font-size: modular-scale(5);
 			line-height: strip-units(modular-scale(0));
 			@include font-weight(bold);
+
+			&:after {
+				content: "";
+				display: block;
+				width: modular-scale(7);
+				height: modular-scale(-4);
+				margin-top: modular-scale(0);
+				background-color: $pink;
+			}
 		}
 
 			.hero__tagline span {
@@ -50,17 +59,21 @@
 		p.hero__blurb {
 			margin-bottom: modular-scale(4);
 			max-width: modular-scale(13);
+			font-size: modular-scale(2);
+			line-height: strip-units(modular-scale(1));
 			text-shadow: 0 0 5px rgba(0,0,0,.3);
+			@include font-weight(light);
 		}
 
-		.hero__cta {
-			padding: modular-scale(0) modular-scale(3);
-			border-radius: 4px;
-			background-color: $dark-pink;
-			color: $white;
-			@include uppercase-text;
+		.hero__arrow {
+			display: block;
+			text-align: left;
+			width: modular-scale(4);
+		}
 
-			&:hover {
-				background-color: darken($dark-pink, 2%);
+			.arrow__icon {
+				display: inline-block;
+				fill: $white;
+				width: 100%;
+				height: auto;
 			}
-		}

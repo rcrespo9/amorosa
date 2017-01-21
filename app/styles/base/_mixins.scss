@@ -46,9 +46,3 @@
 
 	font-weight: $output;
 }
-
-@mixin uppercase-text {
-	letter-spacing: modular-scale(-7, .875em);
-	text-transform: uppercase;
-	@include font-weight(extra-bold);
-}

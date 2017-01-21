@@ -4,12 +4,14 @@
 
 .blurb {
 	background-color: $white;
+	color: $gray;
+	text-align: center;
 	@include text-content;
 }
 
 	.blurb__copy {
 		max-width: modular-scale(15);
-		margin: 0;
+		margin: 0 auto;
 		font-size: modular-scale(3);
 		@include font-weight(normal);
 	}

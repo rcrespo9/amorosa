@@ -23,6 +23,7 @@
 	}
 
 	.block__text {
+		background-color: $white;
 		@include text-content;
 	}
 
@@ -50,5 +51,5 @@
 	}
 
 	.block__img--bras {
-		background-image: url(../images/Untitled-1-small.jpg);
+		background-image: url(../../images/bw-woman.jpg);
 	}

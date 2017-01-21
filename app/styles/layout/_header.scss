@@ -43,7 +43,6 @@
 				.nav__item {
 					display: inline-block;
 					vertical-align: middle;
-					font-size: modular-scale(0);
 
 					&:not(:last-child) {
 						margin-right: modular-scale(3);
@@ -54,8 +53,8 @@
 						padding-bottom: modular-scale(-2);
 						border-bottom: 3px solid transparent;
 						color: $gray;
+						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
-						@include uppercase-text;
 
 						&:hover {
 							border-color: $pink;
