@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: modular-scale(13);
+	height: modular-scale(12);
 	background-color: $light-pink;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -17,7 +17,7 @@
 }
 
 	.hero__tagline {
-		margin-bottom: modular-scale(2);
+		margin-bottom: 0;
 		font-size: modular-scale(6);
 		line-height: strip-units(modular-scale(0));
 		@include font-weight(bold);
