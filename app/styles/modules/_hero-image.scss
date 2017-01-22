@@ -37,19 +37,10 @@
 	}
 
 		.hero__tagline {
-			margin-bottom: modular-scale(1);
 			font-size: modular-scale(5);
 			line-height: strip-units(modular-scale(0));
 			@include font-weight(bold);
-
-			&:after {
-				content: "";
-				display: block;
-				width: modular-scale(7);
-				height: modular-scale(-4);
-				margin-top: modular-scale(0);
-				background-color: $pink;
-			}
+			@include header-underline;
 		}
 
 			.hero__tagline span {
