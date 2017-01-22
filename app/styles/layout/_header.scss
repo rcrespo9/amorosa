@@ -55,24 +55,31 @@
 						// border-bottom: 3px solid transparent;
 						color: $gray;
 						font-size: modular-scale(1);
-						transition: all .5s ease-in-out;
 
-						&:after {
-							content: "";
-							position: absolute;
-							left: 0;
-							bottom: -(modular-scale(-9));
-							width: 0;
-							height: modular-scale(-5);
-							background-color: $pink;
-							transition: width .5s ease-in-out;
-						}
+						&:not(.nav__link--contacto) {
+							transition: all .5s ease-in-out;
 
-						&:hover {
-							color: $pink;
-						}
+							&:after {
+								content: "";
+								position: absolute;
+								left: 0;
+								bottom: -(modular-scale(-9));
+								width: 0;
+								height: modular-scale(-5);
+								background-color: $pink;
+								transition: width .5s ease-in-out;
+							}
 
-						&:hover:after {
-							width: 100%;
+							&:hover {
+								color: $pink;
+							}
+
+							&:hover:after {
+								width: 100%;
+							}
 						}
+					}
+
+					.nav__link--contacto {
+						@include button;
 					}

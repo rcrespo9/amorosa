@@ -37,7 +37,7 @@
 	}
 
 		.hero__tagline {
-			font-size: modular-scale(5);
+			font-size: modular-scale(6);
 			line-height: strip-units(modular-scale(0));
 			@include font-weight(bold);
 			@include header-underline;
@@ -57,8 +57,10 @@
 		}
 
 		.hero__cta {
-			padding: modular-scale(-1) modular-scale(2);
-			color: $white;
-			background-color: $pink;
 			font-size: modular-scale(1);
+			@include button;
+
+			&:hover {
+				background-color: darken($pink, 3%);
+			}
 		}

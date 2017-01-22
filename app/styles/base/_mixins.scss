@@ -59,3 +59,18 @@
 		background-color: $pink;
 	}
 }
+
+/*------------------------------------*\
+  #BUTTONS MIXINS
+\*------------------------------------*/
+
+@mixin button() {
+	padding: modular-scale(-1) modular-scale(2);
+	color: $white;
+	background-color: $pink;
+	transition: background-color .5s ease-in-out;
+
+	&:hover {
+		background-color: darken($pink, 3%);
+	}
+}
