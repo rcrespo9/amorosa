@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 .blurb {
-	background-color: $white;
-	color: $gray;
+	color: $dark-gray;
 	text-align: center;
 	@include text-content;
 }
