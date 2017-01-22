@@ -56,15 +56,9 @@
 			@include font-weight(light);
 		}
 
-		.hero__arrow {
-			display: block;
-			text-align: left;
-			width: modular-scale(4);
+		.hero__cta {
+			padding: modular-scale(-1) modular-scale(2);
+			color: $white;
+			background-color: $pink;
+			font-size: modular-scale(1);
 		}
-
-			.arrow__icon {
-				display: inline-block;
-				fill: $white;
-				width: 100%;
-				height: auto;
-			}
