@@ -6,7 +6,8 @@ $white: #fff;
 $off-white: #FAFAFA;
 
 $gray: #9d9f9e;
-$light-gray: lighten($gray, 35%);
+$bg-gray: lighten($gray, 35%);
+$light-gray: lighten($gray, 32%);
 $medium-gray: darken($gray, 20%);
 $dark-gray: darken($gray, 35%);
 
