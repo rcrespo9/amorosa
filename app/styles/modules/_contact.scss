@@ -1,0 +1,10 @@
+/*------------------------------------*\
+  #CONTACT
+\*------------------------------------*/
+
+.contacto {
+	background-color: $pink;
+	color: $white;
+	text-align: center;
+	@include text-content;
+}

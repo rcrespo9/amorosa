@@ -15,12 +15,10 @@ h3 {
 	font-family: $font-family-serif;
 }
 
-h2 {
-	@include font-weight(medium);
-}
-
+h2,
 h3 {
 	font-size: modular-scale(4);
+	@include font-weight(bold);
 }
 
 .page-content p {
