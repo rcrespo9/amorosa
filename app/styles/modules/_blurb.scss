@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 .blurb {
-	background-color: $bg-gray;
-	color: $dark-gray;
+	background-color: $pink;
 	text-align: center;
 	@include text-content;
 }
@@ -12,6 +11,7 @@
 	.blurb__copy {
 		max-width: modular-scale(15);
 		margin: 0 auto;
+		color: $white;
 		font-size: modular-scale(3);
 		@include font-weight(normal);
 	}

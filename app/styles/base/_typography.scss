@@ -17,6 +17,7 @@ h3 {
 
 h2,
 h3 {
+	color: $dark-gray;
 	font-size: modular-scale(4);
 	@include font-weight(bold);
 }
