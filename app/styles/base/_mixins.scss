@@ -8,8 +8,8 @@
 }
 
 @mixin text-content() {
-	padding-top: modular-scale(5);
-	padding-bottom: modular-scale(5);
+	padding-top: modular-scale(6);
+	padding-bottom: modular-scale(6);
 	@include container;
 }
 
@@ -55,7 +55,7 @@
 		display: block;
 		width: modular-scale(7);
 		height: modular-scale(-4);
-		margin-top: modular-scale(0);
+		margin-top: modular-scale(-6, 1em);
 		background-color: $pink;
 	}
 }
@@ -69,6 +69,7 @@
 	color: $white;
 	background-color: $pink;
 	transition: background-color .5s ease-in-out;
+	@include font-weight(medium);
 
 	&:hover {
 		background-color: darken($pink, 3%);

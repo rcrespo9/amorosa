@@ -9,7 +9,7 @@
 	align-items: center;
 	height: 100vh;
 	padding-top: $nav-height;
-	background-image: url(../../images/woman-bed-web.jpg);
+	background-image: url(../../images/woman-flowers.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -39,7 +39,7 @@
 		.hero__tagline {
 			font-size: modular-scale(6);
 			line-height: strip-units(modular-scale(0));
-			@include font-weight(bold);
+			@include font-weight(medium);
 			@include header-underline;
 		}
 
@@ -64,3 +64,19 @@
 				background-color: darken($pink, 3%);
 			}
 		}
+
+			.cta__text,
+			.cta__icon {
+				display: inline-block;
+			}
+
+			.cta__text {
+				margin-right: modular-scale(-10);
+			}
+
+			.cta__icon {
+				fill: $white;
+				width: modular-scale(2);
+				height: modular-scale(2);
+				vertical-align: middle;
+			}

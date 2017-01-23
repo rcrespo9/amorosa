@@ -23,8 +23,9 @@
 	}
 
 	.block__text {
-		background-color: $bg-gray;
-		@include text-content;
+		padding-top: modular-scale(5);
+		padding-bottom: modular-scale(5);
+		@include container;
 	}
 
 		.block__title {
@@ -32,8 +33,8 @@
 			@include header-underline;
 		}
 
-		.block__copy {
-			margin-bottom: 0;
+		p.block__copy {
+			margin: 0;
 		}
 
 	.block__img {

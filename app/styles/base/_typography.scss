@@ -17,7 +17,7 @@ h3 {
 
 h2 {
 	font-size: modular-scale(4);
-	@include font-weight(bold);
+	@include font-weight(medium);
 }
 
 .page-content p {
