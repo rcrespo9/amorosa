@@ -12,20 +12,33 @@ p {
 h1,
 h2,
 h3 {
+	margin-bottom: modular-scale(3);
 	font-family: $font-family-serif;
+	@include font-weight(bold);
 }
 
 h2,
 h3 {
 	color: $dark-gray;
 	font-size: modular-scale(4);
-	@include font-weight(bold);
 }
 
 .page-content p {
 	margin-bottom: modular-scale(0);
 	font-size: modular-scale(1);
 	line-height: strip-units(modular-scale(2));
+}
+
+.page-content p a,
+.page-footer a {
+	color: inherit;
+	border-bottom: 2px solid transparent;
+	transition: all .5s ease-in-out;
+
+	&:hover {
+		border-color: $medium-gray;
+		color: $medium-gray;
+	}
 }
 
 a {

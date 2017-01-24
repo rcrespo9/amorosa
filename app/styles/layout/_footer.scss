@@ -24,17 +24,6 @@
 			font-size: modular-scale(0);
 		}
 		
-		.footer__text a {
-			color: inherit;
-			border-bottom: 2px solid transparent;
-			transition: all .5s ease-in-out;
-
-			&:hover {
-				border-color: $medium-gray;
-				color: $medium-gray;
-			}
-		}
-
 	.footer__col--attribution {
 		text-align: right;
 	}

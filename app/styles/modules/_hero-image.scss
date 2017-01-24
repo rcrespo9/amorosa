@@ -39,7 +39,6 @@
 		.hero__tagline {
 			font-size: modular-scale(6);
 			line-height: strip-units(modular-scale(0));
-			@include font-weight(medium);
 			@include header-underline;
 		}
 

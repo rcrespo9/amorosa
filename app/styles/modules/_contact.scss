@@ -4,6 +4,41 @@
 
 .contacto {
 	background-color: $bg-gray;
-	text-align: center;
 	@include text-content;
 }
+
+	.contacto__header {
+		text-align: center;
+	}
+
+	.contacto__inner {
+		max-width: modular-scale(14);
+		margin: 0 auto;
+	}
+
+		.contacto__col:first-child {
+			float: left;
+		}
+
+			.contacto__col:first-child .contacto__info:first-child {
+				margin-bottom: modular-scale(1);
+			}
+
+		.contacto__col:last-child {
+			float: right;
+		}
+
+			.contacto__info p:not(:last-child) {
+				margin-bottom: modular-scale(-10);
+			}
+
+			.contacto__info p:last-child {
+				margin-bottom: 0;
+			}
+
+			.contact__title {
+				margin-bottom: modular-scale(-2);
+				font-size: modular-scale(2);
+				font-family: $font-family-sans-serif;
+				@include font-weight(semi-bold);
+			}
