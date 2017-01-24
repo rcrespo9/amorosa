@@ -23,6 +23,10 @@
 			margin: 0;
 			font-size: modular-scale(0);
 		}
+
+			.footer__text a {
+				@include link;
+			}
 		
 	.footer__col--attribution {
 		text-align: right;

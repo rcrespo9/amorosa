@@ -60,6 +60,17 @@
 	}
 }
 
+@mixin link($color: $medium-gray) {
+	color: inherit;
+	border-bottom: 2px solid transparent;
+	transition: all .5s ease-in-out;
+
+	&:hover {
+		border-color: $color;
+		color: $color;
+	}
+}
+
 /*------------------------------------*\
   #BUTTONS MIXINS
 \*------------------------------------*/

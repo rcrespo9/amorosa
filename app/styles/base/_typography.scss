@@ -29,16 +29,8 @@ h3 {
 	line-height: strip-units(modular-scale(2));
 }
 
-.page-content p a,
-.page-footer a {
-	color: inherit;
-	border-bottom: 2px solid transparent;
-	transition: all .5s ease-in-out;
-
-	&:hover {
-		border-color: $medium-gray;
-		color: $medium-gray;
-	}
+.page-content p a {
+	@include link;
 }
 
 a {
