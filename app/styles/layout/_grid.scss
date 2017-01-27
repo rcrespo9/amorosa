@@ -2,7 +2,10 @@
   #PAGE SECTION
 \*------------------------------------*/
 
-.section__inner {
-	@include c-container;
+.page-section {
 	@include text-content;
 }
+
+	.section__inner {
+		@include c-container;
+	}

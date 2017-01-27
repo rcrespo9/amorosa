@@ -9,6 +9,11 @@ p {
 	margin-top: 0;
 }
 
+h2 {
+	font-family: $font-family-serif;
+	@include font-weight(medium);
+}
+
 .section__title {
 	display: inline-block;
 	margin-bottom: modular-scale(1);
