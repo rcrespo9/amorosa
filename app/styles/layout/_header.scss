@@ -11,7 +11,7 @@
 	height: $nav-height;
 	border-bottom: 1px solid $light-gray;
 	background-color: $white;
-	@include container;
+	@include l-container;
 }
 
 	.header__inner {

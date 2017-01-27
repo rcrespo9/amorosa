@@ -15,7 +15,7 @@
 	background-size: cover;
 	color: $white;
 	text-align: left;
-	@include container;
+	@include l-container;
 
 	&:before {
 		content: "";
@@ -37,8 +37,10 @@
 	}
 
 		.hero__tagline {
+			font-family: $font-family-serif;
 			font-size: modular-scale(6);
 			line-height: strip-units(modular-scale(0));
+			@include font-weight(medium);
 			@include header-underline;
 		}
 

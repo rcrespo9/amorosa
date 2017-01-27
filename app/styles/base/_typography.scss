@@ -9,20 +9,6 @@ p {
 	margin-top: 0;
 }
 
-h1,
-h2,
-h3 {
-	margin-bottom: modular-scale(3);
-	font-family: $font-family-serif;
-	@include font-weight(medium);
-}
-
-h2,
-h3 {
-	color: $dark-gray;
-	font-size: modular-scale(4);
-}
-
 .page-content p {
 	margin-bottom: modular-scale(0);
 	font-size: modular-scale(1);

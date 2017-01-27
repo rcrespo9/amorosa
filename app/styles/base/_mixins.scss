@@ -2,15 +2,9 @@
   #GRID MIXINS
 \*------------------------------------*/
 
-@mixin container() {
+@mixin l-container() {
 	padding-right: modular-scale(5);
 	padding-left: modular-scale(5);
-}
-
-@mixin text-content() {
-	padding-top: modular-scale(6);
-	padding-bottom: modular-scale(6);
-	@include container;
 }
 
 /*------------------------------------*\
@@ -63,7 +57,7 @@
 @mixin link($color: $medium-gray) {
 	color: inherit;
 	border-bottom: 2px solid transparent;
-	transition: all .5s ease-in-out;
+	transition: all $anim-speed-ease;
 
 	&:hover {
 		border-color: $color;
@@ -79,7 +73,7 @@
 	padding: modular-scale(-1) modular-scale(2);
 	color: $white;
 	background-color: $pink;
-	transition: background-color .5s ease-in-out;
+	transition: background-color $anim-speed-ease;
 	@include font-weight(medium);
 
 	&:hover {
