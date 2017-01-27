@@ -7,6 +7,18 @@
 	padding-left: modular-scale(5);
 }
 
+@mixin c-container() {
+	max-width: modular-scale(15);
+	margin: 0 auto;
+	padding-right: modular-scale(3);
+	padding-left: modular-scale(3);
+}
+
+@mixin text-content {
+	padding-top: modular-scale(5);
+	padding-bottom: modular-scale(5);
+}
+
 /*------------------------------------*\
   #TYPOGRAPHY MIXINS
 \*------------------------------------*/
@@ -70,11 +82,12 @@
 \*------------------------------------*/
 
 @mixin button() {
-	padding: modular-scale(-1) modular-scale(2);
+	padding: modular-scale(0) modular-scale(3);
 	color: $white;
 	background-color: $pink;
+	text-transform: uppercase;
 	transition: background-color $anim-speed-ease;
-	@include font-weight(medium);
+	@include font-weight(semi-bold);
 
 	&:hover {
 		background-color: darken($pink, 3%);

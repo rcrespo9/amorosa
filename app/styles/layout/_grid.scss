@@ -1,7 +1,8 @@
 /*------------------------------------*\
-  #GRID
+  #PAGE SECTION
 \*------------------------------------*/
 
-// .page-content {
-// 	padding-top: $nav-height;
-// }
+.section__inner {
+	@include c-container;
+	@include text-content;
+}

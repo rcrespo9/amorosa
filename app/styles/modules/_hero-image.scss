@@ -4,9 +4,9 @@
 
 .page-hero {
 	position: relative;
-	display: flex;
-	justify-content: left;
-	align-items: center;
+	// display: flex;
+	// justify-content: left;
+	// align-items: center;
 	height: 100vh;
 	padding-top: $nav-height;
 	background-image: url(../../images/woman-flowers.jpg);
@@ -15,7 +15,6 @@
 	background-size: cover;
 	color: $white;
 	text-align: left;
-	@include l-container;
 
 	&:before {
 		content: "";
@@ -33,7 +32,10 @@
 
 	.hero__inner {
 		position: relative;
+		top: 50%;
 		z-index: 2;
+		transform: translateY(-50%);
+		@include c-container;
 	}
 
 		.hero__tagline {
@@ -58,7 +60,8 @@
 		}
 
 		.hero__cta {
-			font-size: modular-scale(1);
+			font-size: modular-scale(0);
+			letter-spacing: modular-scale(-10);
 			@include button;
 
 			&:hover {

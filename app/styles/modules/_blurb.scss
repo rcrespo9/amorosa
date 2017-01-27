@@ -4,12 +4,13 @@
 
 .blurb {
 	background-color: $pink;
+	color: $white;
 }
 
-	.blurb__copy {
-		max-width: modular-scale(15);
-		margin-bottom: 0;
-		color: $white;
+	p.blurb__copy {
+		margin: 0;
+		font-family: $font-family-serif;
 		font-size: modular-scale(3);
+		line-height: strip-units(modular-scale(1));
 		@include font-weight(normal);
 	}

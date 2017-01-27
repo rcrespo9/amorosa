@@ -53,12 +53,12 @@
 						padding-bottom: modular-scale(-4);
 						border-bottom: 3px solid transparent;
 						color: $gray;
-						font-size: modular-scale(1);	
+						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
 
 						&:hover {
 							border-color: $pink;
 							color: $pink;
 						}
-						
+
 					}
