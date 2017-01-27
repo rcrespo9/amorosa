@@ -3,20 +3,20 @@
 \*------------------------------------*/
 
 @mixin l-container() {
-	padding-right: modular-scale(5);
-	padding-left: modular-scale(5);
+	padding-right: modular-scale(5, 0.875rem);
+	padding-left: modular-scale(5, 0.875rem);
 }
 
 @mixin c-container() {
-	max-width: modular-scale(15);
+	max-width: modular-scale(15, 0.875rem);
 	margin: 0 auto;
-	padding-right: modular-scale(3);
-	padding-left: modular-scale(3);
+	padding-right: modular-scale(2, 0.875rem);
+	padding-left: modular-scale(2, 0.875rem);
 }
 
 @mixin text-content {
-	padding-top: modular-scale(5);
-	padding-bottom: modular-scale(5);
+	padding-top: modular-scale(6, 0.875rem);
+	padding-bottom: modular-scale(6, 0.875rem);
 }
 
 /*------------------------------------*\
