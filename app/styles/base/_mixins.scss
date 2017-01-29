@@ -112,3 +112,37 @@
 		background-color: rgba(21,14,27,.5);
 	}
 }
+
+/*------------------------------------*\
+  #TILE MIXINS
+\*------------------------------------*/
+
+@mixin caret($horiz-pos) {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 40px solid $pink;
+	@if $horiz-pos == 'left' {
+		left: -50px;
+		transform: translateY(-50%) rotate(-90deg);
+	} @else {
+		right: -50px;
+		transform: translateY(-50%) rotate(90deg);
+	} 
+}
+
+@mixin tile-caret($preposition) {
+	@if $preposition == 'before' {
+		&:before {
+			@include caret('left');
+		}
+	} @else {
+		&:after {
+			@include caret('right');
+		}
+	}
+}

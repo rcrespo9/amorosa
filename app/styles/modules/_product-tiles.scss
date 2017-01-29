@@ -2,32 +2,45 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
-.products {
-	@extend .clearfix;
+.product__tiles {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-	.product__tile {
-		position: relative;
-		float: left;
-		width: 50%;
-		height: modular-scale(11);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		@include background-tint;
+.product__tiles:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+	.tile {
+		display: flex;
+		flex: 0 0 auto;
+		flex-basis: 50%;
+		max-width: 50%;
+		flex-direction: column;
+		flex-grow: 1;
 	}
 
-		.tile__header {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			z-index: 2;
+	.tile--product {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: modular-scale(10);
+		background-color: $pink;
+		text-align: center;
+	}
+
+	.product__tiles:nth-of-type(odd) .tile--product {
+		@include tile-caret('after');
+	}
+	.product__tiles:nth-of-type(even) .tile--product {
+		@include tile-caret('before');
+	}
+
+		.tile__name {
 			margin-bottom: 0;
 			color: $white;
 			font-size: modular-scale(4);
-			transform: translate(-50%, -50%);
 		}
-
-	.product__tile--sostenes {
-		background-image: url(../../images/sostenes.jpg);
-	}
