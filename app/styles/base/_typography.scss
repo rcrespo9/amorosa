@@ -9,17 +9,12 @@ p {
 	margin-top: 0;
 }
 
-h2 {
-	font-family: $font-family-serif;
-	@include font-weight(normal);
-}
-
 .section__title {
 	margin-bottom: modular-scale(3);
 	font-size: modular-scale(0);
 	text-transform: uppercase;
-	letter-spacing: modular-scale(-10);
-	@include font-weight(semi-bold);
+	letter-spacing: modular-scale(-9);
+	@include font-weight(bold);
 }
 
 .page-content p {

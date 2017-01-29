@@ -2,56 +2,63 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
-.product__tiles {
+.products {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
-.product__tiles:nth-of-type(even) {
-	flex-direction: row-reverse;
-}
-
-	.tile__product,
-	.tile__slider {
-		display: flex;
-		flex: 0 0 auto;
-		flex-basis: 50%;
-		max-width: 50%;
-		flex-direction: column;
-		flex-grow: 1;
-	}
-
-	.product__tiles:nth-of-type(odd) .tile__product {
-		@include tile-caret('after', $dark-pink);
-	}
-	.product__tiles:nth-of-type(even) .tile__product {
-		@include tile-caret('before', $dark-pink);
-	}
-
-	.tile__product {
+	.product__tile {
 		position: relative;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: modular-scale(10);
-		background-color: $dark-pink;
-		text-align: center;
+		flex: 0 0 auto;
+		flex-direction: column;
+		flex-grow: 1;
+		flex-basis: 50%;
+		max-width: 50%;
+		padding: modular-scale(-3);
+		// padding-bottom: modular-scale(0);
+
+		// &:nth-of-type(odd) {
+		// 	padding-right: modular-scale(0);
+		// }
 	}
 
-		.product__name {
+		.tile__header {
+			position: absolute;
+			top: modular-scale(4);
+			left: modular-scale(4);
+			z-index: 2;
 			margin-bottom: 0;
 			color: $white;
-			font-size: modular-scale(4);
+			font-family: $font-family-sans-serif;
+			font-size: modular-scale(1);
+			@include font-weight(normal);
 		}
 
 	.tile__slider {
+		position: relative;
+		width: 100%;
+		padding-bottom: 67%;
 		background-position: center center;
 		background-repeat: none;
 		background-size: cover;
+		@include background-tint(rgba(21,14,27,.5));
 	}
 
-	#sostenes-slider {
-		background-image: url(../../images/sostenes.jpg);
+	.tile__slider--lenceria {
+		background-image: url(../../images/lingerie.jpeg);
+	}
+
+	.tile__slider--sostenes {
+		background-image: url(../../images/sostenes.jpeg);
+	}
+
+	.tile__slider--pantis {
+		background-image: url(../../images/panties.jpeg);
+	}
+
+	.tile__slider--bathing {
+		background-image: url(../../images/bathing.jpeg);
 	}

@@ -98,7 +98,7 @@
   #BACKGROUND MIXINS
 \*------------------------------------*/
 
-@mixin background-tint() {
+@mixin background-tint($bg-color) {
 	&:before {
 		content: "";
 		position: absolute;
@@ -109,40 +109,6 @@
 		z-index: 1;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(21,14,27,.5);
-	}
-}
-
-/*------------------------------------*\
-  #TILE MIXINS
-\*------------------------------------*/
-
-@mixin caret($horiz-pos, $color) {
-	content: "";
-	position: absolute;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border-top: 30px solid transparent;
-	border-bottom: 30px solid transparent;
-	transform: translateY(-50%);
-	@if $horiz-pos == 'left' {
-		left: -40px;
-		border-right: 40px solid $color;
-	} @else {
-		right: -40px;
-		border-left: 40px solid $color;
-	} 
-}
-
-@mixin tile-caret($preposition, $color) {
-	@if $preposition == 'before' {
-		&:before {
-			@include caret('left', $color);
-		}
-	} @else {
-		&:after {
-			@include caret('right', $color);
-		}
+		background-color: $bg-color;
 	}
 }
