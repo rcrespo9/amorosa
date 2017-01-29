@@ -11,7 +11,7 @@ p {
 
 h2 {
 	font-family: $font-family-serif;
-	@include font-weight(medium);
+	@include font-weight(normal);
 }
 
 .section__title {

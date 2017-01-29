@@ -13,7 +13,8 @@
 	flex-direction: row-reverse;
 }
 
-	.tile {
+	.tile__product,
+	.tile__slider {
 		display: flex;
 		flex: 0 0 auto;
 		flex-basis: 50%;
@@ -22,25 +23,35 @@
 		flex-grow: 1;
 	}
 
-	.tile--product {
+	.product__tiles:nth-of-type(odd) .tile__product {
+		@include tile-caret('after', $dark-pink);
+	}
+	.product__tiles:nth-of-type(even) .tile__product {
+		@include tile-caret('before', $dark-pink);
+	}
+
+	.tile__product {
 		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: modular-scale(10);
-		background-color: $pink;
+		background-color: $dark-pink;
 		text-align: center;
 	}
 
-	.product__tiles:nth-of-type(odd) .tile--product {
-		@include tile-caret('after');
-	}
-	.product__tiles:nth-of-type(even) .tile--product {
-		@include tile-caret('before');
-	}
-
-		.tile__name {
+		.product__name {
 			margin-bottom: 0;
 			color: $white;
 			font-size: modular-scale(4);
 		}
+
+	.tile__slider {
+		background-position: center center;
+		background-repeat: none;
+		background-size: cover;
+	}
+
+	#sostenes-slider {
+		background-image: url(../../images/sostenes.jpg);
+	}

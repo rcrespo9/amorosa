@@ -9,8 +9,7 @@
 
 	p.blurb__copy {
 		margin: 0;
-		font-family: $font-family-serif;
+		@extend h2;
 		font-size: modular-scale(3);
 		line-height: strip-units(modular-scale(1));
-		@include font-weight(normal);
 	}

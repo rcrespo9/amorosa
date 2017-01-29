@@ -117,7 +117,7 @@
   #TILE MIXINS
 \*------------------------------------*/
 
-@mixin caret($horiz-pos) {
+@mixin caret($horiz-pos, $color) {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -128,21 +128,21 @@
 	transform: translateY(-50%);
 	@if $horiz-pos == 'left' {
 		left: -40px;
-		border-right: 40px solid $pink;
+		border-right: 40px solid $color;
 	} @else {
 		right: -40px;
-		border-left: 40px solid $pink;
+		border-left: 40px solid $color;
 	} 
 }
 
-@mixin tile-caret($preposition) {
+@mixin tile-caret($preposition, $color) {
 	@if $preposition == 'before' {
 		&:before {
-			@include caret('left');
+			@include caret('left', $color);
 		}
 	} @else {
 		&:after {
-			@include caret('right');
+			@include caret('right', $color);
 		}
 	}
 }
