@@ -17,7 +17,7 @@
 		flex-grow: 1;
 		flex-basis: 25%;
 		max-width: 25%;
-		height: modular-scale(9);
+		height: modular-scale(10);
 	}
 
 		.tile__product {
@@ -29,16 +29,15 @@
 
 			.product__name {
 				margin-bottom: modular-scale(-1);
-				color: $medium-gray;
 				font-family: $font-family-serif;
-				font-size: modular-scale(2);
+				font-size: modular-scale(3);
 				@include font-weight(medium);
 			}
 
 			.product__arrow {
 				display: inline-block;
-				width: modular-scale(1);
-				height: modular-scale(1);
+				width: modular-scale(2);
+				height: modular-scale(2);
 				stroke-width: 0;
 				stroke: $pink;
 				fill: $pink;
