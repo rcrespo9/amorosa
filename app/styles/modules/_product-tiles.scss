@@ -3,57 +3,102 @@
 \*------------------------------------*/
 
 .product__tiles {
-	display: flex;
-	flex: 0 1 auto;
-	flex-direction: row;
-	flex-wrap: wrap;
+	@include flexbox-row;
 }
 
 	.tile {
 		position: relative;
-		flex-basis: 25%;
-		max-width: 25%;
-		height: modular-scale(11, $viewport-scale);
+		height: modular-scale(10, $viewport-scale);
+		@include flexbox-column;
+		@include flexbox-column-width(25%);
 	}
 
-	.tile,
-	.product__front {
-		display: flex;
-		flex: 0 0 auto;
-		flex-direction: column;
-		flex-grow: 1;
+	.tile__product {
+		perspective: modular-scale(20, $viewport-scale);
 	}
 
-		.tile__product {
-			background-color: $white;
-			text-align: center;
+		.product__inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			transition: transform .5s;
+
+			&.flipped {
+				transform: rotateY(180deg);
+			}
+
+			&.flipped-reverse {
+				transform: rotateY(-180deg);
+			}
 		}
 
-			.product__front {
+			.product__flippable {
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
+				background-color: $white;
+				backface-visibility: hidden;
+			}
+
+			.product__flippable--front {
 				justify-content: center;
 				align-items: center;
+				text-align: center;
+				@include flexbox-column;
 			}
 
 				.product__name {
-					margin-bottom: modular-scale(0, $viewport-scale);
+					margin-bottom: modular-scale(-1, $viewport-scale);
 					color: $medium-gray;
 					font-family: $font-family-serif;
-					font-size: modular-scale(4, $viewport-scale);
+					font-size: modular-scale(3, $viewport-scale);
 					@include font-weight(normal);
 				}
 
 				.product__arrow {
 					display: inline-block;
-					width: modular-scale(3, $viewport-scale);
+					width: modular-scale(2, $viewport-scale);
 					height: modular-scale(2, $viewport-scale);
 					stroke-width: 0;
 					stroke: $pink;
 					fill: $pink;
+				}
+
+				.product__flip {
+					position: absolute;
+					bottom: modular-scale(0);
+				}
+
+					.flip-icon {
+						display: inline-block;
+						width: modular-scale(1, $viewport-scale);
+						height: modular-scale(1, $viewport-scale);
+						stroke-width: 0;
+						stroke: $pink;
+						fill: $pink;
+					}
+
+				.product__flip--right {
+					right: modular-scale(1);
+				}
+
+				.product__flip--left {
+					left: modular-scale(1);
+				}
+
+			.product__flippable--back {
+				padding: modular-scale(2);
+				transform: rotateY(180deg);
+			}
+
+				p.product__desc {
+					margin-bottom: 0;
+					font-size: modular-scale(0, $viewport-scale);
 				}
 
 	.tile__slider {

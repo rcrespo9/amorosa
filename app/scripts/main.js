@@ -1,5 +1,11 @@
-// const tagline = document.querySelector('.hero__tagline');
+document.querySelector('.product__flip--right').addEventListener('click', function(e) {
+	e.preventDefault();
 
-// document.querySelector('.hero__tagline').addEventListener('mousemove', function(e) {
-// 	tagline.style.backgroundPosition = `${-e.clientX / 10 }px ${-e.clientY / 10 }px`;
-// });
+	document.getElementById('js-card-flip').classList.add('flipped');
+});
+
+document.querySelector('.product__flippable--back').addEventListener('click', function(e) {
+	e.preventDefault();
+
+	document.getElementById('js-card-flip').classList.remove('flipped');
+});

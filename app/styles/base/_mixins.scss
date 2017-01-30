@@ -19,6 +19,25 @@
 	padding-bottom: modular-scale(6);
 }
 
+@mixin flexbox-row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+@mixin flexbox-column() {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+@mixin flexbox-column-width($width) {
+	flex-basis: $width;
+	max-width: $width;
+}
+
 /*------------------------------------*\
   #TYPOGRAPHY MIXINS
 \*------------------------------------*/
