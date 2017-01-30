@@ -2,49 +2,53 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
-.products {
+.product__tiles {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
-	.product__tile {
+	.tile {
 		position: relative;
 		display: flex;
 		flex: 0 0 auto;
 		flex-direction: column;
 		flex-grow: 1;
-		flex-basis: 50%;
-		max-width: 50%;
-		padding: modular-scale(-3);
-		// padding-bottom: modular-scale(0);
-
-		// &:nth-of-type(odd) {
-		// 	padding-right: modular-scale(0);
-		// }
+		flex-basis: 25%;
+		max-width: 25%;
+		height: modular-scale(9);
 	}
 
-		.tile__header {
-			position: absolute;
-			top: modular-scale(4);
-			left: modular-scale(4);
-			z-index: 2;
-			margin-bottom: 0;
-			color: $white;
-			font-family: $font-family-sans-serif;
-			font-size: modular-scale(1);
-			@include font-weight(normal);
+		.tile__product {
+			justify-content: center;
+			align-items: center;
+			background-color: $white;
+			text-align: center;
 		}
+
+			.product__name {
+				margin-bottom: modular-scale(-1);
+				color: $medium-gray;
+				font-family: $font-family-serif;
+				font-size: modular-scale(2);
+				@include font-weight(medium);
+			}
+
+			.product__arrow {
+				display: inline-block;
+				width: modular-scale(1);
+				height: modular-scale(1);
+				stroke-width: 0;
+				stroke: $pink;
+				fill: $pink;
+			}
 
 	.tile__slider {
 		position: relative;
-		width: 100%;
-		padding-bottom: 67%;
 		background-position: center center;
 		background-repeat: none;
 		background-size: cover;
-		@include background-tint(rgba(21,14,27,.5));
 	}
 
 	.tile__slider--lenceria {
