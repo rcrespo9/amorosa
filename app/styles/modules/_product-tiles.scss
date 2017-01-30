@@ -11,37 +11,50 @@
 
 	.tile {
 		position: relative;
+		flex-basis: 25%;
+		max-width: 25%;
+		height: modular-scale(11, $viewport-scale);
+	}
+
+	.tile,
+	.product__front {
 		display: flex;
 		flex: 0 0 auto;
 		flex-direction: column;
 		flex-grow: 1;
-		flex-basis: 25%;
-		max-width: 25%;
-		height: modular-scale(10);
 	}
 
 		.tile__product {
-			justify-content: center;
-			align-items: center;
 			background-color: $white;
 			text-align: center;
 		}
 
-			.product__name {
-				margin-bottom: modular-scale(-1);
-				font-family: $font-family-serif;
-				font-size: modular-scale(3);
-				@include font-weight(normal);
+			.product__front {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
 			}
 
-			.product__arrow {
-				display: inline-block;
-				width: modular-scale(2);
-				height: modular-scale(2);
-				stroke-width: 0;
-				stroke: $pink;
-				fill: $pink;
-			}
+				.product__name {
+					margin-bottom: modular-scale(0, $viewport-scale);
+					color: $medium-gray;
+					font-family: $font-family-serif;
+					font-size: modular-scale(4, $viewport-scale);
+					@include font-weight(normal);
+				}
+
+				.product__arrow {
+					display: inline-block;
+					width: modular-scale(3, $viewport-scale);
+					height: modular-scale(2, $viewport-scale);
+					stroke-width: 0;
+					stroke: $pink;
+					fill: $pink;
+				}
 
 	.tile__slider {
 		position: relative;
