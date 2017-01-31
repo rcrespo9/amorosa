@@ -1,11 +1,39 @@
-document.querySelector('.card__more').addEventListener('click', function(e) {
-	e.preventDefault();
+(function(window, jQuery, undefined) {
+	'use strict';
 
-	document.querySelector('.product__card').classList.add('flipped');
-});
+	class ProductCards {
+		constructor() {
+			this.productTiles = $('#js-product-tiles');
+		}
 
-document.querySelector('.card--back').addEventListener('click', function(e) {
-	e.preventDefault();
+		flipCard(e) {
+			const $cardTarget = $(e.target);
+			const productCardSelector = '.product__card';
+			const flippedClass = 'flipped';
 
-	document.querySelector('.product__card').classList.remove('flipped');
-});
+			console.log(e.target);
+
+			e.preventDefault();
+
+			if($cardTarget.hasClass('card__more')) {
+				$cardTarget.closest(productCardSelector).addClass(flippedClass);
+			} else if ($cardTarget.hasClass('card--back')) {
+				$cardTarget.closest(productCardSelector).removeClass(flippedClass);
+			}
+		}
+
+		init() {
+			this.productTiles.on('click', '.card__more, .card--back', this.flipCard);
+		}
+	}
+
+	class Main {
+		constructor() {
+			const productCards = new ProductCards();
+
+			productCards.init();
+		}
+	}
+
+	$(document).ready(() => new Main());
+}(jQuery));
