@@ -17,7 +17,7 @@
 		perspective: modular-scale(20, $viewport-scale);
 	}
 
-		.product__inner {
+		.product__card {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -35,7 +35,7 @@
 			}
 		}
 
-			.product__flippable {
+			.card {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -45,58 +45,33 @@
 				backface-visibility: hidden;
 			}
 
-			.product__flippable--front {
+			.card--front {
 				justify-content: center;
 				align-items: center;
 				text-align: center;
 				@include flexbox-column;
 			}
 
-				.product__name {
-					margin-bottom: modular-scale(-1, $viewport-scale);
+				.card__header {
+					margin-bottom: modular-scale(0, $viewport-scale);
 					color: $medium-gray;
 					font-family: $font-family-serif;
 					font-size: modular-scale(3, $viewport-scale);
 					@include font-weight(normal);
 				}
 
-				.product__arrow {
-					display: inline-block;
-					width: modular-scale(2, $viewport-scale);
-					height: modular-scale(2, $viewport-scale);
-					stroke-width: 0;
-					stroke: $pink;
-					fill: $pink;
+				.card__more {
+					color: $dark-pink;
+					letter-spacing: modular-scale(-11);
+					text-transform: uppercase;
 				}
 
-				.product__flip {
-					position: absolute;
-					bottom: modular-scale(0);
-				}
-
-					.flip-icon {
-						display: inline-block;
-						width: modular-scale(1, $viewport-scale);
-						height: modular-scale(1, $viewport-scale);
-						stroke-width: 0;
-						stroke: $pink;
-						fill: $pink;
-					}
-
-				.product__flip--right {
-					right: modular-scale(1);
-				}
-
-				.product__flip--left {
-					left: modular-scale(1);
-				}
-
-			.product__flippable--back {
+			.card--back {
 				padding: modular-scale(2);
 				transform: rotateY(180deg);
 			}
 
-				p.product__desc {
+				p.card__desc {
 					margin-bottom: 0;
 					font-size: modular-scale(0, $viewport-scale);
 				}

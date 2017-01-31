@@ -1,11 +1,11 @@
-document.querySelector('.product__flip--right').addEventListener('click', function(e) {
+document.querySelector('.card__more').addEventListener('click', function(e) {
 	e.preventDefault();
 
-	document.getElementById('js-card-flip').classList.add('flipped');
+	document.querySelector('.product__card').classList.add('flipped');
 });
 
-document.querySelector('.product__flippable--back').addEventListener('click', function(e) {
+document.querySelector('.card--back').addEventListener('click', function(e) {
 	e.preventDefault();
 
-	document.getElementById('js-card-flip').classList.remove('flipped');
+	document.querySelector('.product__card').classList.remove('flipped');
 });
