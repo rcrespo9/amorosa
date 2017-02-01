@@ -96,17 +96,23 @@
 	}
 }
 
+@mixin uppercase-text() {
+	text-transform: uppercase;
+	letter-spacing: modular-scale(-6, $second-scale);
+	@include font-weight(bold);
+}
+
 /*------------------------------------*\
   #BUTTONS MIXINS
 \*------------------------------------*/
 
 @mixin button() {
-	padding: modular-scale(0) modular-scale(3);
+	padding: modular-scale(-2) modular-scale(2) modular-scale(-1);
+	border-radius: 4px;
 	color: $white;
 	background-color: $pink;
-	text-transform: uppercase;
 	transition: background-color $anim-speed-ease;
-	@include font-weight(semi-bold);
+	@include font-weight(medium);
 
 	&:hover {
 		background-color: darken($pink, 3%);

@@ -62,8 +62,7 @@
 
 				.card__more {
 					color: $dark-pink;
-					letter-spacing: modular-scale(-11);
-					text-transform: uppercase;
+					@include uppercase-text;
 				}
 
 			.card--back {

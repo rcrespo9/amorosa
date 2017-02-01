@@ -10,13 +10,28 @@ p {
 }
 
 .section__title {
-	margin-bottom: modular-scale(3);
+	position: relative;
+	display: inline-block;
+	margin-bottom: modular-scale(2);
 	color: inherit;
 	font-size: modular-scale(0);
-	text-transform: uppercase;
-	letter-spacing: modular-scale(-9);
-	@include font-weight(bold);
+	@include uppercase-text;
 }
+
+	.title__heart {
+		display: inline-block;
+		vertical-align: baseline;
+		margin-right: modular-scale(-5);
+		width: modular-scale(-1);
+		height: modular-scale(-1);
+		stroke: currentColor;
+		fill: currentColor;
+		animation: .5s ease-in-out infinite alternate heartbeat;
+	}
+
+	@keyframes heartbeat {
+		to { transform: scale(1.1); }
+	}
 
 .page-content p {
 	margin-bottom: modular-scale(0);
