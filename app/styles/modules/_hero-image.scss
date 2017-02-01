@@ -30,7 +30,7 @@
 			font-family: $font-family-serif;
 			font-size: modular-scale(6);
 			line-height: strip-units(modular-scale(0));
-			@include font-weight(normal);
+			@include font-weight(medium);
 			@include header-underline;
 		}
 
