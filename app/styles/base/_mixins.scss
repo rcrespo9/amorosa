@@ -85,9 +85,9 @@
 	}
 }
 
-@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px) {
+@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px, $border-color: transparent) {
 	color: $color;
-	border-bottom: $border-size solid transparent;
+	border-bottom: $border-size solid $border-color;
 	transition: all $anim-speed-ease;
 
 	&:hover {
