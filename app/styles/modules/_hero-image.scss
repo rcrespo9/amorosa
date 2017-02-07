@@ -39,7 +39,7 @@
 			}
 
 		p.hero__blurb {
-			margin-bottom: modular-scale(4);
+			margin-bottom: modular-scale(3);
 			max-width: modular-scale(13);
 			font-size: modular-scale(2);
 			line-height: strip-units(modular-scale(1));
@@ -50,10 +50,6 @@
 		.hero__cta {
 			font-size: modular-scale(1);
 			@include button;
-
-			&:hover {
-				background-color: darken($pink, 3%);
-			}
 		}
 
 			.cta__text,

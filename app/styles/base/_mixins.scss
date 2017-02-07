@@ -85,8 +85,7 @@
 	}
 }
 
-@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px, $padding-bottom: 0) {
-	padding-bottom: $padding-bottom;
+@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px) {
 	color: $color;
 	border-bottom: $border-size solid transparent;
 	transition: all $anim-speed-ease;
@@ -95,6 +94,10 @@
 		border-color: $hover-color;
 		color: $hover-color;
 	}
+}
+
+@mixin link-padding($padding-bottom: modular-scale(-7)) {
+	padding-bottom: $padding-bottom;
 }
 
 @mixin uppercase-text() {
@@ -113,7 +116,7 @@
 	color: $white;
 	background-color: $pink;
 	transition: background-color $anim-speed-ease;
-	@include font-weight(medium);
+	@include font-weight(semi-bold);
 
 	&:hover {
 		background-color: darken($pink, 3%);

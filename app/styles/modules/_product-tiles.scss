@@ -63,7 +63,8 @@
 				.card__more {
 					font-size: modular-scale(1, $viewport-scale);
 					text-transform: lowercase;
-					@include link($dark-pink, $dark-pink, 2px, modular-scale(-7, $viewport-scale));
+					@include link-padding;
+					@include link($dark-pink);
 				}
 
 			.card--back {
