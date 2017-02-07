@@ -8,22 +8,23 @@
 
 		flipCard(e) {
 			const $cardTarget = $(e.target);
-			const productCardSelector = '.product__card';
-			const flippedClass = 'flipped';
-
-			console.log(e.target);
 
 			e.preventDefault();
 
-			if($cardTarget.hasClass('card__more')) {
-				$cardTarget.closest(productCardSelector).addClass(flippedClass);
-			} else if ($cardTarget.hasClass('card--back')) {
-				$cardTarget.closest(productCardSelector).removeClass(flippedClass);
-			}
+			$cardTarget.closest('.product__card').addClass('flipped');
+		}
+
+		flipCardBack(e) {
+			const $cardTarget = $(e.target);
+
+			e.preventDefault();
+
+			$cardTarget.closest('.product__card').removeClass('flipped');
 		}
 
 		init() {
-			this.productTiles.on('click', '.card__more, .card--back', this.flipCard);
+			this.productTiles.on('click', '.card__flip', this.flipCard);
+			this.productTiles.on('click', '.card__flipback', this.flipCardBack);
 		}
 	}
 

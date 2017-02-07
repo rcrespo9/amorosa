@@ -60,7 +60,7 @@
 					@include font-weight(normal);
 				}
 
-				.card__more {
+				.card__flip {
 					font-size: modular-scale(1, $viewport-scale);
 					text-transform: lowercase;
 					@include link-padding;
@@ -68,7 +68,8 @@
 				}
 
 			.card--back {
-				padding: modular-scale(2);
+				position: relative;
+				padding: modular-scale(1);
 				transform: rotateY(180deg);
 			}
 
@@ -76,6 +77,28 @@
 					margin-bottom: 0;
 					font-size: modular-scale(0, $viewport-scale);
 				}
+
+				.card__flipback {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					display: block;
+					width: modular-scale(1, $viewport-scale);
+					height: modular-scale(1, $viewport-scale);
+					background-color: $dark-pink;
+					color: $white;
+					text-align: center;
+				}
+
+					.flipback__icon {
+						display: inline-block;
+						margin-top: -(modular-scale(-5, $viewport-scale));
+						width: modular-scale(0, $viewport-scale);
+						height: modular-scale(0, $viewport-scale);
+						stroke-width: 0;
+						stroke: currentColor;
+						fill: currentColor;
+					}
 
 	.tile__slider {
 		position: relative;
