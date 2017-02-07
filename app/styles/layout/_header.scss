@@ -50,15 +50,7 @@
 				}
 
 					.nav__link {
-						padding-bottom: modular-scale(-4);
-						border-bottom: 3px solid transparent;
-						color: $gray;
 						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
-
-						&:hover {
-							border-color: $pink;
-							color: $pink;
-						}
-
+						@include link($gray, $pink, 3px, modular-scale(-7));
 					}

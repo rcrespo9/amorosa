@@ -53,7 +53,7 @@
 			}
 
 				.card__header {
-					margin-bottom: modular-scale(0, $viewport-scale);
+					margin-bottom: modular-scale(-2, $viewport-scale);
 					color: $medium-gray;
 					font-family: $font-family-serif;
 					font-size: modular-scale(3, $viewport-scale);
@@ -61,8 +61,9 @@
 				}
 
 				.card__more {
-					color: $dark-pink;
-					@include uppercase-text;
+					font-size: modular-scale(1, $viewport-scale);
+					text-transform: lowercase;
+					@include link($dark-pink, $dark-pink, 2px, modular-scale(-7, $viewport-scale));
 				}
 
 			.card--back {

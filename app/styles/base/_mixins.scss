@@ -85,14 +85,15 @@
 	}
 }
 
-@mixin link($color: $medium-gray) {
-	color: inherit;
-	border-bottom: 2px solid transparent;
+@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px, $padding-bottom: 0) {
+	padding-bottom: $padding-bottom;
+	color: $color;
+	border-bottom: $border-size solid transparent;
 	transition: all $anim-speed-ease;
 
 	&:hover {
-		border-color: $color;
-		color: $color;
+		border-color: $hover-color;
+		color: $hover-color;
 	}
 }
 

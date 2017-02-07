@@ -23,7 +23,7 @@
 		top: 50%;
 		z-index: 2;
 		transform: translateY(-50%);
-		@include l-container;
+		@include c-container;
 	}
 
 		.hero__tagline {
