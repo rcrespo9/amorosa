@@ -52,6 +52,6 @@
 					.nav__link {
 						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
-						@include link-padding;
+						@include link-padding(modular-scale(-4));
 						@include link($gray, $pink, 3px);
 					}
