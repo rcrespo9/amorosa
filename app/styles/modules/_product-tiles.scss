@@ -85,7 +85,7 @@
 					display: block;
 					width: modular-scale(2, $viewport-scale);
 					height: modular-scale(2, $viewport-scale);
-					background-color: $dark-pink;
+					background-color: $pink;
 					color: $white;
 					text-align: center;
 				}
@@ -106,26 +106,42 @@
 
 		.slider__controls {
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			right: 0;
 			z-index: 10;
-			background-color: $dark-pink;
+			width: modular-scale(6, $viewport-scale);
+			height: modular-scale(4, $viewport-scale);
+			background-color: $pink;
 		}
 
 			.slider__control {
-				display: inline-block;
-				padding: modular-scale(-3, $viewport-scale) modular-scale(-5, $viewport-scale);
+				position: relative;
+				display: block;
+				float: left;
+				width: 50%;
+				height: 100%;
 				color: $white;
 				transition: transform .1s linear;
 			}
 
 				.control__arrow {
+					position: absolute;
+					top: 50%;
 					display: inline-block;
-					width: modular-scale(3, $viewport-scale);
-					height: modular-scale(3, $viewport-scale);
+					width: modular-scale(2, $viewport-scale);
+					height: modular-scale(2, $viewport-scale);
 					stroke-width: 0;
 					stroke: currentColor;
 					fill: currentColor;
+					transform: translateY(-50%);
+				}
+
+				.slider__control--right .control__arrow {
+					left: modular-scale(-6);
+				}
+
+				.slider__control--left .control__arrow {
+					right: modular-scale(-6);
 				}
 
 			.slider__control--right:hover {
@@ -183,8 +199,6 @@
 		.tile__slider--sostenes .slider__img--3 {
 			background-image: url(../../images/sostenes-3.jpeg);
 		}
-
-
 
 		.tile__slider--pantis .slider__img--1 {
 			background-image: url(../../images/panties.jpeg);
