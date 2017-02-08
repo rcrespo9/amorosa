@@ -104,6 +104,29 @@
 		position: relative;
 	}
 
+		.slider__controls {
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10;
+			background-color: $dark-pink;
+		}
+
+			.slider__control {
+				display: inline-block;
+				padding: modular-scale(-3, $viewport-scale) modular-scale(-5, $viewport-scale);
+				color: $white;
+			}
+
+				.control__arrow {
+					display: inline-block;
+					width: modular-scale(3, $viewport-scale);
+					height: modular-scale(3, $viewport-scale);
+					stroke-width: 0;
+					stroke: currentColor;
+					fill: currentColor;
+				}
+
 		.slider__img {
 			position: absolute;
 			top: 0;
