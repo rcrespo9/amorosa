@@ -83,8 +83,8 @@
 					bottom: 0;
 					left: 0;
 					display: block;
-					width: modular-scale(1, $viewport-scale);
-					height: modular-scale(1, $viewport-scale);
+					width: modular-scale(2, $viewport-scale);
+					height: modular-scale(2, $viewport-scale);
 					background-color: $dark-pink;
 					color: $white;
 					text-align: center;
@@ -92,7 +92,7 @@
 
 					.flipback__icon {
 						display: inline-block;
-						margin-top: -(modular-scale(-5, $viewport-scale));
+						vertical-align: middle;
 						width: modular-scale(0, $viewport-scale);
 						height: modular-scale(0, $viewport-scale);
 						stroke-width: 0;
@@ -116,6 +116,7 @@
 				display: inline-block;
 				padding: modular-scale(-3, $viewport-scale) modular-scale(-5, $viewport-scale);
 				color: $white;
+				transition: transform .1s linear;
 			}
 
 				.control__arrow {
@@ -126,6 +127,14 @@
 					stroke: currentColor;
 					fill: currentColor;
 				}
+
+			.slider__control--right:hover {
+				transform: translateX(5%);
+			}
+
+			.slider__control--left:hover {
+				transform: translateX(-5%);
+			}
 
 		.slider__img {
 			position: absolute;
@@ -166,6 +175,16 @@
 		.tile__slider--sostenes .slider__img--1 {
 			background-image: url(../../images/sostenes.jpeg);
 		}
+
+		.tile__slider--sostenes .slider__img--2 {
+			background-image: url(../../images/sostenes-2.jpeg);
+		}
+
+		.tile__slider--sostenes .slider__img--3 {
+			background-image: url(../../images/sostenes-3.jpeg);
+		}
+
+
 
 		.tile__slider--pantis .slider__img--1 {
 			background-image: url(../../images/panties.jpeg);
