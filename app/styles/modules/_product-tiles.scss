@@ -102,23 +102,52 @@
 
 	.tile__slider {
 		position: relative;
-		background-position: center center;
-		background-repeat: none;
-		background-size: cover;
 	}
 
-	.tile__slider--lenceria {
-		background-image: url(../../images/lingerie.jpeg);
-	}
+		.slider__img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			background-repeat: none;
+			background-size: cover;
+			opacity: 0;
+			transition: opacity .5s ease-in-out;
+		}
 
-	.tile__slider--sostenes {
-		background-image: url(../../images/sostenes.jpeg);
-	}
+		.slider__img--active {
+			opacity: 1;
+			z-index: 1;
+		}
 
-	.tile__slider--pantis {
-		background-image: url(../../images/panties.jpeg);
-	}
+		.tile__slider--lenceria .slider__img--1 {
+			background-image: url(../../images/lingerie.jpeg);
+		}
 
-	.tile__slider--bathing {
-		background-image: url(../../images/bathing.jpeg);
-	}
+
+		.tile__slider--lenceria .slider__img--2 {
+			background-image: url(../../images/lingerie-2.jpeg);
+		}
+
+
+		.tile__slider--lenceria .slider__img--3 {
+			background-image: url(../../images/lingerie-3.jpeg);
+		}
+
+
+		.tile__slider--sostenes .slider__img--1 {
+			background-image: url(../../images/sostenes.jpeg);
+		}
+
+		.tile__slider--pantis .slider__img--1 {
+			background-image: url(../../images/panties.jpeg);
+		}
+
+		.tile__slider--bathing .slider__img--1 {
+			background-image: url(../../images/bathing.jpeg);
+		}
