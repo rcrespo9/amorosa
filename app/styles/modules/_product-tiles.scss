@@ -106,7 +106,7 @@
 
 		.slider__controls {
 			position: absolute;
-			bottom: 0;
+			top: 0;
 			right: 0;
 			z-index: 10;
 			width: modular-scale(6, $viewport-scale);
@@ -145,11 +145,11 @@
 				}
 
 			.slider__control--right:hover {
-				transform: translateX(5%);
+				transform: translateX(7%);
 			}
 
 			.slider__control--left:hover {
-				transform: translateX(-5%);
+				transform: translateX(-7%);
 			}
 
 		.slider__img {
@@ -204,6 +204,22 @@
 			background-image: url(../../images/panties.jpeg);
 		}
 
+		.tile__slider--pantis .slider__img--2 {
+			background-image: url(../../images/panties-2.jpeg);
+		}
+
+		.tile__slider--pantis .slider__img--3 {
+			background-image: url(../../images/panties-3.jpeg);
+		}
+
 		.tile__slider--bathing .slider__img--1 {
 			background-image: url(../../images/bathing.jpeg);
+		}
+
+		.tile__slider--bathing .slider__img--2 {
+			background-image: url(../../images/bathing-2.jpeg);
+		}
+
+		.tile__slider--bathing .slider__img--3 {
+			background-image: url(../../images/bathing-3.jpeg);
 		}
