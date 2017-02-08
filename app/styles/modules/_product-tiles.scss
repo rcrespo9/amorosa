@@ -165,7 +165,7 @@
 			background-repeat: none;
 			background-size: cover;
 			opacity: 0;
-			transition: opacity .5s ease-in-out;
+			transition: opacity $anim-speed-ease;
 		}
 
 		.slider__img--active {
