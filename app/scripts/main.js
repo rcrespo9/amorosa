@@ -28,9 +28,35 @@
 		}
 	}
 
-	class ProductSliders {
-		constructor() {
-			this.tilesContainer = $('#js-product-tiles');
+	class ProductSlider {
+		constructor(sliderId) {
+			this.productSlider = $(sliderId);
+			this.sliderImgs = this.productSlider.children('.slider__img');
+			this.sliderImgActive = this.productSlider.children('.slider__img--active');
+			this.sliderImgsLength = this.sliderImgs.length;
+			this.currentIndex = this.sliderImgs.index(this.sliderImgActive);
+		}
+
+		cycleImgs() {
+			const $sliderImg = this.sliderImgs.eq(this.currentIndex);
+			const sliderImgActiveClass = 'slider__img--active';
+
+			this.sliderImgs.removeClass(sliderImgActiveClass);
+			$sliderImg.addClass(sliderImgActiveClass);
+		}
+
+		autoSlide() {
+			const self = this;
+
+			setInterval(function() {
+				self.currentIndex += 1;
+
+				if (self.currentIndex > self.sliderImgsLength - 1) {
+					self.currentIndex = 0;
+				}
+
+				self.cycleImgs();
+			}, 5000)
 		}
 
 		changeSlide(e) {
@@ -53,7 +79,7 @@
 
 			e.preventDefault();
 
-			if($sliderControl.closest(sliderControlSelector).hasClass('slider__control--next')) {
+			if ($sliderControl.closest(sliderControlSelector).hasClass('slider__control--next')) {
 				currentIndex += 1;
 
 				if (currentIndex > sliderImgsLength - 1) {
@@ -73,17 +99,25 @@
 		}
 
 		init() {
-			this.tilesContainer.on('click', '.slider__control', this.changeSlide);
+			this.autoSlide();
+			// this.tilesContainer.on('click', '.slider__control', this.changeSlide);
 		}
 	}
 
 	class Main {
 		constructor() {
 			const productCards = new ProductCards();
-			const productSliders = new ProductSliders();
+			const lenceriaSlider = new ProductSlider('#js-lenceria-slider');
+			const sostenesSlider = new ProductSlider('#js-sostenes-slider');
+			const pantisSlider = new ProductSlider('#js-pantis-slider');
+			const bathingSlider = new ProductSlider('#js-bathing-slider');
 
 			productCards.init();
-			productSliders.init();
+
+			lenceriaSlider.init();
+			sostenesSlider.init();
+			pantisSlider.init();
+			bathingSlider.init();
 		}
 	}
 
