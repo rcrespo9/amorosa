@@ -13,6 +13,7 @@
 		@include flexbox-column-width(25%);
 	}
 
+	// PRODUCT DESCRIPTION
 	.tile__product {
 		perspective: modular-scale(20);
 	}
@@ -100,6 +101,7 @@
 						fill: currentColor;
 					}
 
+	// PRODUCT SLIDER
 	.tile__slider {
 		position: relative;
 	}
@@ -136,19 +138,19 @@
 					transform: translateY(-50%);
 				}
 
-				.slider__control--right .control__arrow {
+				.slider__control--next .control__arrow {
 					left: modular-scale(-6);
 				}
 
-				.slider__control--left .control__arrow {
+				.slider__control--prev .control__arrow {
 					right: modular-scale(-6);
 				}
 
-			.slider__control--right:hover {
+			.slider__control--next:hover {
 				transform: translateX(7%);
 			}
 
-			.slider__control--left:hover {
+			.slider__control--prev:hover {
 				transform: translateX(-7%);
 			}
 

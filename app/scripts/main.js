@@ -3,7 +3,7 @@
 
 	class ProductCards {
 		constructor() {
-			this.productTiles = $('#js-product-tiles');
+			this.tilesContainer = $('#js-product-tiles');
 		}
 
 		flipCard(e) {
@@ -23,47 +23,57 @@
 		}
 
 		init() {
-			this.productTiles.on('click', '.card__flip', this.flipCard);
-			this.productTiles.on('click', '.card__flipback', this.flipCardBack);
+			this.tilesContainer.on('click', '.card__flip', this.flipCard);
+			this.tilesContainer.on('click', '.card__flipback', this.flipCardBack);
 		}
 	}
 
 	class ProductSliders {
 		constructor() {
-			this.productTiles = $('#js-product-tiles');
+			this.tilesContainer = $('#js-product-tiles');
 		}
 
 		changeSlide(e) {
 			const $sliderControl = $(e.target);
-			const sliderControlsParentSelector = '.slider__controls';
 			const sliderControlSelector = '.slider__control';
-			const sliderImgSelector = '.slider__img';
-			const sliderImgActiveSelector = '.slider__img--active';
-			const sliderImgActiveClass = 'slider__img--active';
+			const $slider = $sliderControl.closest('.tile__slider');
+			const $sliderImgs = $slider.children('.slider__img');
+			const $sliderImgActive = $slider.children('.slider__img--active');
+			const sliderImgsLength = $sliderImgs.length;
+
+			let currentIndex = $sliderImgs.index($sliderImgActive);
+
+			const cycleImgs = function() {
+				const $sliderImg = $sliderImgs.eq(currentIndex);
+				const sliderImgActiveClass = 'slider__img--active';
+
+				$sliderImgs.removeClass(sliderImgActiveClass);
+				$sliderImg.addClass(sliderImgActiveClass);
+			}
 
 			e.preventDefault();
 
-			if($sliderControl.closest(sliderControlSelector).hasClass('slider__control--left')) {
-				$sliderControl
-					.closest(sliderControlsParentSelector)
-					.siblings(sliderImgActiveSelector)
-					.prev(sliderImgSelector)
-					.addClass(sliderImgActiveClass)
-					.next(sliderImgSelector)
-					.removeClass(sliderImgActiveClass);
-			} else if ($sliderControl.closest(sliderControlSelector).hasClass('slider__control--right')) {
-				$sliderControl
-					.closest(sliderControlsParentSelector)
-					.siblings(sliderImgActiveSelector)
-					.next(sliderImgSelector)
-					.addClass(sliderImgActiveClass)
-					.prev(sliderImgSelector)
-					.removeClass(sliderImgActiveClass);
+			if($sliderControl.closest(sliderControlSelector).hasClass('slider__control--next')) {
+				currentIndex += 1;
+
+				if (currentIndex > sliderImgsLength - 1) {
+					currentIndex = 0;
+				}
+
+				cycleImgs();
+			} else if ($sliderControl.closest(sliderControlSelector).hasClass('slider__control--prev')) {
+				currentIndex -= 1;
+
+				if (currentIndex < 0) {
+					currentIndex = sliderImgsLength - 1;
+				}
+
+				cycleImgs();
 			}
 		}
 
 		init() {
-			this.productTiles.on('click', '.slider__control', this.changeSlide);
+			this.tilesContainer.on('click', '.slider__control', this.changeSlide);
 		}
 	}
 
