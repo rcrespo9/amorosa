@@ -57,6 +57,10 @@
 			this.cycleImgs();
 		}
 
+		autoSlide() {
+			setInterval(this.nextSlide.bind(this), 5000);
+		}
+
 		goToNextSlide(e) {
 			e.preventDefault();
 
@@ -75,10 +79,6 @@
 			}
 
 			this.cycleImgs();
-		}
-
-		autoSlide() {
-			setInterval(this.nextSlide.bind(this), 5000);
 		}
 
 		init() {
