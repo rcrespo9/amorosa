@@ -8,13 +8,13 @@
 
 	.tile {
 		position: relative;
-		height: modular-scale(10, $viewport-scale);
+		height: modular-scale(10);
 		@include flexbox-column;
 		@include flexbox-column-width(25%);
 	}
 
 	.tile__product {
-		perspective: modular-scale(20, $viewport-scale);
+		perspective: modular-scale(20);
 	}
 
 		.product__card {
@@ -53,15 +53,15 @@
 			}
 
 				.card__header {
-					margin-bottom: modular-scale(-2, $viewport-scale);
+					margin-bottom: modular-scale(-2);
 					color: $medium-gray;
 					font-family: $font-family-serif;
-					font-size: modular-scale(3, $viewport-scale);
+					font-size: modular-scale(3);
 					@include font-weight(normal);
 				}
 
 				.card__flip {
-					font-size: modular-scale(1, $viewport-scale);
+					font-size: modular-scale(1);
 					text-transform: lowercase;
 					@include link-padding;
 					@include link($dark-pink);
@@ -75,7 +75,7 @@
 
 				p.card__desc {
 					margin-bottom: 0;
-					font-size: modular-scale(0, $viewport-scale);
+					font-size: modular-scale(0);
 				}
 
 				.card__flipback {
@@ -83,8 +83,8 @@
 					bottom: 0;
 					left: 0;
 					display: block;
-					width: modular-scale(2, $viewport-scale);
-					height: modular-scale(2, $viewport-scale);
+					width: modular-scale(2);
+					height: modular-scale(2);
 					background-color: $pink;
 					color: $white;
 					text-align: center;
@@ -93,8 +93,8 @@
 					.flipback__icon {
 						display: inline-block;
 						vertical-align: middle;
-						width: modular-scale(0, $viewport-scale);
-						height: modular-scale(0, $viewport-scale);
+						width: modular-scale(0);
+						height: modular-scale(0);
 						stroke-width: 0;
 						stroke: currentColor;
 						fill: currentColor;
@@ -109,8 +109,8 @@
 			top: 0;
 			right: 0;
 			z-index: 10;
-			width: modular-scale(6, $viewport-scale);
-			height: modular-scale(4, $viewport-scale);
+			width: modular-scale(6);
+			height: modular-scale(4);
 			background-color: $pink;
 		}
 
@@ -128,8 +128,8 @@
 					position: absolute;
 					top: 50%;
 					display: inline-block;
-					width: modular-scale(2, $viewport-scale);
-					height: modular-scale(2, $viewport-scale);
+					width: modular-scale(2);
+					height: modular-scale(2);
 					stroke-width: 0;
 					stroke: currentColor;
 					fill: currentColor;
