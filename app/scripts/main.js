@@ -47,6 +47,10 @@
 			$sliderImg.addClass(sliderImgActiveClass);
 		}
 
+		autoSlide() {
+			setInterval(this.nextSlide.bind(this), 5000);
+		}
+
 		nextSlide() {
 			this.currentIndex += 1;
 
@@ -55,10 +59,6 @@
 			}
 
 			this.cycleImgs();
-		}
-
-		autoSlide() {
-			setInterval(this.nextSlide.bind(this), 5000);
 		}
 
 		goToNextSlide(e) {
@@ -91,13 +91,12 @@
 	class Main {
 		constructor() {
 			const productCards = new ProductCards();
+			productCards.init();
+
 			const lenceriaSlider = new ProductSlider('#js-lenceria-slider');
 			const sostenesSlider = new ProductSlider('#js-sostenes-slider');
 			const pantisSlider = new ProductSlider('#js-pantis-slider');
 			const bathingSlider = new ProductSlider('#js-bathing-slider');
-
-			productCards.init();
-
 			lenceriaSlider.init();
 			sostenesSlider.init();
 			pantisSlider.init();
