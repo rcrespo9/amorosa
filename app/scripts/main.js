@@ -45,62 +45,44 @@
 			$sliderImg.addClass(sliderImgActiveClass);
 		}
 
-		autoSlide() {
-			const self = this;
+		nextSlide() {
+			this.currentIndex += 1;
 
-			setInterval(function() {
-				self.currentIndex += 1;
+			if (this.currentIndex > this.sliderImgsLength - 1) {
+				this.currentIndex = 0;
+			}
 
-				if (self.currentIndex > self.sliderImgsLength - 1) {
-					self.currentIndex = 0;
-				}
-
-				self.cycleImgs();
-			}, 5000)
+			this.cycleImgs();
 		}
 
-		changeSlide(e) {
-			const $sliderControl = $(e.target);
-			const sliderControlSelector = '.slider__control';
-			const $slider = $sliderControl.closest('.tile__slider');
-			const $sliderImgs = $slider.children('.slider__img');
-			const $sliderImgActive = $slider.children('.slider__img--active');
-			const sliderImgsLength = $sliderImgs.length;
-
-			let currentIndex = $sliderImgs.index($sliderImgActive);
-
-			const cycleImgs = function() {
-				const $sliderImg = $sliderImgs.eq(currentIndex);
-				const sliderImgActiveClass = 'slider__img--active';
-
-				$sliderImgs.removeClass(sliderImgActiveClass);
-				$sliderImg.addClass(sliderImgActiveClass);
-			}
-
+		goToNextSlide(e) {
 			e.preventDefault();
 
-			if ($sliderControl.closest(sliderControlSelector).hasClass('slider__control--next')) {
-				currentIndex += 1;
+			this.nextSlide();
+		}
 
-				if (currentIndex > sliderImgsLength - 1) {
-					currentIndex = 0;
-				}
+		goToPrevSlide(e) {
+			e.preventDefault();
 
-				cycleImgs();
-			} else if ($sliderControl.closest(sliderControlSelector).hasClass('slider__control--prev')) {
-				currentIndex -= 1;
+			clearInterval(this.autoSlide);
 
-				if (currentIndex < 0) {
-					currentIndex = sliderImgsLength - 1;
-				}
+			this.currentIndex -= 1;
 
-				cycleImgs();
+			if (this.currentIndex < 0) {
+				this.currentIndex = this.sliderImgsLength - 1;
 			}
+
+			this.cycleImgs();
+		}
+
+		autoSlide() {
+			setInterval(this.nextSlide.bind(this), 5000);
 		}
 
 		init() {
 			this.autoSlide();
-			// this.tilesContainer.on('click', '.slider__control', this.changeSlide);
+			this.productSlider.on('click', '.slider__control--next', this.goToNextSlide.bind(this));
+			this.productSlider.on('click', '.slider__control--prev', this.goToPrevSlide.bind(this));
 		}
 	}
 
