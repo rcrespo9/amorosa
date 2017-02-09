@@ -4,27 +4,29 @@
 	class ProductCards {
 		constructor() {
 			this.tilesContainer = $('#js-product-tiles');
+			this.productCardSelector = '.product__card';
+			this.flippedClass = 'flipped';
 		}
 
 		flipCard(e) {
-			const $cardTarget = $(e.target);
+			const $flipCardLink = $(e.target);
 
 			e.preventDefault();
 
-			$cardTarget.closest('.product__card').addClass('flipped');
+			$flipCardLink.closest(this.productCardSelector).addClass(this.flippedClass);
 		}
 
 		flipCardBack(e) {
-			const $cardTarget = $(e.target);
+			const $flipCardBackLink = $(e.target);
 
 			e.preventDefault();
 
-			$cardTarget.closest('.product__card').removeClass('flipped');
+			$flipCardBackLink.closest(this.productCardSelector).removeClass(this.flippedClass);
 		}
 
 		init() {
-			this.tilesContainer.on('click', '.card__flip', this.flipCard);
-			this.tilesContainer.on('click', '.card__flipback', this.flipCardBack);
+			this.tilesContainer.on('click', '.card__flip', this.flipCard.bind(this));
+			this.tilesContainer.on('click', '.card__flipback', this.flipCardBack.bind(this));
 		}
 	}
 
