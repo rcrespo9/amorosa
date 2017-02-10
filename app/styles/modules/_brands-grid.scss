@@ -1,0 +1,19 @@
+/*------------------------------------*\
+  #BRANDS GRID
+\*------------------------------------*/
+
+.brands {
+	@include flexbox-row;
+}
+
+	.brand__item {
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		@include flexbox-column;
+		@include flexbox-column-width(33.3333333%);
+	}
+
+		.brand__img {
+			width: modular-scale(10);
+		}
