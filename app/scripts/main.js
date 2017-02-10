@@ -48,7 +48,8 @@
 		}
 
 		autoSlide() {
-			setInterval(this.nextSlide.bind(this), 5000);
+			this.nextSlide();
+			// requestAnimationFrame(this.autoSlide.bind(this));
 		}
 
 		nextSlide() {
@@ -64,13 +65,15 @@
 		goToNextSlide(e) {
 			e.preventDefault();
 
+			cancelAnimationFrame(this.autoSlide);
+
 			this.nextSlide();
 		}
 
 		goToPrevSlide(e) {
 			e.preventDefault();
 
-			clearInterval(this.autoSlide);
+			cancelAnimationFrame(this.autoSlide);
 
 			this.currentIndex -= 1;
 
@@ -82,7 +85,7 @@
 		}
 
 		init() {
-			this.autoSlide();
+			requestAnimationFrame(this.autoSlide.bind(this));
 
 			if (Modernizr.touchevents) {
 			  this.productSlider.swipe({
