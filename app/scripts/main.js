@@ -67,7 +67,7 @@
 		goToNextSlide(e) {
 			e.preventDefault();
 
-			cancelAnimationFrame(this.autoSlide);
+			cancelAnimationFrame(this.autoSlide.bind(this));
 
 			this.nextSlide();
 		}
@@ -75,7 +75,7 @@
 		goToPrevSlide(e) {
 			e.preventDefault();
 
-			cancelAnimationFrame(this.autoSlide);
+			cancelAnimationFrame(this.autoSlide.bind(this));
 
 			this.currentIndex -= 1;
 
