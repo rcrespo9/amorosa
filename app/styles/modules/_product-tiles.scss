@@ -106,6 +106,10 @@
 		position: relative;
 	}
 
+	.tile__slider:hover .slider__controls {
+		opacity: 1;
+	}
+
 		.slider__controls {
 			position: absolute;
 			top: 0;
@@ -114,6 +118,8 @@
 			width: modular-scale(6);
 			height: modular-scale(4);
 			background-color: $pink;
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
 		}
 
 			.slider__control {
