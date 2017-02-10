@@ -81,19 +81,19 @@
 			this.cycleImgs();
 		}
 
-		hello() {
-			console.log('swiped!');
-		}
-
 		init() {
 			this.autoSlide();
-			this.productSlider.on('click', '.slider__control--next', this.goToNextSlide.bind(this));
-			this.productSlider.on('click', '.slider__control--prev', this.goToPrevSlide.bind(this));
-			this.productSlider.swipe({
-				swipeLeft: this.goToNextSlide.bind(this),
-				swipeRight: this.goToPrevSlide.bind(this),
-				threshold: 0
-			});
+
+			if (Modernizr.touchevents) {
+			  this.productSlider.swipe({
+			  	swipeLeft: this.goToNextSlide.bind(this),
+			  	swipeRight: this.goToPrevSlide.bind(this),
+			  	threshold: 0
+			  });
+			} else {
+			  this.productSlider.on('click', '.slider__control--next', this.goToNextSlide.bind(this));
+			  this.productSlider.on('click', '.slider__control--prev', this.goToPrevSlide.bind(this));
+			}
 		}
 	}
 

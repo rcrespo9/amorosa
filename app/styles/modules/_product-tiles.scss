@@ -106,10 +106,6 @@
 		position: relative;
 	}
 
-	.tile__slider:hover .slider__controls {
-		opacity: 1;
-	}
-
 		.slider__controls {
 			position: absolute;
 			top: 0;
@@ -120,6 +116,14 @@
 			background-color: $pink;
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
+		}
+
+		.no-touch .tile__slider:hover .slider__controls {
+			opacity: 1;
+		}
+
+		.touch .slider__controls {
+			display: none;
 		}
 
 			.slider__control {
