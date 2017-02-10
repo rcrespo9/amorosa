@@ -9,7 +9,7 @@
 	left: 0;
 	width: 100%;
 	height: $nav-height;
-	border-bottom: 1px solid $light-gray;
+	border-bottom: 1px solid $off-white;
 	background-color: $white;
 	@include l-container;
 }
@@ -27,7 +27,7 @@
 		}
 
 		.header__logo {
-			width: 12.5rem; // equivalent to 200px, in keeping with width of low-res logo
+			width: modular-scale(9);
 		}
 
 		.header__nav {
