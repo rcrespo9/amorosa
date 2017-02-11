@@ -3,21 +3,18 @@
 \*------------------------------------*/
 
 .brands {
+	padding: modular-scale(4) 0 modular-scale(2);
 	@include flexbox-row;
 }
 
 	.brand__item {
 		justify-content: center;
-		margin-top: modular-scale(0);
-		margin-bottom: modular-scale(0);
+		margin-top: modular-scale(1);
+		margin-bottom: modular-scale(1);
 		opacity: .6;
 		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);
-
-		&:hover {
-			opacity: 1;
-		}
 
 		&:focus {
 			outline: none;
@@ -35,6 +32,6 @@
 
 		.brand__logo {
 			display: inline-block;
-			width: modular-scale(10);
+			width: modular-scale(9);
 			filter: grayscale(100%);
 		}

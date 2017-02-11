@@ -2,7 +2,7 @@
   #PAGE SECTION
 \*------------------------------------*/
 
-.page-section:not(.page-section--products) {
+.page-section--text {
 	@include text-content;
 }
 
