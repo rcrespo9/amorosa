@@ -9,8 +9,8 @@
 
 	.brand__item {
 		justify-content: center;
-		margin-top: modular-scale(1);
-		margin-bottom: modular-scale(1);
+		margin-top: modular-scale(2);
+		margin-bottom: modular-scale(2);
 		opacity: .6;
 		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
@@ -32,7 +32,7 @@
 
 		.brand__logo {
 			display: inline-block;
-			width: modular-scale(10);
+			max-width: modular-scale(10);
 			filter: grayscale(100%);
 		}
 
