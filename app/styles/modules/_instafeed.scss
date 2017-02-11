@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  #INSTAFEED
+\*------------------------------------*/
+
+.instafeed {
+	margin-bottom: modular-scale(1);
+	@include flexbox-row;
+}
+
+	.instafeed__item {
+		padding: modular-scale(1);
+		@include flexbox-column;
+		@include flexbox-column-width(100% / 3);
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+.instagram-cta {
+	display: block;
+	font-size: modular-scale(0);
+	text-align: center;
+	@include uppercase-text;
+}
+
+	.instagram-cta span {
+		display: inline-block;
+		@include link($color: $gray, $hover-color: $dark-gray, $border-color: $gray);
+		@include link-padding;
+	}
