@@ -48,8 +48,10 @@
 		}
 
 		autoSlide() {
-			this.nextSlide();
-			requestAnimationFrame(this.autoSlide.bind(this));
+			setTimeout(function() {
+				this.nextSlide();
+				requestAnimationFrame(this.autoSlide.bind(this));
+			}.bind(this), 5000);
 		}
 
 		nextSlide() {

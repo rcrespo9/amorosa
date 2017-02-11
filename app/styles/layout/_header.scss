@@ -26,9 +26,11 @@
 			vertical-align: middle;
 		}
 
-		.header__logo {
-			width: modular-scale(9);
-		}
+			.logo__img {
+				display: inline-block;
+				width: rem(215px);
+				height: rem(70px);
+			}
 
 		.header__nav {
 			text-align: right;
