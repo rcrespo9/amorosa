@@ -32,6 +32,10 @@
 
 		.brand__logo {
 			display: inline-block;
-			width: modular-scale(9);
+			width: modular-scale(10);
 			filter: grayscale(100%);
+		}
+
+		.brand__logo--xoxo {
+			width: modular-scale(9);
 		}
