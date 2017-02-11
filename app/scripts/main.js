@@ -1,6 +1,57 @@
 (function(window, jQuery, undefined) {
 	'use strict';
 
+	/*!
+	 * Behaves the same as setTimeout except uses requestAnimationFrame()
+	 * where possible for better performance
+	 * modified gist.github.com/joelambert/1002116
+	 * the fallback function requestAnimFrame is incorporated
+	 * gist.github.com/joelambert/1002116
+	 * gist.github.com/englishextra/873c8f78bfda7cafc905f48a963df07b
+	 * jsfiddle.net/englishextra/dnyomc4j/
+	 * @param {Object} fn The callback function
+	 * @param {Int} delay The delay in milliseconds
+	 * requestTimeout(fn,delay);
+	 */
+	var requestTimeout = function (fn, delay) {
+		var requestAnimFrame = (function () {
+			return window.requestAnimationFrame || function (callback, element) {
+				window.setTimeout(callback, 1000 / 60);
+			};
+		})(),
+		start = new Date().getTime(),
+		handle = {};
+		function loop() {
+			var current = new Date().getTime(),
+			delta = current - start;
+			if (delta >= delay) {
+				fn.call();
+			} else {
+				handle.value = requestAnimFrame(loop);
+			}
+		}
+		handle.value = requestAnimFrame(loop);
+		return handle;
+	};
+
+	/*!
+	 * Behaves the same as clearTimeout except uses cancelRequestAnimationFrame()
+	 * where possible for better performance
+	 * gist.github.com/joelambert/1002116
+	 * gist.github.com/englishextra/873c8f78bfda7cafc905f48a963df07b
+	 * jsfiddle.net/englishextra/dnyomc4j/
+	 * @param {Int|Object} handle The callback function
+	 * clearRequestTimeout(handle);
+	 */
+	var clearRequestTimeout = function (handle) {
+		if (window.cancelAnimationFrame) {
+			window.cancelAnimationFrame(handle.value);
+		} else {
+			window.clearTimeout(handle);
+		}
+
+	};
+
 	class ProductCards {
 		constructor() {
 			this.tilesContainer = $('#js-product-tiles');
@@ -47,13 +98,6 @@
 			$sliderImg.addClass(sliderImgActiveClass);
 		}
 
-		autoSlide() {
-			setTimeout(function() {
-				this.nextSlide();
-				requestAnimationFrame(this.autoSlide.bind(this));
-			}.bind(this), 5000);
-		}
-
 		nextSlide() {
 			this.currentIndex += 1;
 
@@ -64,10 +108,15 @@
 			this.cycleImgs();
 		}
 
+		autoSlide() {
+			this.nextSlide();
+			requestTimeout(this.autoSlide.bind(this), 5000);
+		}
+
 		goToNextSlide(e) {
 			e.preventDefault();
 
-			cancelAnimationFrame(this.autoSlide.bind(this));
+			clearRequestTimeout(this.autoSlide.bind(this));
 
 			this.nextSlide();
 		}
@@ -75,7 +124,7 @@
 		goToPrevSlide(e) {
 			e.preventDefault();
 
-			cancelAnimationFrame(this.autoSlide.bind(this));
+			clearRequestTimeout(this.autoSlide.bind(this));
 
 			this.currentIndex -= 1;
 
@@ -87,7 +136,7 @@
 		}
 
 		init() {
-			// requestAnimationFrame(this.autoSlide.bind(this));
+			requestAnimationFrame(this.autoSlide.bind(this));
 
 			if (Modernizr.touchevents) {
 			  this.productSlider.swipe({
@@ -119,4 +168,4 @@
 	}
 
 	$(document).ready(() => new Main());
-}(jQuery));
+}(window, jQuery));
