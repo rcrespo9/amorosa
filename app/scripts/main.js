@@ -48,10 +48,8 @@
 		}
 
 		autoSlide() {
-			setTimeout(function() {
-				this.nextSlide();
-				requestAnimationFrame(this.autoSlide.bind(this));
-			}.bind(this), 5000);
+			this.nextSlide();
+			requestAnimationFrame(this.autoSlide.bind(this));
 		}
 
 		nextSlide() {
@@ -87,7 +85,7 @@
 		}
 
 		init() {
-			requestAnimationFrame(this.autoSlide.bind(this));
+			// requestAnimationFrame(this.autoSlide.bind(this));
 
 			if (Modernizr.touchevents) {
 			  this.productSlider.swipe({
