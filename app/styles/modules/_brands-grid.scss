@@ -7,10 +7,21 @@
 }
 
 	.brand__item {
-		margin-top: modular-scale(-1);
-		margin-bottom: modular-scale(-1);
+		justify-content: center;
+		margin-top: modular-scale(0);
+		margin-bottom: modular-scale(0);
+		opacity: .6;
+		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:focus {
+			outline: none;
+		}
 	}
 
 		.brand__item:nth-child(3n+2) .brand__logo {
@@ -25,14 +36,14 @@
 		.brand__logo {
 			display: inline-block;
 			width: modular-scale(10);
-			fill: $dark-gray;
-			transition: fill $anim-speed-ease;
-
-			&:hover {
-				fill: initial;
-			}
+			filter: grayscale(100%);
 		}
 
-		.brand__logo--hanes:hover {
-			fill: #D81E05;
-		}
+		// img.brand__logo {
+		// 	filter: grayscale(100%);
+		// 	transition: filter $anim-speed-ease;
+
+		// 	&:hover {
+		// 		filter: none;
+		// 	}
+		// }
