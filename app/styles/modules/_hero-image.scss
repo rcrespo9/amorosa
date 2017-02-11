@@ -4,9 +4,9 @@
 
 .page-hero {
 	position: relative;
-	// display: flex;
-	// justify-content: left;
-	// align-items: center;
+	display: flex;
+	justify-content: left;
+	align-items: center;
 	height: 100vh;
 	padding-top: $nav-height;
 	background-image: url(../../images/woman-flowers.jpg);
@@ -20,10 +20,10 @@
 
 	.hero__inner {
 		position: relative;
-		top: 50%;
+		// top: 50%;
 		z-index: 2;
-		transform: translateY(-50%);
-		@include c-container;
+		// transform: translateY(-50%);
+		@include l-container;
 	}
 
 		.hero__tagline {

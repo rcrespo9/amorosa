@@ -2,20 +2,20 @@
   #INSTAFEED
 \*------------------------------------*/
 
-.instafeed {
-	margin-bottom: modular-scale(1);
-	@include flexbox-row;
-}
+.instafeed__item {
+	display: block;
+	float: left;
+	width: 30%;
+	margin-bottom: modular-scale(4);
 
-	.instafeed__item {
-		padding: modular-scale(1);
-		@include flexbox-column;
-		@include flexbox-column-width(100% / 3);
-
-		&:focus {
-			outline: none;
-		}
+	&:not(:last-child) {
+		margin-right: calc(10% / 2);
 	}
+
+	&:focus {
+		outline: none;
+	}
+}
 
 .instagram-cta {
 	display: block;
