@@ -2,34 +2,37 @@
   #BRANDS GRID
 \*------------------------------------*/
 
-.brand__item {
-	float: left;
-	width: 30%;
-
-	&:nth-child(2n) {
-		text-align: center;
-	}
-
-	&:nth-child(3n) {
-		text-align: right;
-	}
-
-	&:not(:nth-child(3n)) {
-		margin-right: calc(10% / 3);
-	}
+.brands {
+	@include flexbox-row;
 }
 
-	.brand__logo {
-		display: inline-block;
-		width: modular-scale(10);
-		fill: $dark-gray;
-		transition: fill $anim-speed-ease;
+	.brand__item {
+		margin-top: modular-scale(-1);
+		margin-bottom: modular-scale(-1);
+		@include flexbox-column;
+		@include flexbox-column-width(100% / 3);
+	}
 
-		&:hover {
-			fill: initial;
+		.brand__item:nth-child(3n+2) .brand__logo {
+			margin-right: auto;
+			margin-left: auto;
 		}
-	}
 
-	.brand__logo--hanes:hover {
-		fill: #D81E05;
-	}
+		.brand__item:nth-child(3n) .brand__logo {
+			margin-left: auto;
+		}
+
+		.brand__logo {
+			display: inline-block;
+			width: modular-scale(10);
+			fill: $dark-gray;
+			transition: fill $anim-speed-ease;
+
+			&:hover {
+				fill: initial;
+			}
+		}
+
+		.brand__logo--hanes:hover {
+			fill: #D81E05;
+		}
