@@ -12,7 +12,6 @@
 		margin-top: modular-scale(2);
 		margin-bottom: modular-scale(2);
 		opacity: .6;
-		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);
 
@@ -21,21 +20,14 @@
 		}
 	}
 
-		.brand__item:nth-child(3n+2) .brand__logo {
-			margin-right: auto;
-			margin-left: auto;
-		}
-
-		.brand__item:nth-child(3n) .brand__logo {
-			margin-left: auto;
-		}
-
 		.brand__logo {
 			display: inline-block;
-			max-width: modular-scale(10);
+			max-width: modular-scale(10, $second-scale);
+			margin: 0 auto;
 			filter: grayscale(100%);
 		}
 
-		.brand__logo--xoxo {
-			width: modular-scale(9);
+		.brand__logo--xoxo,
+		.brand__logo--hanes {
+			width: modular-scale(9, $second-scale);
 		}
