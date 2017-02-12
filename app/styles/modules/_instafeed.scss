@@ -2,30 +2,47 @@
   #INSTAFEED
 \*------------------------------------*/
 
-.instafeed__item {
-	display: block;
-	float: left;
-	width: 30%;
-	margin-bottom: modular-scale(4);
-
-	&:not(:last-child) {
-		margin-right: calc(10% / 2);
-	}
-
-	&:focus {
-		outline: none;
-	}
+.instafeed {
+	position: relative;
 }
 
-.instagram-cta {
-	display: block;
-	font-size: modular-scale(0);
-	text-align: center;
-	@include uppercase-text;
-}
+	.instafeed__item {
+		position: relative;
+		display: block;
+		float: left;
+		width: calc(100% / 10);
+		@include background-tint(rgba(21,14,27,.5));
 
-	.instagram-cta span {
+		&:hover:before {
+			background-color: transparent;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.instafeed__cta {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 50%;
 		display: inline-block;
-		@include link($color: $gray, $hover-color: $dark-gray, $border-color: $gray);
-		@include link-padding;
+		font-size: modular-scale(1);
+		transform: translate(-50%, -50%);
+		@include button;
 	}
+
+		.instafeed__ig-icon {
+			display: inline-block;
+			width: modular-scale(2);
+			height: modular-scale(2);
+			margin-right: modular-scale(-2);
+			stroke-width: 0;
+			stroke: currentColor;
+			fill: currentColor;
+		}
+
+		.instafeed__cta span {
+			vertical-align: text-bottom;
+		}
