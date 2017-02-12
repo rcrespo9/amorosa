@@ -2,10 +2,14 @@
   #PAGE SECTION
 \*------------------------------------*/
 
-.page-section--text {
-	@include text-content;
+.page-content {
+	margin: 0 modular-scale(2);
 }
 
-	.section__inner {
-		@include c-container;
+	.page-section--text {
+		@include text-content;
 	}
+
+		.section__inner {
+			@include c-container;
+		}
