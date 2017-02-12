@@ -3,14 +3,13 @@
 \*------------------------------------*/
 
 .brands {
-	padding: modular-scale(4) 0 modular-scale(2);
+	padding: modular-scale(5) 0 modular-scale(1);
 	@include flexbox-row;
 }
 
 	.brand__item {
 		justify-content: center;
-		margin-top: modular-scale(2);
-		margin-bottom: modular-scale(2);
+		padding: modular-scale(1);
 		opacity: .6;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);
@@ -29,5 +28,5 @@
 
 		.brand__logo--xoxo,
 		.brand__logo--hanes {
-			width: modular-scale(9, $second-scale);
+			max-width: modular-scale(9, $second-scale);
 		}
