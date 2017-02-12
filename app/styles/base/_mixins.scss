@@ -116,7 +116,7 @@
 	color: $white;
 	background-color: $pink;
 	transition: background-color $anim-speed-ease;
-	@include font-weight(semi-bold);
+	@include font-weight(medium);
 
 	&:hover {
 		background-color: darken($pink, 3%);
