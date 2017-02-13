@@ -22,11 +22,12 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
+		@include flexbox-row;
 		@include l-container;
 	}
 
 		.hero__content {
-			padding: 0 modular-scale(1);
+			@include flexbox-column;
 		}
 
 			.hero__tagline {
@@ -52,6 +53,8 @@
 			}
 
 			.hero__cta {
+				display: inline-block;
+				flex: initial;
 				font-size: modular-scale(1);
 				@include button;
 			}
