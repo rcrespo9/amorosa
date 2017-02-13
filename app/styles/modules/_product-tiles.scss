@@ -9,7 +9,7 @@
 	.tile {
 		position: relative;
 		height: modular-scale(10);
-		@include flexbox-column($horiz-padding: null);
+		@include flexbox-column($padding: null);
 		@include flexbox-column-width(25%);
 	}
 

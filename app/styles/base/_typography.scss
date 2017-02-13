@@ -12,8 +12,8 @@ p {
 .section__title {
 	position: relative;
 	display: inline-block;
+	margin-bottom: 0;
 	padding-top: modular-scale(-2);
-	margin-bottom: modular-scale(2);
 	color: inherit;
 	font-size: modular-scale(0);
 	@include uppercase-text;

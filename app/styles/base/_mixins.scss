@@ -15,8 +15,8 @@
 }
 
 @mixin text-content {
-	padding-top: modular-scale(6);
-	padding-bottom: modular-scale(6);
+	padding-top: modular-scale(5);
+	padding-bottom: modular-scale(5);
 }
 
 @mixin flexbox-row {
@@ -26,13 +26,12 @@
 	flex-wrap: wrap;
 }
 
-@mixin flexbox-column($horiz-padding: modular-scale(1)) {
+@mixin flexbox-column($padding: modular-scale(1)) {
 	display: flex;
 	flex: 0 0 auto;
 	flex-direction: column;
 	flex-grow: 1;
-	padding-right: $horiz-padding;
-	padding-left: $horiz-padding;
+	padding: $padding;
 }
 
 @mixin flexbox-column-width($width) {
@@ -84,7 +83,7 @@
 		}
 		@else {
 			width: modular-scale(4);
-			height: modular-scale(-6)
+			height: modular-scale(-7)
 		}
 		margin-top: modular-scale(0);
 		background-color: $underline-color;

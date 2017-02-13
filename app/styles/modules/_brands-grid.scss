@@ -11,8 +11,6 @@
 
 	.brand__item {
 		justify-content: center;
-		padding-top: modular-scale(1);
-		padding-bottom: modular-scale(1);
 		opacity: .6;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);
