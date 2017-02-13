@@ -80,12 +80,13 @@
 		@if $large-line {
 			width: modular-scale(7);
 			height: modular-scale(-4);
+			margin-top: modular-scale(0);
 		}
 		@else {
-			width: modular-scale(4);
-			height: modular-scale(-7)
+			width: modular-scale(2);
+			height: modular-scale(-6);
+			margin-top: modular-scale(-2);
 		}
-		margin-top: modular-scale(0);
 		background-color: $underline-color;
 	}
 }
