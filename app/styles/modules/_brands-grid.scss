@@ -3,13 +3,16 @@
 \*------------------------------------*/
 
 .brands {
-	padding: modular-scale(5) 0 modular-scale(1);
+	padding-top: modular-scale(4);
+	padding-bottom: modular-scale(0);
+	@include l-container;
 	@include flexbox-row;
 }
 
 	.brand__item {
 		justify-content: center;
-		padding: modular-scale(1);
+		padding-top: modular-scale(1);
+		padding-bottom: modular-scale(1);
 		opacity: .6;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 3);

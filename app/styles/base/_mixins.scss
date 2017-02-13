@@ -26,11 +26,13 @@
 	flex-wrap: wrap;
 }
 
-@mixin flexbox-column() {
+@mixin flexbox-column($horiz-padding: modular-scale(1)) {
 	display: flex;
 	flex: 0 0 auto;
 	flex-direction: column;
 	flex-grow: 1;
+	padding-right: $horiz-padding;
+	padding-left: $horiz-padding;
 }
 
 @mixin flexbox-column-width($width) {
@@ -72,16 +74,20 @@
 	font-weight: $output;
 }
 
-@mixin header-underline() {
-	margin-bottom: modular-scale(2);
-
+@mixin header-underline($large-line: false, $underline-color: $medium-gray) {
 	&:after {
 		content: "";
 		display: block;
-		width: modular-scale(7);
-		height: modular-scale(-4);
-		margin-top: modular-scale(-6, 1em);
-		background-color: $pink;
+		@if $large-line {
+			width: modular-scale(7);
+			height: modular-scale(-4);
+		}
+		@else {
+			width: modular-scale(4);
+			height: modular-scale(-6)
+		}
+		margin-top: modular-scale(0);
+		background-color: $underline-color;
 	}
 }
 

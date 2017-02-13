@@ -6,10 +6,21 @@
 	padding: 0 modular-scale(2);
 }
 
-	.page-section--text {
+	.section__inner {
+		@include flexbox-row;
+		@include l-container;
 		@include text-content;
 	}
 
-		.section__inner {
-			@include c-container;
+		.section__header,
+		.section__content {
+			@include flexbox-column;
+		}
+
+		.section__header {
+			@include flexbox-column-width(25%);
+		}
+
+		.section__content {
+			@include flexbox-column-width(75%);
 		}

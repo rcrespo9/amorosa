@@ -1,11 +1,19 @@
 /*------------------------------------*\
-  #BACKGROUNDS
+  #COLOR THEMES
 \*------------------------------------*/
+
+.page-section:not(.pink-bg) .section__title {
+	@include header-underline;
+}
 
 .pink-bg {
 	background-color: $pink;
 	color: $white;
 }
+
+	.pink-bg .section__title {
+		@include header-underline($underline-color: $white);
+	}
 
 .gray-bg {
 	background-color: $bg-gray;
