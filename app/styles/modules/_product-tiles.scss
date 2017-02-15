@@ -77,7 +77,7 @@
 
 				p.card__desc {
 					margin-bottom: 0;
-					font-size: modular-scale(0);
+					font-size: modular-scale(0, $second-scale);
 				}
 
 				.card__flipback {
