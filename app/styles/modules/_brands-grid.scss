@@ -10,8 +10,13 @@
 	.brand__item {
 		justify-content: center;
 		opacity: .6;
+		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
-		@include flexbox-column-width(100% / 3);
+		@include flexbox-column-width(100% / 6);
+
+		&:hover {
+			opacity: 1;
+		}
 
 		&:focus {
 			outline: none;
@@ -20,6 +25,5 @@
 
 		.brand__logo {
 			display: inline-block;
-			margin: 0 auto;
 			filter: grayscale(100%);
 		}
