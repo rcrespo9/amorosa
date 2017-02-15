@@ -22,12 +22,12 @@
 
 		.brand__logo {
 			display: inline-block;
-			max-width: modular-scale(10, $second-scale);
+			// max-width: modular-scale(10, $second-scale);
 			margin: 0 auto;
 			filter: grayscale(100%);
 		}
 
 		.brand__logo--xoxo,
 		.brand__logo--hanes {
-			max-width: modular-scale(9, $second-scale);
+			// max-width: modular-scale(9, $second-scale);
 		}
