@@ -8,14 +8,13 @@
 
 	.tile {
 		position: relative;
-		height: modular-scale(10);
+		height: modular-scale(11);
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(25%);
 	}
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
-		background-color: $pink;
 		perspective: modular-scale(20);
 	}
 
@@ -43,8 +42,44 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: $white;
+				color: $white;
 				backface-visibility: hidden;
+			}
+
+			.card--pink {
+				background-color: $pink;
+			}
+
+			.card--pink .card__flip:hover {
+				background-color: $white;
+				color: $pink;
+			}
+
+			.card--orange {
+				background-color: #FFB4A6;
+			}
+
+			.card--orange .card__flip:hover {
+				background-color: $white;
+				color: #FFB4A6;
+			}
+
+			.card--seagreen {
+				background-color: #99EAB1;
+			}
+
+			.card--seagreen .card__flip:hover {
+				background-color: $white;
+				color: #99EAB1;
+			}
+
+			.card--green {
+				background-color: #D5F8A2;
+			}
+
+			.card--seagreen .card__flip:hover {
+				background-color: $white;
+				color: #D5F8A2;
 			}
 
 			.card--front {
@@ -55,18 +90,20 @@
 			}
 
 				.card__header {
-					margin-bottom: modular-scale(-2);
-					color: $medium-gray;
-					font-family: $font-family-serif;
+					margin-bottom: modular-scale(0);
+					font-family: font-family-serif;
 					font-size: modular-scale(3);
-					@include font-weight(normal);
+					@include font-weight(medium);
 				}
 
 				.card__flip {
-					font-size: modular-scale(1);
+					padding: modular-scale(-7) modular-scale(1) modular-scale(-3);
+					border: 2px solid;
+					border-radius: 35px;
+					color: inherit;
+					font-size: modular-scale(0);
 					text-transform: lowercase;
-					@include link-padding;
-					@include link($dark-pink);
+					transition: all $anim-speed-ease;
 				}
 
 			.card--back {
@@ -77,7 +114,8 @@
 
 				p.card__desc {
 					margin-bottom: 0;
-					font-size: modular-scale(0, $second-scale);
+					font-size: modular-scale(0);
+					@include font-weight(light);
 				}
 
 				.card__flipback {
