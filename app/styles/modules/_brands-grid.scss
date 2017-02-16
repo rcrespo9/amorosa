@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 .brands {
+	padding-top: modular-scale(-5);
+	padding-bottom: modular-scale(-5);
 	@include l-container;
 	@include flexbox-row;
 }
