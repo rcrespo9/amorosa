@@ -77,7 +77,7 @@
 				background-color: #D5F8A2;
 			}
 
-			.card--seagreen .card__flip:hover {
+			.card--green .card__flip:hover {
 				background-color: $white;
 				color: #D5F8A2;
 			}
@@ -98,7 +98,7 @@
 
 				.card__flip {
 					padding: modular-scale(-7) modular-scale(1) modular-scale(-3);
-					border: 2px solid;
+					border: 2px solid $white;
 					border-radius: 35px;
 					color: inherit;
 					font-size: modular-scale(0);
