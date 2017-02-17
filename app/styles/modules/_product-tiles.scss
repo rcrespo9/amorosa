@@ -13,16 +13,32 @@
 		background-color: #D7538F;
 	}
 
+	&:first-child .tile__product .product__title {
+		color: darken(#D7538F, 20%);
+	}
+
 	&:nth-child(2) .tile__product {
 		background-color: #FFB4A6;
+	}
+
+	&:nth-child(2) .tile__product .product__title {
+		color: darken(#FFB4A6, 10%);
 	}
 
 	&:nth-child(3) .tile__product {
 		background-color: #D197E3;
 	}
 
+	&:nth-child(3) .tile__product .product__title {
+		color: darken(#D197E3, 10%);
+	}
+
 	&:last-child .tile__product {
 		background-color: #B0EB5A;
+	}
+
+	&:last-child .tile__product .product__title {
+		color: darken(#B0EB5A, 20%);
 	}
 }
 
@@ -38,6 +54,13 @@
 		padding: modular-scale(4);
 		color: $white;
 	}
+
+		.product__title {
+			margin-bottom: modular-scale(-3);
+			font-size: modular-scale(0);
+			@include uppercase-text;
+			@include font-weight(semi-bold);
+		}
 
 		.product__header {
 			margin-bottom: modular-scale(-1);
