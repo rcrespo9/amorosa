@@ -4,13 +4,17 @@
 
 .product__tiles {
 	@include flexbox-row;
+
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+	}
 }
 
 	.tile {
 		position: relative;
 		height: modular-scale(11);
 		@include flexbox-column($padding: null);
-		@include flexbox-column-width(25%);
+		@include flexbox-column-width(50%);
 	}
 
 	// PRODUCT DESCRIPTION
@@ -47,39 +51,39 @@
 			}
 
 			.card--pink {
-				background-color: $pink;
+				background-color: #F29CC3;
 			}
 
 			.card--pink .card__flip:hover {
 				background-color: $white;
-				color: $pink;
+				color: #F29CC3;
 			}
 
 			.card--orange {
-				background-color: #FFB4A6;
+				background-color: #F2A19C;
 			}
 
 			.card--orange .card__flip:hover {
 				background-color: $white;
-				color: #FFB4A6;
+				color: #F2A19C;
 			}
 
 			.card--seagreen {
-				background-color: #99EAB1;
+				background-color: #A19CF2;
 			}
 
 			.card--seagreen .card__flip:hover {
 				background-color: $white;
-				color: #99EAB1;
+				color: #A19CF2;
 			}
 
 			.card--green {
-				background-color: #D5F8A2;
+				background-color: #9CC3F2;
 			}
 
 			.card--green .card__flip:hover {
 				background-color: $white;
-				color: #D5F8A2;
+				color: #9CC3F2;
 			}
 
 			.card--front {
@@ -92,7 +96,7 @@
 				.card__header {
 					margin-bottom: modular-scale(0);
 					font-family: font-family-serif;
-					font-size: modular-scale(3);
+					font-size: modular-scale(4);
 					@include font-weight(medium);
 				}
 
@@ -101,20 +105,20 @@
 					border: 2px solid $white;
 					border-radius: 35px;
 					color: inherit;
-					font-size: modular-scale(0);
+					font-size: modular-scale(1);
 					text-transform: lowercase;
 					transition: all $anim-speed-ease;
 				}
 
 			.card--back {
 				position: relative;
-				padding: modular-scale(1);
+				padding: modular-scale(3);
 				transform: rotateY(180deg);
 			}
 
 				p.card__desc {
 					margin-bottom: 0;
-					font-size: modular-scale(0);
+					font-size: modular-scale(1);
 					@include font-weight(light);
 				}
 
