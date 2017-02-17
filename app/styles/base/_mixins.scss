@@ -162,6 +162,6 @@
 		@if $direction == left { left: -(modular-scale(2)); }
 		@if $direction == right { right: -(modular-scale(2)); }
 		transform: translateY(-50%);
-		@include triangle(modular-scale(4) modular-scale(2), $color, $direction);
+		@include triangle(modular-scale(5), $color, $direction);
 	}
 }
