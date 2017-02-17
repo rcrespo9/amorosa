@@ -8,141 +8,49 @@
 	&:nth-child(even) {
 		flex-direction: row-reverse;
 	}
+
+	&:first-child .tile__product {
+		background-color: #D7538F;
+	}
+
+	&:nth-child(2) .tile__product {
+		background-color: #FFB4A6;
+	}
+
+	&:nth-child(3) .tile__product {
+		background-color: #D197E3;
+	}
+
+	&:last-child .tile__product {
+		background-color: #B0EB5A;
+	}
 }
 
 	.tile {
 		position: relative;
-		height: modular-scale(11);
+		height: modular-scale(12);
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
-		perspective: modular-scale(20);
+		padding: modular-scale(4);
+		color: $white;
 	}
 
-		.product__card {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			transform-style: preserve-3d;
-			transition: transform .5s;
-
-			&.flipped {
-				transform: rotateY(180deg);
-			}
-
-			&.flipped-reverse {
-				transform: rotateY(-180deg);
-			}
+		.product__header {
+			margin-bottom: modular-scale(-1);
+			font-family: font-family-serif;
+			font-size: modular-scale(4);
+			@include font-weight(medium);
 		}
 
-			.card {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				color: $white;
-				backface-visibility: hidden;
-			}
-
-			.card--pink {
-				background-color: #F29CC3;
-			}
-
-			.card--pink .card__flip:hover {
-				background-color: $white;
-				color: #F29CC3;
-			}
-
-			.card--orange {
-				background-color: #F2A19C;
-			}
-
-			.card--orange .card__flip:hover {
-				background-color: $white;
-				color: #F2A19C;
-			}
-
-			.card--seagreen {
-				background-color: #A19CF2;
-			}
-
-			.card--seagreen .card__flip:hover {
-				background-color: $white;
-				color: #A19CF2;
-			}
-
-			.card--green {
-				background-color: #9CC3F2;
-			}
-
-			.card--green .card__flip:hover {
-				background-color: $white;
-				color: #9CC3F2;
-			}
-
-			.card--front {
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				@include flexbox-column;
-			}
-
-				.card__header {
-					margin-bottom: modular-scale(0);
-					font-family: font-family-serif;
-					font-size: modular-scale(4);
-					@include font-weight(medium);
-				}
-
-				.card__flip {
-					padding: modular-scale(-7) modular-scale(1) modular-scale(-3);
-					border: 2px solid $white;
-					border-radius: 35px;
-					color: inherit;
-					font-size: modular-scale(1);
-					text-transform: lowercase;
-					transition: all $anim-speed-ease;
-				}
-
-			.card--back {
-				position: relative;
-				padding: modular-scale(3);
-				transform: rotateY(180deg);
-			}
-
-				p.card__desc {
-					margin-bottom: 0;
-					font-size: modular-scale(1);
-					@include font-weight(light);
-				}
-
-				.card__flipback {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					display: block;
-					width: modular-scale(2);
-					height: modular-scale(2);
-					background-color: $pink;
-					color: $white;
-					text-align: center;
-				}
-
-					.flipback__icon {
-						display: inline-block;
-						vertical-align: text-bottom;
-						width: modular-scale(0);
-						height: modular-scale(0);
-						stroke-width: 0;
-						stroke: currentColor;
-						fill: currentColor;
-					}
+		p.product__desc {
+			margin-bottom: 0;
+			font-size: modular-scale(1);
+			@include font-weight(light);
+		}
 
 	// PRODUCT SLIDER
 	.tile__slider {

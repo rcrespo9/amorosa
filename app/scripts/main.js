@@ -52,35 +52,6 @@
 
 	};
 
-	class ProductCards {
-		constructor() {
-			this.tilesContainer = $('#js-product-tiles');
-			this.productCardSelector = '.product__card';
-			this.flippedClass = 'flipped';
-		}
-
-		flipCard(e) {
-			const $flipCardLink = $(e.target);
-
-			e.preventDefault();
-
-			$flipCardLink.closest(this.productCardSelector).addClass(this.flippedClass);
-		}
-
-		flipCardBack(e) {
-			const $flipCardBackLink = $(e.target);
-
-			e.preventDefault();
-
-			$flipCardBackLink.closest(this.productCardSelector).removeClass(this.flippedClass);
-		}
-
-		init() {
-			this.tilesContainer.on('click', '.card__flip', this.flipCard.bind(this));
-			this.tilesContainer.on('click', '.card__flipback', this.flipCardBack.bind(this));
-		}
-	}
-
 	class ProductSlider {
 		constructor(sliderId) {
 			this.productSlider = $(sliderId);
@@ -153,9 +124,6 @@
 
 	class Main {
 		constructor() {
-			const productCards = new ProductCards();
-			productCards.init();
-
 			const lenceriaSlider = new ProductSlider('#js-lenceria-slider');
 			const sostenesSlider = new ProductSlider('#js-sostenes-slider');
 			const pantisSlider = new ProductSlider('#js-pantis-slider');
