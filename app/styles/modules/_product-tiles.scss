@@ -3,42 +3,63 @@
 \*------------------------------------*/
 
 .product__tiles {
+	position: relative;
 	@include flexbox-row;
 
 	&:nth-child(even) {
 		flex-direction: row-reverse;
 	}
 
+	&:first-child .tile__product,
+	&:first-child .slider__controls {
+		background-color: #EA66A2;
+	}
+
 	&:first-child .tile__product {
-		background-color: #D7538F;
+		@include tile-trangle(right, #EA66A2);
 	}
 
 	&:first-child .tile__product .product__title {
-		color: darken(#D7538F, 20%);
+		color: darken(#EA66A2, 10%);
+	}
+
+	&:nth-child(2) .tile__product,
+	&:nth-child(2) .slider__controls {
+		background-color: #F19DED;
 	}
 
 	&:nth-child(2) .tile__product {
-		background-color: #FFB4A6;
+		@include tile-trangle(left, #F19DED);
 	}
 
 	&:nth-child(2) .tile__product .product__title {
-		color: darken(#FFB4A6, 10%);
+		color: darken(#F19DED, 10%);
 	}
 
-	&:nth-child(3) .tile__product {
-		background-color: #D197E3;
+	&:nth-child(3) .tile__product,
+	&:nth-child(3) .slider__controls {
+		background-color: #CB9DF1;
 	}
 
 	&:nth-child(3) .tile__product .product__title {
-		color: darken(#D197E3, 10%);
+		color: darken(#CB9DF1, 15%);
 	}
 
-	&:last-child .tile__product {
-		background-color: #B0EB5A;
+	&:nth-child(3) .tile__product {
+		@include tile-trangle(right, #CB9DF1);
+	}
+
+	&:last-child .tile__product,
+	&:last-child .slider__controls {
+		background-color: #A19DF1;
 	}
 
 	&:last-child .tile__product .product__title {
-		color: darken(#B0EB5A, 20%);
+		color: darken(#A19DF1, 15%);
+	}
+
+	&:last-child .tile__product {
+		@include tile-trangle(left, #A19DF1);
 	}
 }
 
@@ -56,14 +77,14 @@
 	}
 
 		.product__title {
-			margin-bottom: modular-scale(-3);
-			font-size: modular-scale(0);
+			margin-bottom: modular-scale(-1);
+			font-size: modular-scale(-1);
 			@include uppercase-text;
-			@include font-weight(semi-bold);
+			@include font-weight(bold);
 		}
 
 		.product__header {
-			margin-bottom: modular-scale(-1);
+			margin-bottom: modular-scale(-6);
 			font-family: font-family-serif;
 			font-size: modular-scale(4);
 			@include font-weight(medium);
@@ -87,7 +108,6 @@
 			z-index: 10;
 			width: modular-scale(6);
 			height: modular-scale(4);
-			background-color: $pink;
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
 			will-change: opacity;

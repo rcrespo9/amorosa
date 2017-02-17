@@ -83,7 +83,7 @@
 			margin-top: modular-scale(0);
 		}
 		@else {
-			width: modular-scale(3);
+			width: modular-scale(2);
 			height: modular-scale(-6);
 			margin-top: modular-scale(-2);
 		}
@@ -146,5 +146,22 @@
 		height: 100%;
 		background-color: $bg-color;
 		transition: background-color $anim-speed-ease;
+	}
+}
+
+/*------------------------------------*\
+  #TILE MIXINS
+\*------------------------------------*/
+
+@mixin tile-trangle($direction, $color) {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		@if $direction == left { left: -(modular-scale(2)); }
+		@if $direction == right { right: -(modular-scale(2)); }
+		transform: translateY(-50%);
+		@include triangle(modular-scale(4) modular-scale(2), $color, $direction);
 	}
 }
