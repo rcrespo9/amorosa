@@ -5,18 +5,18 @@
 $white: #fff;
 $off-white: #f5f5f5;
 
-$gray: #9c9c9c;
+$gray: #9C9D9D;
 $bg-gray: #F5F5F5;
-$medium-gray: #616161;
+$medium-gray: darken($gray, 16%);
 $dark-gray: #424242;
 
 $pink: #f29ec4;
 
 // SHADES OF PINK FOR PRODUCT TILES
-$lenceria-pink: darken($pink, 20%);
-$sostenes-pink: darken($pink, 15%);
-$pantis-pink: darken($pink, 10%);
-$bathing-pink: darken($pink, 5%);
+$lenceria-pink: #880E4F;
+$sostenes-pink: #AD1457;
+$pantis-pink: #C2185B;
+$bathing-pink: #D81B60;
 
 /*------------------------------------*\
   #TYPOGRAPHY

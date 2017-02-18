@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .page-section:not(.pink-bg) .section__title {
-	@include header-underline;
+	@include header-underline($underline-color: $gray);
 }
 
 .pink-bg {

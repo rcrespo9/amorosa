@@ -10,7 +10,15 @@
 		flex-direction: row-reverse;
 	}
 
-	&:nth-child(odd) .slider__img--controls {
+	&:nth-child(even) .tile__product {
+		@include tile-trangle(left, $white);
+	}
+
+	&:nth-child(odd) .tile__product {
+		@include tile-trangle(right, $white);
+	}
+
+	&:nth-child(odd) .slider__controls {
 		left: 0;
 	}
 
@@ -26,61 +34,8 @@
 		@include flexbox-column-width(50%);
 	}
 
-	.product__tiles--lenceria .tile__product,
-	.product__tiles--lenceria .slider__controls {
-		background-color: $lenceria-pink;
-	}
-
-	.product__tiles--lenceria .tile__product {
-		@include tile-trangle(right, $lenceria-pink);
-	}
-
-		.product__tiles--lenceria .product__title {
-			color: darken($lenceria-pink, 20%);
-		}
-
-	.product__tiles--sostenes .tile__product,
-	.product__tiles--sostenes .slider__controls {
-		background-color: $sostenes-pink;
-	}
-
-	.product__tiles--sostenes .tile__product {
-		@include tile-trangle(left, $sostenes-pink);
-	}
-
-		.product__tiles--sostenes .product__title {
-			color: darken($sostenes-pink, 20%);
-		}
-
-	.product__tiles--pantis .tile__product,
-	.product__tiles--pantis .slider__controls {
-		background-color: $pantis-pink;
-	}
-
-	.product__tiles--pantis .tile__product {
-		@include tile-trangle(right, $pantis-pink);
-	}
-
-		.product__tiles--pantis .product__title {
-			color: darken($pantis-pink, 20%);
-		}
-
-	.product__tiles--bathing .tile__product,
-	.product__tiles--bathing .slider__controls {
-		background-color: $bathing-pink;
-	}
-
-	.product__tiles--bathing .tile__product {
-		@include tile-trangle(left, $bathing-pink);
-	}
-
-		.product__tiles--bathing .product__title {
-			color: darken($bathing-pink, 20%);
-		}
-
 	// PRODUCT DESCRIPTION
 	.tile__product {
-		color: $white;
 		@include l-container;
 		@include text-content;
 	}
