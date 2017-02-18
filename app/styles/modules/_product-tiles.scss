@@ -80,8 +80,9 @@
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
-		padding: modular-scale(4);
 		color: $white;
+		@include l-container;
+		@include text-content;
 	}
 
 		.product__title {
