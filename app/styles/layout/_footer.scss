@@ -5,6 +5,7 @@
 .page-footer {
 	padding-top: modular-scale(2);
 	padding-bottom: modular-scale(1);
+	color: $gray;
 	@include l-container;
 }
 

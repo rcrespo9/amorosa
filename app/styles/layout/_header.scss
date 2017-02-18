@@ -54,7 +54,7 @@
 						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
 						@include link-padding(modular-scale(-4));
-						@include link($hover-color: $pink, $border-size: 3px);
+						@include link($color: $gray, $hover-color: $pink, $border-size: 3px);
 					}
 
 					// .nav__link--contacto {
