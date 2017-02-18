@@ -10,56 +10,12 @@
 		flex-direction: row-reverse;
 	}
 
-	&:first-child .tile__product,
-	&:first-child .slider__controls {
-		background-color: #EA66A2;
+	&:nth-child(odd) .slider__img--controls {
+		left: 0;
 	}
 
-	&:first-child .tile__product {
-		@include tile-trangle(right, #EA66A2);
-	}
-
-	&:first-child .tile__product .product__title {
-		color: darken(#EA66A2, 10%);
-	}
-
-	&:nth-child(2) .tile__product,
-	&:nth-child(2) .slider__controls {
-		background-color: #F19DED;
-	}
-
-	&:nth-child(2) .tile__product {
-		@include tile-trangle(left, #F19DED);
-	}
-
-	&:nth-child(2) .tile__product .product__title {
-		color: darken(#F19DED, 10%);
-	}
-
-	&:nth-child(3) .tile__product,
-	&:nth-child(3) .slider__controls {
-		background-color: #CB9DF1;
-	}
-
-	&:nth-child(3) .tile__product .product__title {
-		color: darken(#CB9DF1, 15%);
-	}
-
-	&:nth-child(3) .tile__product {
-		@include tile-trangle(right, #CB9DF1);
-	}
-
-	&:last-child .tile__product,
-	&:last-child .slider__controls {
-		background-color: #A19DF1;
-	}
-
-	&:last-child .tile__product .product__title {
-		color: darken(#A19DF1, 15%);
-	}
-
-	&:last-child .tile__product {
-		@include tile-trangle(left, #A19DF1);
+	&:nth-child(even) .slider__controls {
+		right: 0;
 	}
 }
 
@@ -69,6 +25,58 @@
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
+
+	.product__tiles--lenceria .tile__product,
+	.product__tiles--lenceria .slider__controls {
+		background-color: $lenceria-pink;
+	}
+
+	.product__tiles--lenceria .tile__product {
+		@include tile-trangle(right, $lenceria-pink);
+	}
+
+		.product__tiles--lenceria .product__title {
+			color: darken($lenceria-pink, 20%);
+		}
+
+	.product__tiles--sostenes .tile__product,
+	.product__tiles--sostenes .slider__controls {
+		background-color: $sostenes-pink;
+	}
+
+	.product__tiles--sostenes .tile__product {
+		@include tile-trangle(left, $sostenes-pink);
+	}
+
+		.product__tiles--sostenes .product__title {
+			color: darken($sostenes-pink, 20%);
+		}
+
+	.product__tiles--pantis .tile__product,
+	.product__tiles--pantis .slider__controls {
+		background-color: $pantis-pink;
+	}
+
+	.product__tiles--pantis .tile__product {
+		@include tile-trangle(right, $pantis-pink);
+	}
+
+		.product__tiles--pantis .product__title {
+			color: darken($pantis-pink, 20%);
+		}
+
+	.product__tiles--bathing .tile__product,
+	.product__tiles--bathing .slider__controls {
+		background-color: $bathing-pink;
+	}
+
+	.product__tiles--bathing .tile__product {
+		@include tile-trangle(left, $bathing-pink);
+	}
+
+		.product__tiles--bathing .product__title {
+			color: darken($bathing-pink, 20%);
+		}
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
@@ -96,6 +104,8 @@
 			@include font-weight(light);
 		}
 
+
+
 	// PRODUCT SLIDER
 	.tile__slider {
 		position: relative;
@@ -104,13 +114,11 @@
 		.slider__controls {
 			position: absolute;
 			top: 0;
-			right: 0;
 			z-index: 10;
 			width: modular-scale(6);
 			height: modular-scale(4);
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
-			will-change: opacity;
 		}
 
 		.no-touch .tile__slider:hover .slider__controls {
