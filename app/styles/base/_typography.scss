@@ -12,9 +12,10 @@ p {
 .section__title {
 	position: relative;
 	display: inline-block;
-	margin-bottom: 0;
+	margin-bottom: modular-scale(1);
 	padding-top: modular-scale(-2);
 	color: inherit;
+	font-family: $font-family-sans-serif;
 	font-size: modular-scale(0);
 	@include uppercase-text;
 }

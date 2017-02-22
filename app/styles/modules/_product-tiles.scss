@@ -40,15 +40,8 @@
 		@include text-content;
 	}
 
-		.product__title {
-			margin-bottom: modular-scale(-1);
-			font-size: modular-scale(-1);
-			@include uppercase-text;
-			@include font-weight(bold);
-		}
-
 		.product__header {
-			margin-bottom: modular-scale(-6);
+			margin-bottom: modular-scale(-1);
 			font-family: font-family-serif;
 			font-size: modular-scale(4);
 			@include font-weight(medium);
