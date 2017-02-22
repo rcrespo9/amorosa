@@ -41,3 +41,12 @@
 				.hero__tagline span {
 					display: block;
 				}
+
+			p.hero__blurb {
+				margin: 0 auto;
+				max-width: modular-scale(12);
+				font-size: modular-scale(1);
+				line-height: strip-units(modular-scale(1));
+				// text-shadow: 0 0 5px rgba(0,0,0,.3);
+				@include font-weight(normal);
+			}

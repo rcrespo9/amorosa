@@ -106,7 +106,7 @@
 \*------------------------------------*/
 
 @mixin button() {
-	padding: modular-scale(-2) modular-scale(2) modular-scale(-1);
+	padding: modular-scale(-1) modular-scale(2) modular-scale(-2);
 	border-radius: 4px;
 	color: $white;
 	background-color: $pink;

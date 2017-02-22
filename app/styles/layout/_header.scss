@@ -52,9 +52,8 @@
 
 					.nav__link {
 						font-family: $font-family-sans-serif;
-						font-size: modular-scale(0);
+						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
-						@include uppercase-text;
 						@include link-padding(modular-scale(-4));
 						@include link($color: $gray, $hover-color: $pink, $border-size: 3px);
 					}
