@@ -75,19 +75,8 @@
 
 @mixin header-underline($large-line: false, $underline-color: $medium-gray) {
 	&:after {
-		content: "";
+		content: "\2013";
 		display: block;
-		@if $large-line {
-			width: modular-scale(7);
-			height: modular-scale(-4);
-			margin-top: modular-scale(0);
-		}
-		@else {
-			width: modular-scale(2);
-			height: modular-scale(-6);
-			margin-top: modular-scale(-2);
-		}
-		background-color: $underline-color;
 	}
 }
 
