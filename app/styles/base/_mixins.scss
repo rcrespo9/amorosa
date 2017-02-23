@@ -98,7 +98,7 @@
 @mixin uppercase-text() {
 	text-transform: uppercase;
 	letter-spacing: modular-scale(-7, $second-scale);
-	@include font-weight(medium);
+	@include font-weight(semi-bold);
 }
 
 /*------------------------------------*\

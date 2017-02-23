@@ -35,7 +35,7 @@
 				font-family: $font-family-serif;
 				font-size: modular-scale(6);
 				line-height: strip-units(modular-scale(0));
-				@include font-weight(bold);
+				@include font-weight(medium);
 			}
 
 				.hero__tagline span {
@@ -44,9 +44,9 @@
 
 			p.hero__blurb {
 				margin: 0 auto;
-				max-width: modular-scale(12);
+				max-width: modular-scale(13);
 				font-size: modular-scale(1);
 				line-height: strip-units(modular-scale(1));
-				// text-shadow: 0 0 5px rgba(0,0,0,.3);
-				@include font-weight(normal);
+				text-shadow: 0 0 5px rgba(0,0,0,.3);
+				@include font-weight(light);
 			}
