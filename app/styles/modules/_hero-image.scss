@@ -31,7 +31,7 @@
 		}
 
 			.hero__tagline {
-				margin-bottom: 0;
+				margin-bottom: modular-scale(2);
 				font-family: $font-family-serif;
 				font-size: modular-scale(6);
 				line-height: strip-units(modular-scale(0));
