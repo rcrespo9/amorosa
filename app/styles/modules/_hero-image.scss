@@ -9,7 +9,7 @@
 	align-items: center;
 	height: 97vh;
 	padding-top: $nav-height;
-	background-image: url(../../images/woman-flowers.jpg);
+	background-image: url(../../images/pexels-photo-314548.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -31,11 +31,11 @@
 		}
 
 			.hero__tagline {
-				margin-bottom: modular-scale(1);
+				margin-bottom: 0;
 				font-family: $font-family-serif;
 				font-size: modular-scale(6);
 				line-height: strip-units(modular-scale(0));
-				@include font-weight(medium);
+				@include font-weight(bold);
 			}
 
 				.hero__tagline span {
