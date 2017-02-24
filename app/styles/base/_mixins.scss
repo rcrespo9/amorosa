@@ -95,10 +95,10 @@
 	padding-bottom: $padding-bottom;
 }
 
-@mixin uppercase-text() {
+@mixin uppercase-text($font-weight: semi-bold) {
 	text-transform: uppercase;
 	letter-spacing: modular-scale(-7, $second-scale);
-	@include font-weight(semi-bold);
+	@include font-weight($font-weight);
 }
 
 /*------------------------------------*\

@@ -11,13 +11,14 @@
 }
 
 	.footer__inner {
-		display: table;
-		width: 100%;
+		width: inherit;
+		height: 100%;
+		align-items: center;
+		@include flexbox-row;
 	}
 
 	.footer__col {
-		display: table-cell;
-		vertical-align: middle;
+		@include flexbox-column-width(50%);
 	}
 
 		.footer__text {

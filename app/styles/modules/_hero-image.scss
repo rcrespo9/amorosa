@@ -5,7 +5,6 @@
 .page-hero {
 	position: relative;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	height: 97vh;
 	padding-top: $nav-height;
@@ -22,31 +21,26 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
-		@include flexbox-row;
 		@include l-container;
 	}
 
-		.hero__content {
-			@include flexbox-column;
+		.hero__tagline {
+			margin-bottom: modular-scale(2);
+			font-family: $font-family-serif;
+			font-size: modular-scale(6);
+			line-height: strip-units(modular-scale(0));
+			@include font-weight(medium);
 		}
 
-			.hero__tagline {
-				margin-bottom: modular-scale(2);
-				font-family: $font-family-serif;
-				font-size: modular-scale(6);
-				line-height: strip-units(modular-scale(0));
-				@include font-weight(medium);
+			.hero__tagline span {
+				display: block;
 			}
 
-				.hero__tagline span {
-					display: block;
-				}
-
-			p.hero__blurb {
-				margin: 0 auto;
-				max-width: modular-scale(13);
-				font-size: modular-scale(1);
-				line-height: strip-units(modular-scale(1));
-				text-shadow: 0 0 5px rgba(0,0,0,.3);
-				@include font-weight(light);
-			}
+		p.hero__blurb {
+			margin: 0 auto;
+			max-width: modular-scale(13);
+			font-size: modular-scale(1);
+			line-height: strip-units(modular-scale(1));
+			text-shadow: 0 0 5px rgba(0,0,0,.3);
+			@include font-weight(light);
+		}
