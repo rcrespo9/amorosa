@@ -55,18 +55,45 @@
 					@include uppercase-text(medium);
 				}
 
+				.burger__icon,
+				.burger__icon:before,
+				.burger__icon:after {
+					width: 38px;
+					height: 3px;
+					background-color: $gray;
+					transition: all .25s ease-out;
+				}
+
 				.burger__icon {
-					width: modular-scale(2);
+					position: relative;
 					margin-left: modular-scale(-2);
 				}
 
-					.burger__line {
+					.burger__icon:before,
+					.burger__icon:after {
+						content: "";
+						position: absolute;
+						left: 0;
 						display: block;
-						width: 100%;
-						height: 3px;
-						background-color: $gray;
+						transform-origin: center;
+					}
 
-						&:not(:first-child) {
-							margin-top: modular-scale(-4);
-						}
+					.burger__icon:before {
+						top: -9px;
+					}
+
+					.burger__icon:after {
+						top: 9px;
+					}
+
+				.open-nav .burger__icon {
+					background-color: transparent;
+				}
+
+					.open-nav .burger__icon:before {
+						transform: translateY(9px) rotate(45deg);
+					}
+
+					.open-nav .burger__icon:after {
+						transform: translateY(-9px) rotate(-45deg);
 					}
