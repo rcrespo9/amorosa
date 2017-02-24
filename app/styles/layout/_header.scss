@@ -44,6 +44,29 @@
 				color: $gray;
 			}
 
-				.burger__text {
-					@include uppercase-text;
+				.burger__text,
+				.burger__icon {
+					display: inline-block;
+					vertical-align: middle;
 				}
+
+				.burger__text {
+					font-size: modular-scale(0);
+					@include uppercase-text(medium);
+				}
+
+				.burger__icon {
+					width: modular-scale(2);
+					margin-left: modular-scale(-2);
+				}
+
+					.burger__line {
+						display: block;
+						width: 100%;
+						height: 3px;
+						background-color: $gray;
+
+						&:not(:first-child) {
+							margin-top: modular-scale(-4);
+						}
+					}
