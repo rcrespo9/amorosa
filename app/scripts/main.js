@@ -13,8 +13,8 @@
 	 * @param {Int} delay The delay in milliseconds
 	 * requestTimeout(fn,delay);
 	 */
-	var requestTimeout = function (fn, delay) {
-		var requestAnimFrame = (function () {
+	const requestTimeout = function (fn, delay) {
+		const requestAnimFrame = (function () {
 			return window.requestAnimationFrame || function (callback, element) {
 				window.setTimeout(callback, 1000 / 60);
 			};
@@ -22,7 +22,7 @@
 		start = new Date().getTime(),
 		handle = {};
 		function loop() {
-			var current = new Date().getTime(),
+			const current = new Date().getTime(),
 			delta = current - start;
 			if (delta >= delay) {
 				fn.call();
@@ -43,7 +43,7 @@
 	 * @param {Int|Object} handle The callback function
 	 * clearRequestTimeout(handle);
 	 */
-	var clearRequestTimeout = function (handle) {
+	const clearRequestTimeout = function (handle) {
 		if (window.cancelAnimationFrame) {
 			window.cancelAnimationFrame(handle.value);
 		} else {
@@ -122,6 +122,21 @@
 		}
 	}
 
+	class Navigation {
+		constructor() {
+			this.body = $('body');
+			this.burgerBtn = $('#js-burger-btn');
+		}
+
+		toggleMenu() {
+			this.body.toggleClass('open-nav');
+		}
+
+		init() {
+			this.burgerBtn.on('click', this.toggleMenu.bind(this));
+		}
+	}
+
 	class Main {
 		constructor() {
 			const lenceriaSlider = new ProductSlider('#js-lenceria-slider');
@@ -142,6 +157,9 @@
 			    template: '<a class="instafeed__item" href="{{link}}" rel="noopener noreferrer" target="_blank"><img src="{{image}}" /></a>'
 			});
 			userFeed.run();
+
+			const navigation = new Navigation();
+			navigation.init();
 		}
 	}
 
