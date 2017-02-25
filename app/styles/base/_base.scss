@@ -10,11 +10,11 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: strip-units(modular-scale(1));
 
 	@media(min-width: $large-desktop) {
-		font-size: 20px;
+		font-size: 24px;
 	}
 }
 
