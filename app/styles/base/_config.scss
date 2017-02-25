@@ -10,20 +10,16 @@ $medium-gray: darken($gray, 16%);
 $dark-gray: #424242;
 
 $pink: #f29ec4;
-
-// SHADES OF PINK FOR PRODUCT TILES
-$lenceria-pink: #880E4F;
-$sostenes-pink: #AD1457;
-$pantis-pink: #C2185B;
-$bathing-pink: #D81B60;
+$bg-pink: #D7538F;
 
 /*------------------------------------*\
   #TYPOGRAPHY
 \*------------------------------------*/
 
 $font-family-sans-serif: 'sofia-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif: 'acta-display', Georgia, Times, serif;
+$font-family-serif: 'kepler-std', Georgia, Times, serif;
 
+$modular-scale-ratio: $major-third;
 $modular-scale-base: rem($em-base);
 $second-scale: 0.875rem;
 $viewport-scale: 1.166vw;
@@ -32,7 +28,7 @@ $viewport-scale: 1.166vw;
   #HEADER VARIABLES
 \*------------------------------------*/
 
-$nav-height: modular-scale(6);
+$nav-height: modular-scale(8);
 
 $burger-icon-height: 2px;
 $burger-icon-spacing: 9px;

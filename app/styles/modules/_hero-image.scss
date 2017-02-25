@@ -31,7 +31,7 @@
 			.hero__tagline {
 				margin-bottom: modular-scale(2);
 				font-family: $font-family-serif;
-				font-size: modular-scale(6);
+				font-size: modular-scale(7);
 				line-height: strip-units(modular-scale(0));
 				@include font-weight(medium);
 			}
@@ -48,8 +48,8 @@
 
 			.hero__line {
 				position: relative;
-				top: rem(14px);
-				width: modular-scale(7);
+				top: modular-scale(-1);
+				width: modular-scale(9);
 				height: 3px;
 				margin-right: modular-scale(2);
 				background-color: $pink;
@@ -57,7 +57,7 @@
 
 			p.hero__blurb {
 				margin-bottom: 0;
-				max-width: modular-scale(13);
+				max-width: modular-scale(16);
 				font-size: modular-scale(1);
 				line-height: strip-units(modular-scale(1));
 				// text-shadow: 0 0 5px rgba(0,0,0,.3);

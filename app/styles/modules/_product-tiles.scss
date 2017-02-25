@@ -43,12 +43,13 @@
 		.product__header {
 			margin-bottom: modular-scale(-1);
 			font-family: $font-family-serif;
-			font-size: modular-scale(4);
+			font-size: modular-scale(5);
 			@include font-weight(regular);
 			// @include header-underline;
 		}
 
 		p.product__desc {
+			max-width: modular-scale(16);
 			margin-bottom: 0;
 			font-size: modular-scale(1);
 			@include font-weight(light);
