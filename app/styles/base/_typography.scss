@@ -25,7 +25,6 @@ p {
 	margin-bottom: modular-scale(0);
 	font-size: modular-scale(1);
 	line-height: strip-units(modular-scale(2));
-	@include font-weight(light);
 }
 
 .page-content p a {
