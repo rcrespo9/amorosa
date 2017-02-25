@@ -13,7 +13,7 @@
 	background-position: center center;
 	background-size: cover;
 	color: $white;
-	text-align: center;
+	text-align: left;
 	@include background-tint(rgba(21,14,27,.5));
 }
 
@@ -21,26 +21,45 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
-		@include l-container;
+		@include c-container;
 	}
 
-		.hero__tagline {
-			margin-bottom: modular-scale(2);
-			font-family: $font-family-serif;
-			font-size: modular-scale(6);
-			line-height: strip-units(modular-scale(0));
-			@include font-weight(medium);
+		.hero__content {
+			display: inline-block;
 		}
 
-			.hero__tagline span {
-				display: block;
+			.hero__tagline {
+				margin-bottom: modular-scale(2);
+				font-family: $font-family-serif;
+				font-size: modular-scale(6);
+				line-height: strip-units(modular-scale(0));
+				@include font-weight(medium);
 			}
 
-		p.hero__blurb {
-			margin: 0 auto;
-			max-width: modular-scale(13);
-			font-size: modular-scale(1);
-			line-height: strip-units(modular-scale(1));
-			text-shadow: 0 0 5px rgba(0,0,0,.3);
-			@include font-weight(light);
-		}
+				.hero__tagline span {
+					display: block;
+				}
+
+			.hero__line,
+			.hero__blurb {
+				display: inline-block;
+				vertical-align: text-top;
+			}
+
+			.hero__line {
+				position: relative;
+				top: rem(14px);
+				width: modular-scale(7);
+				height: 3px;
+				margin-right: modular-scale(2);
+				background-color: $pink;
+			}
+
+			p.hero__blurb {
+				margin-bottom: 0;
+				max-width: modular-scale(13);
+				font-size: modular-scale(1);
+				line-height: strip-units(modular-scale(1));
+				// text-shadow: 0 0 5px rgba(0,0,0,.3);
+				@include font-weight(light);
+			}

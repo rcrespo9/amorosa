@@ -3,7 +3,8 @@
 \*------------------------------------*/
 
 p.blurb__copy {
-	&:not(:last-child) {
-		margin-bottom: modular-scale(1);
-	}
+	font-family: $font-family-serif;
+	font-size: modular-scale(3);
+	line-height: strip-units(modular-scale(1));
+	@include no-margin;
 }

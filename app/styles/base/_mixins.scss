@@ -101,6 +101,10 @@
 	@include font-weight($font-weight);
 }
 
+@mixin no-margin() {
+	margin-bottom: 0;
+}
+
 /*------------------------------------*\
   #BUTTONS MIXINS
 \*------------------------------------*/
