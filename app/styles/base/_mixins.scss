@@ -8,10 +8,10 @@
 }
 
 @mixin c-container() {
-	max-width: modular-scale(18);
+	max-width: modular-scale(17);
 	margin: 0 auto;
-	padding-right: modular-scale(2);
-	padding-left: modular-scale(2);
+	padding-right: modular-scale(1);
+	padding-left: modular-scale(1);
 }
 
 @mixin text-content {

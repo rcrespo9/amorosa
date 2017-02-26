@@ -6,7 +6,7 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	height: 97vh;
+	height: 95vh;
 	padding-top: $nav-height;
 	background-image: url(../../images/pexels-photo-314548.jpg);
 	background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 				@include font-weight(medium);
 			}
 
-				.hero__tagline span {
+				.tagline__break {
 					display: block;
 				}
 
@@ -48,10 +48,10 @@
 
 			.hero__line {
 				position: relative;
-				top: modular-scale(-1);
-				width: modular-scale(8);
+				top: rem(11px);
+				width: modular-scale(7);
 				height: 3px;
-				margin-right: modular-scale(2);
+				margin-right: modular-scale(1);
 				background-color: $pink;
 			}
 
