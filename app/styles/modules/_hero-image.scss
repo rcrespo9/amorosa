@@ -63,3 +63,39 @@
 				// text-shadow: 0 0 5px rgba(0,0,0,.3);
 				@include font-weight(regular);
 			}
+
+	.hero__cta {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		text-align: center;
+	}
+
+		.hero__cta-link {
+			position: relative;
+			display: inline-block;
+			color: rgba($white, .6);
+			font-size: modular-scale(-1);
+			transition: color $anim-speed-ease;
+			@include uppercase-text;
+
+			&:hover {
+				color: rgba($white, 1);
+			}
+
+			&:hover:after {
+				transform: translateY(25%);
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				background-color: $white;
+				width: 1px;
+				height: modular-scale(3);
+				margin: modular-scale(-3) auto 0;
+				transition: transform $anim-speed-ease;
+			}
+		}
