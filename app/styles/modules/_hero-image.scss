@@ -33,7 +33,7 @@
 				font-family: $font-family-serif;
 				font-size: modular-scale(7);
 				line-height: strip-units(modular-scale(0));
-				@include font-weight(medium);
+				@include font-weight(bold);
 			}
 
 				.tagline__break {
@@ -57,9 +57,9 @@
 
 			p.hero__blurb {
 				margin-bottom: 0;
-				max-width: modular-scale(16);
+				max-width: modular-scale(15);
 				font-size: modular-scale(1);
 				line-height: strip-units(modular-scale(1));
 				// text-shadow: 0 0 5px rgba(0,0,0,.3);
-				@include font-weight(light);
+				@include font-weight(regular);
 			}
