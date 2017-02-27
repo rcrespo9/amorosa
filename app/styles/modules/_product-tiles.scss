@@ -2,6 +2,13 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
+.products__inner {
+	background-color: #FFF3F8;
+	padding-top: modular-scale(5);
+	padding-bottom: modular-scale(5);
+	@include l-container;
+}
+
 .product__tiles {
 	position: relative;
 	@include flexbox-row;
@@ -37,6 +44,7 @@
 	.tile__product {
 		padding-right: modular-scale(6);
 		padding-left: modular-scale(6);
+		background-color: $white;
 		@include text-content;
 	}
 
@@ -58,7 +66,7 @@
 				width: modular-scale(6);
 				height: modular-scale(1);
 				margin-bottom: modular-scale(1);
-				border-bottom: 4px solid $pink;
+				border-bottom: 4px solid #FAC9DF;
 			}
 		}
 
@@ -80,7 +88,7 @@
 			z-index: 10;
 			width: modular-scale(7);
 			height: modular-scale(5);
-			background-color: $pink;
+			background-color: #FAC9DF;
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
 		}
