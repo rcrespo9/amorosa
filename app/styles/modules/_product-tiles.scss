@@ -10,13 +10,13 @@
 		flex-direction: row-reverse;
 	}
 
-	&:nth-child(even) .tile__product {
-		@include tile-trangle(left, $white);
-	}
+	// &:nth-child(even) .tile__product {
+	// 	@include tile-trangle(left, $white);
+	// }
 
-	&:nth-child(odd) .tile__product {
-		@include tile-trangle(right, $white);
-	}
+	// &:nth-child(odd) .tile__product {
+	// 	@include tile-trangle(right, $white);
+	// }
 
 	&:nth-child(odd) .slider__controls {
 		left: 0;
