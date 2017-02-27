@@ -40,6 +40,12 @@
 		@include text-content;
 	}
 
+		.product__title {
+			font-size: modular-scale(-1);
+			margin-bottom: modular-scale(-2);
+			@include uppercase-text(bold);
+		}
+
 		.product__header {
 			font-family: $font-family-serif;
 			font-size: modular-scale(5);
