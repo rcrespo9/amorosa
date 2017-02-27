@@ -35,7 +35,8 @@
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
-		@include l-container;
+		padding-right: modular-scale(6);
+		padding-left: modular-scale(6);
 		@include text-content;
 	}
 
@@ -71,8 +72,9 @@
 			position: absolute;
 			top: 0;
 			z-index: 10;
-			width: modular-scale(6);
-			height: modular-scale(4);
+			width: modular-scale(7);
+			height: modular-scale(5);
+			background-color: $pink;
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
 		}
@@ -108,11 +110,11 @@
 				}
 
 				.slider__control--next .control__arrow {
-					left: modular-scale(-6);
+					left: modular-scale(-7);
 				}
 
 				.slider__control--prev .control__arrow {
-					right: modular-scale(-6);
+					right: modular-scale(-7);
 				}
 
 			.slider__control--next:hover {
