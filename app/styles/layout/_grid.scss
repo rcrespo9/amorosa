@@ -8,6 +8,6 @@
 
 	.section__inner {
 		@include flexbox-row;
-		@include c-container($size: large);
+		@include c-container($size: small);
 		@include text-content;
 	}

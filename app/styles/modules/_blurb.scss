@@ -6,6 +6,7 @@ p.blurb__copy {
 	font-family: $font-family-serif;
 	font-size: modular-scale(4);
 	line-height: strip-units(modular-scale(1));
+	// text-align: center;
 	@include font-weight(light);
 	@include no-margin;
 }
