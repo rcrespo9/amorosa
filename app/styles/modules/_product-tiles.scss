@@ -29,7 +29,6 @@
 
 	.tile {
 		position: relative;
-		// height: modular-scale(12);
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
@@ -41,15 +40,22 @@
 	}
 
 		.product__header {
-			margin-bottom: modular-scale(-1);
 			font-family: $font-family-serif;
 			font-size: modular-scale(5);
-			@include font-weight(semi-bold);
-			// @include header-underline;
+			@include font-weight(medium);
+			@include no-margin;
+
+			&:after {
+				content: "";
+				display: block;
+				width: modular-scale(6);
+				height: modular-scale(1);
+				margin-bottom: modular-scale(1);
+				border-bottom: 4px solid $pink;
+			}
 		}
 
 		p.product__desc {
-			max-width: modular-scale(16);
 			margin-bottom: 0;
 			font-size: modular-scale(1);
 		}

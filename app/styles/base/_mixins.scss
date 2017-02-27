@@ -7,11 +7,12 @@
 	padding-left: modular-scale(5);
 }
 
-@mixin c-container() {
-	max-width: modular-scale(17);
+@mixin c-container($size, $padding: modular-scale(2)) {
+	@if $size == large { max-width: modular-scale(18); }
+	@if $size == small { max-width: modular-scale(17); }
 	margin: 0 auto;
-	padding-right: modular-scale(2);
-	padding-left: modular-scale(2);
+	padding-right: $padding;
+	padding-left: $padding;
 }
 
 @mixin text-content {
@@ -71,13 +72,6 @@
 	}
 
 	font-weight: $output;
-}
-
-@mixin header-underline($large-line: false, $underline-color: $medium-gray) {
-	&:after {
-		content: "\2013";
-		display: block;
-	}
 }
 
 @mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px, $border-color: transparent) {

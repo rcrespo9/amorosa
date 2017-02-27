@@ -21,7 +21,7 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
-		@include c-container;
+		@include c-container($size: small);
 	}
 
 		.hero__content {
