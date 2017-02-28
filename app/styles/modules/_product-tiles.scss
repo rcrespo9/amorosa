@@ -2,8 +2,7 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
-.products{
-	background-color: $bg-gray;
+.products {
 	padding-top: modular-scale(5);
 	padding-bottom: modular-scale(5);
 	@include l-container;
