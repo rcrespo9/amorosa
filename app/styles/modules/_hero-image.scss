@@ -7,8 +7,9 @@
 	display: flex;
 	align-items: center;
 	height: 100vh;
+	margin: 0 modular-scale(4);
 	padding-top: $nav-height;
-	background-image: url(../../images/pexels-photo-314548.jpg);
+	background-image: url(https://static.pexels.com/photos/119654/pexels-photo-119654.jpeg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
