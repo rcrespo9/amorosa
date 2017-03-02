@@ -2,210 +2,198 @@
   #PRODUCT TILES
 \*------------------------------------*/
 
-.products {
-	padding-top: modular-scale(5);
-	padding-bottom: modular-scale(5);
-	@include p-container;
-}
+.product__tiles {
+	position: relative;
+	@include flexbox-row;
 
-	.product__tiles {
-		position: relative;
-		@include flexbox-row;
-
-		&:nth-child(even) {
-			flex-direction: row-reverse;
-		}
-
-		&:nth-child(even) .tile__product {
-			@include tile-trangle(left, $white);
-		}
-
-		&:nth-child(odd) .tile__product {
-			@include tile-trangle(right, $white);
-		}
-
-		&:nth-child(odd) .slider__controls {
-			left: 0;
-		}
-
-		&:nth-child(even) .slider__controls {
-			right: 0;
-		}
+	&:nth-child(even) {
+		flex-direction: row-reverse;
 	}
 
-		.tile {
-			position: relative;
-			@include flexbox-column($padding: null);
-			@include flexbox-column-width(50%);
+	&:nth-child(even) .tile__product {
+		@include tile-trangle(left, $white);
+	}
+
+	&:nth-child(odd) .tile__product {
+		@include tile-trangle(right, $white);
+	}
+
+	&:nth-child(odd) .slider__controls {
+		left: 0;
+	}
+
+	&:nth-child(even) .slider__controls {
+		right: 0;
+	}
+}
+
+	.tile {
+		position: relative;
+		@include flexbox-column($padding: null);
+		@include flexbox-column-width(50%);
+	}
+
+	// PRODUCT DESCRIPTION
+	.tile__product {
+		padding-right: modular-scale(5);
+		padding-left: modular-scale(5);
+		background-color: $white;
+		@include text-content;
+	}
+
+		.product__header {
+			font-family: $header-font;
+			font-size: modular-scale(5);
+			@include font-weight(semi-bold);
+			@include no-margin;
+
+			&:after {
+				content: "";
+				display: block;
+				width: modular-scale(6);
+				height: modular-scale(1);
+				margin-bottom: modular-scale(1);
+				border-bottom: 4px solid $light-pink;
+			}
 		}
 
-		// PRODUCT DESCRIPTION
-		.tile__product {
-			padding-right: modular-scale(5);
-			padding-left: modular-scale(5);
-			background-color: $white;
-			@include text-content;
+		p.product__desc {
+			font-size: modular-scale(1);
+			@include no-margin;
 		}
 
-			.product__title {
-				font-size: modular-scale(-1);
-				margin-bottom: modular-scale(-2);
-				@include uppercase-text(bold);
-			}
-
-			.product__header {
-				font-family: $header-font;
-				font-size: modular-scale(5);
-				@include font-weight(semi-bold);
-				@include no-margin;
-
-				&:after {
-					content: "";
-					display: block;
-					width: modular-scale(6);
-					height: modular-scale(1);
-					margin-bottom: modular-scale(1);
-					border-bottom: 4px solid $light-pink;
-				}
-			}
-
-			p.product__desc {
-				margin-bottom: 0;
-				font-size: modular-scale(1);
-			}
 
 
+	// PRODUCT SLIDER
+	.tile__slider {
+		position: relative;
+	}
 
-		// PRODUCT SLIDER
-		.tile__slider {
-			position: relative;
+		.slider__controls {
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			width: modular-scale(7);
+			height: modular-scale(5);
+			background-color: $light-pink;
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
 		}
 
-			.slider__controls {
-				position: absolute;
-				top: 0;
-				z-index: 10;
-				width: modular-scale(7);
-				height: modular-scale(5);
-				background-color: $light-pink;
-				opacity: 0;
-				transition: opacity .2s ease-in-out;
-			}
+		.no-touch .tile__slider:hover .slider__controls {
+			opacity: 1;
+		}
 
-			.no-touch .tile__slider:hover .slider__controls {
-				opacity: 1;
-			}
+		.touch .slider__controls {
+			display: none;
+		}
 
-			.touch .slider__controls {
-				display: none;
-			}
-
-				.slider__control {
-					position: relative;
-					display: block;
-					float: left;
-					width: 50%;
-					height: 100%;
-					color: $white;
-					transition: transform .1s linear;
-				}
-
-					.control__arrow {
-						position: absolute;
-						top: 50%;
-						display: inline-block;
-						width: modular-scale(2);
-						height: modular-scale(2);
-						stroke-width: 0;
-						stroke: currentColor;
-						fill: currentColor;
-						transform: translateY(-50%);
-					}
-
-					.slider__control--next .control__arrow {
-						left: modular-scale(-7);
-					}
-
-					.slider__control--prev .control__arrow {
-						right: modular-scale(-7);
-					}
-
-				.slider__control--next:hover {
-					transform: translateX(7%);
-				}
-
-				.slider__control--prev:hover {
-					transform: translateX(-7%);
-				}
-
-			.slider__img {
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: 0;
-				width: 100%;
+			.slider__control {
+				position: relative;
+				display: block;
+				float: left;
+				width: 50%;
 				height: 100%;
-				background-position: center center;
-				background-repeat: none;
-				background-size: cover;
-				opacity: 0;
-				transition: opacity $anim-speed-ease;
+				color: $white;
+				transition: transform .1s linear;
 			}
 
-			.slider__img--active {
-				opacity: 1;
-				z-index: 1;
+				.control__arrow {
+					position: absolute;
+					top: 50%;
+					display: inline-block;
+					width: modular-scale(2);
+					height: modular-scale(2);
+					stroke-width: 0;
+					stroke: currentColor;
+					fill: currentColor;
+					transform: translateY(-50%);
+				}
+
+				.slider__control--next .control__arrow {
+					left: modular-scale(-7);
+				}
+
+				.slider__control--prev .control__arrow {
+					right: modular-scale(-7);
+				}
+
+			.slider__control--next:hover {
+				transform: translateX(7%);
 			}
 
-			.tile__slider--lenceria .slider__img--1 {
-				background-image: url(../../images/lingerie.jpeg);
+			.slider__control--prev:hover {
+				transform: translateX(-7%);
 			}
 
+		.slider__img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			background-repeat: none;
+			background-size: cover;
+			opacity: 0;
+			transition: opacity $anim-speed-ease;
+		}
 
-			.tile__slider--lenceria .slider__img--2 {
-				background-image: url(../../images/lingerie-2.jpeg);
-			}
+		.slider__img--active {
+			opacity: 1;
+			z-index: 1;
+		}
+
+		.tile__slider--lenceria .slider__img--1 {
+			background-image: url(../../images/lingerie.jpeg);
+		}
 
 
-			.tile__slider--lenceria .slider__img--3 {
-				background-image: url(../../images/lingerie-3.jpeg);
-			}
+		.tile__slider--lenceria .slider__img--2 {
+			background-image: url(../../images/lingerie-2.jpeg);
+		}
 
 
-			.tile__slider--sostenes .slider__img--1 {
-				background-image: url(../../images/sostenes.jpeg);
-			}
+		.tile__slider--lenceria .slider__img--3 {
+			background-image: url(../../images/lingerie-3.jpeg);
+		}
 
-			.tile__slider--sostenes .slider__img--2 {
-				background-image: url(../../images/sostenes-2.jpeg);
-			}
 
-			.tile__slider--sostenes .slider__img--3 {
-				background-image: url(../../images/sostenes-3.jpeg);
-			}
+		.tile__slider--sostenes .slider__img--1 {
+			background-image: url(../../images/sostenes.jpeg);
+		}
 
-			.tile__slider--pantis .slider__img--1 {
-				background-image: url(../../images/panties.jpeg);
-			}
+		.tile__slider--sostenes .slider__img--2 {
+			background-image: url(../../images/sostenes-2.jpeg);
+		}
 
-			.tile__slider--pantis .slider__img--2 {
-				background-image: url(../../images/panties-2.jpeg);
-			}
+		.tile__slider--sostenes .slider__img--3 {
+			background-image: url(../../images/sostenes-3.jpeg);
+		}
 
-			.tile__slider--pantis .slider__img--3 {
-				background-image: url(../../images/panties-3.jpeg);
-			}
+		.tile__slider--pantis .slider__img--1 {
+			background-image: url(../../images/panties.jpeg);
+		}
 
-			.tile__slider--bathing .slider__img--1 {
-				background-image: url(../../images/bathing.jpeg);
-			}
+		.tile__slider--pantis .slider__img--2 {
+			background-image: url(../../images/panties-2.jpeg);
+		}
 
-			.tile__slider--bathing .slider__img--2 {
-				background-image: url(../../images/bathing-2.jpeg);
-			}
+		.tile__slider--pantis .slider__img--3 {
+			background-image: url(../../images/panties-3.jpeg);
+		}
 
-			.tile__slider--bathing .slider__img--3 {
-				background-image: url(../../images/bathing-3.jpeg);
-			}
+		.tile__slider--bathing .slider__img--1 {
+			background-image: url(../../images/bathing.jpeg);
+		}
+
+		.tile__slider--bathing .slider__img--2 {
+			background-image: url(../../images/bathing-2.jpeg);
+		}
+
+		.tile__slider--bathing .slider__img--3 {
+			background-image: url(../../images/bathing-3.jpeg);
+		}

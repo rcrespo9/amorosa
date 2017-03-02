@@ -25,10 +25,6 @@
 			@include flexbox-column($padding: null);
 		}
 
-		// .header__logo {
-		// 	@include flexbox-column-width(75%);
-		// }
-
 			.logo__link {
 				display: inline-block;
 			}

@@ -7,9 +7,8 @@
 	padding-left: modular-scale(4);
 }
 
-@mixin c-container($size) {
-	@if $size == large { max-width: modular-scale(18); }
-	@if $size == small { max-width: modular-scale(17); }
+@mixin c-container {
+	max-width: modular-scale(18);
 	margin: 0 auto;
 	padding-right: modular-scale(2);
 	padding-left: modular-scale(2);
@@ -21,8 +20,8 @@
 }
 
 @mixin text-content {
-	padding-top: modular-scale(6);
-	padding-bottom: modular-scale(6);
+	padding-top: modular-scale(5);
+	padding-bottom: modular-scale(5);
 }
 
 @mixin flexbox-row {
