@@ -29,7 +29,6 @@
 
 	.tile {
 		position: relative;
-		justify-content: center;
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
