@@ -87,6 +87,7 @@
 				}
 
 				.burger__text {
+					font-family: $sans-serif-font;
 					font-size: 18px;
 					@include uppercase-text(medium);
 				}

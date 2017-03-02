@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .page-hero {
-	@include p-container;
+	@include page-padding;
 }
 
 	.hero__inner {
