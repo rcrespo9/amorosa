@@ -42,9 +42,7 @@
 	}
 
 		.product__header {
-			font-family: $header-font;
 			font-size: modular-scale(5);
-			@include font-weight(semi-bold);
 			@include no-margin;
 
 			&:after {
@@ -53,7 +51,7 @@
 				width: modular-scale(6);
 				height: modular-scale(1);
 				margin-bottom: modular-scale(1);
-				border-bottom: 4px solid $light-pink;
+				border-bottom: 4px solid $pink;
 			}
 		}
 
