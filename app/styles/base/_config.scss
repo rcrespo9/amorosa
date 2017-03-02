@@ -17,13 +17,12 @@ $bg-pink: #D7538F;
   #TYPOGRAPHY
 \*------------------------------------*/
 
-$font-family-sans-serif: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif: 'freight-display-pro', Georgia, Times, serif;
+$body-font: 'freight-text-pro', Georgia, Times, serif;
+$header-font: 'freight-display-pro', Georgia, Times, serif;
+$sans-serif-font: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $modular-scale-ratio: $major-third;
 $modular-scale-base: rem($em-base);
-$second-scale: 0.875rem;
-$viewport-scale: 1.166vw;
 
 /*------------------------------------*\
   #HEADER VARIABLES

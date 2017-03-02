@@ -54,7 +54,7 @@
 			}
 
 			.product__header {
-				font-family: $font-family-serif;
+				font-family: $header-font;
 				font-size: modular-scale(5);
 				@include font-weight(medium);
 				@include no-margin;
