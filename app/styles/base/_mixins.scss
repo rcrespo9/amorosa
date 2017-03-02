@@ -2,17 +2,22 @@
   #GRID MIXINS
 \*------------------------------------*/
 
-@mixin l-container() {
-	padding-right: modular-scale(5);
-	padding-left: modular-scale(5);
+@mixin l-container {
+	padding-right: modular-scale(4);
+	padding-left: modular-scale(4);
 }
 
-@mixin c-container($size, $padding: modular-scale(2)) {
+@mixin c-container($size) {
 	@if $size == large { max-width: modular-scale(18); }
 	@if $size == small { max-width: modular-scale(17); }
 	margin: 0 auto;
-	padding-right: $padding;
-	padding-left: $padding;
+	padding-right: modular-scale(2);
+	padding-left: modular-scale(2);
+}
+
+@mixin p-container {
+	padding-right: modular-scale(2);
+	padding-left: modular-scale(2);
 }
 
 @mixin text-content {

@@ -5,7 +5,7 @@
 .products {
 	padding-top: modular-scale(5);
 	padding-bottom: modular-scale(5);
-	@include l-container;
+	@include p-container;
 }
 
 	.product__tiles {
@@ -56,7 +56,7 @@
 			.product__header {
 				font-family: $header-font;
 				font-size: modular-scale(5);
-				@include font-weight(medium);
+				@include font-weight(semi-bold);
 				@include no-margin;
 
 				&:after {
