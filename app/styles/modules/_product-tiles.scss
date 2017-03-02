@@ -29,12 +29,14 @@
 
 	.tile {
 		position: relative;
+		justify-content: center;
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
 
 	// PRODUCT DESCRIPTION
 	.tile__product {
+		min-height: modular-scale(14);
 		padding-right: modular-scale(5);
 		padding-left: modular-scale(5);
 		background-color: $white;
