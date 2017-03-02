@@ -2,12 +2,8 @@
   #PAGE SECTION
 \*------------------------------------*/
 
-.page-content {
-	// padding: 0 modular-scale(3);
+.section__inner {
+	@include flexbox-row;
+	@include c-container($size: small);
+	@include text-content;
 }
-
-	.section__inner {
-		@include flexbox-row;
-		@include c-container($size: small);
-		@include text-content;
-	}
