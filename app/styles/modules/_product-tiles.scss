@@ -43,6 +43,7 @@
 	}
 
 		.product__header {
+			color: $dark-gray;
 			font-size: modular-scale(5);
 			@include no-margin;
 
@@ -74,7 +75,7 @@
 			z-index: 10;
 			width: modular-scale(7);
 			height: modular-scale(5);
-			background-color: $light-pink;
+			background-color: $pink;
 			opacity: 0;
 			transition: opacity .2s ease-in-out;
 		}
