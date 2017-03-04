@@ -29,9 +29,9 @@
 				@include font-weight(black);
 			}
 
-				// .tagline__svg {
-				// 	height: ceil(modular-scale(11));
-				// }
+				.tagline__svg {
+					height: ceil(modular-scale(11));
+				}
 
 				.tagline__text {
 					text-anchor: middle;
