@@ -12,13 +12,7 @@
 		align-items: center;
 		height: 100vh;
 		padding-top: $nav-height;
-		background-image: url(https://static.pexels.com/photos/119654/pexels-photo-119654.jpeg);
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		color: $white;
 		text-align: center;
-		@include background-tint(rgba(21,14,27,.5));
 	}
 
 		.hero__content {
@@ -28,12 +22,20 @@
 		}
 
 			.hero__tagline {
-				margin-bottom: modular-scale(2);
+				margin-bottom: modular-scale(1);
+				color: $dark-gray;
+				font-family: $header-font;
 				font-size: modular-scale(7);
+				@include font-weight(black);
 			}
 
-				.tagline__break {
-					display: block;
+				// .tagline__svg {
+				// 	height: ceil(modular-scale(11));
+				// }
+
+				.tagline__text {
+					text-anchor: middle;
+					fill: url(#tagline-image);
 				}
 
 			p.hero__blurb {
@@ -41,39 +43,3 @@
 				max-width: modular-scale(15);
 				line-height: strip-units(modular-scale(1));
 			}
-
-			.hero__cta {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				z-index: 2;
-			}
-
-				.hero__cta-link {
-					position: relative;
-					display: inline-block;
-					color: rgba($white, .6);
-					font-family: $sans-serif-font;
-					font-size: modular-scale(-1);
-					transition: color $anim-speed-ease;
-					@include uppercase-text;
-
-					&:hover {
-						color: rgba($white, 1);
-					}
-
-					&:hover:after {
-						transform: translateY(20%);
-					}
-
-					&:after {
-						content: "";
-						display: block;
-						background-color: $white;
-						width: 1px;
-						height: modular-scale(4);
-						margin: modular-scale(-1) auto 0;
-						transition: transform $anim-speed-ease;
-					}
-				}
