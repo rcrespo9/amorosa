@@ -106,16 +106,16 @@
   #BUTTONS MIXINS
 \*------------------------------------*/
 
-@mixin button() {
-	padding: modular-scale(-1) modular-scale(2) modular-scale(-2);
-	border-radius: 4px;
+@mixin button($bg-color: $pink) {
+	padding: modular-scale(0) modular-scale(4);
 	color: $white;
-	background-color: $pink;
+	background-color: $bg-color;
 	transition: background-color $anim-speed-ease;
-	@include font-weight(medium);
+	font-family: $sans-serif-font;
+	@include uppercase-text;
 
 	&:hover {
-		background-color: darken($pink, 3%);
+		background-color: darken($bg-color, 3%);
 	}
 }
 

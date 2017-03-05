@@ -22,24 +22,25 @@
 		}
 
 			.hero__tagline {
-				margin-bottom: modular-scale(1);
+				margin-bottom: modular-scale(2);
 				color: $dark-gray;
 				font-family: $header-font;
 				font-size: modular-scale(7);
 				@include font-weight(black);
 			}
 
-				.tagline__svg {
-					height: ceil(modular-scale(11));
-				}
-
-				.tagline__text {
-					text-anchor: middle;
-					fill: url(#tagline-image);
+				.tagline__br {
+					display: block;
 				}
 
 			p.hero__blurb {
 				margin: 0 auto;
 				max-width: modular-scale(15);
 				line-height: strip-units(modular-scale(1));
+			}
+
+			.hero__cta {
+				margin-top: modular-scale(3);
+				font-size: modular-scale(-1);
+				@include button($dark-gray);
 			}
