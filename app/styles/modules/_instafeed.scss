@@ -30,7 +30,7 @@
 		display: inline-block;
 		font-size: modular-scale(1);
 		transform: translate(-50%, -50%);
-		@include button;
+		@include button($bg-color: $pink, $text-color: $white);
 	}
 
 		.instafeed__ig-icon {
