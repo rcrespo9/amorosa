@@ -106,7 +106,7 @@
   #BUTTONS MIXINS
 \*------------------------------------*/
 
-@mixin button($bg-color, $text-color, $hover-text-color: $bg-color) {
+@mixin button($bg-color, $text-color, $hover-text-color: $bg-color, $hover-bg-color: $text-color) {
 	padding: modular-scale(-1) modular-scale(3);
 	border: 2px solid $text-color;
 	border-radius: 30px;
@@ -118,7 +118,7 @@
 
 	&:hover {
 		color: $hover-text-color;
-		background-color: $text-color;
+		background-color: $hover-bg-color;
 	}
 }
 

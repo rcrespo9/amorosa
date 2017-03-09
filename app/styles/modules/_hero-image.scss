@@ -46,5 +46,5 @@
 			.hero__cta {
 				margin-top: modular-scale(3);
 				font-size: modular-scale(-1);
-				@include button($bg-color: transparent, $text-color: $white, $hover-text-color: $dark-pink);
+				@include button($bg-color: transparent, $text-color: $white, $hover-bg-color: $white, $hover-text-color: $dark-pink);
 			}
