@@ -58,8 +58,11 @@
 
 			.hero__arrow {
 				display: inline-block;
-				transition: transform .2s ease-in;
-				animation: .75s ease-in-out 0s infinite alternate floating-arrow;
+				transition: transform $anim-speed-ease;
+
+				&:hover {
+					transform: translateY(modular-scale(-2));
+				}
 			}
 
 				.arrow__icon {
@@ -69,10 +72,4 @@
 					stroke-width: 0;
 					stroke: $white;
 					fill: $white;
-				}
-
-
-				@keyframes floating-arrow {
-					from { transform: translateY(0); }
-					to { transform: translateY(modular-scale(0)); }
 				}
