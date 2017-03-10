@@ -38,13 +38,41 @@
 				}
 
 			p.hero__blurb {
-				margin: 0 auto;
+				margin: 0 auto modular-scale(3);
 				max-width: modular-scale(15);
 				line-height: strip-units(modular-scale(1));
 			}
 
 			.hero__cta {
-				margin-top: modular-scale(3);
 				font-size: modular-scale(-1);
 				@include button($bg-color: $white, $text-color: $dark-pink);
 			}
+
+		.hero__arrow-container {
+			position: absolute;
+			left: 0;
+			bottom: modular-scale(5);
+			z-index: 2;
+			width: 100%;
+		}
+
+			.hero__arrow {
+				display: inline-block;
+				transition: transform .2s ease-in;
+				animation: .75s ease-in-out 0s infinite alternate floating-arrow;
+			}
+
+				.arrow__icon {
+					display: inline-block;
+					width: modular-scale(5);
+					height: modular-scale(5);
+					stroke-width: 0;
+					stroke: $white;
+					fill: $white;
+				}
+
+
+				@keyframes floating-arrow {
+					from { transform: translateY(0); }
+					to { transform: translateY(modular-scale(0)); }
+				}
