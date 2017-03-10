@@ -106,7 +106,7 @@
   #BUTTONS MIXINS
 \*------------------------------------*/
 
-@mixin button($bg-color, $text-color) {
+@mixin button($bg-color, $text-color, $bg-hover-color, $text-hover-color) {
 	padding: modular-scale(-1) modular-scale(3);
 	border-radius: 30px;
 	background-color: $bg-color;
@@ -115,10 +115,11 @@
 	font-family: $sans-serif-font;
 	@include uppercase-text;
 
-	// &:hover {
-	// 	color: $hover-text-color;
-	// 	background-color: $hover-bg-color;
-	// }
+	&:hover {
+		background-color: $bg-hover-color;
+		color: $text-hover-color;
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+	}
 }
 
 /*------------------------------------*\

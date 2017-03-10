@@ -45,7 +45,7 @@
 
 			.hero__cta {
 				font-size: modular-scale(-1);
-				@include button($bg-color: $white, $text-color: $dark-pink);
+				@include button($bg-color: $white, $text-color: $dark-pink, $bg-hover-color: null, $text-hover-color: null);
 			}
 
 		.hero__arrow-container {
