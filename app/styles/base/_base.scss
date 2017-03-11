@@ -22,6 +22,7 @@ body {
 	background-color: $white;
 	color: $medium-gray;
 	font-family: $body-font;
+	font-feature-settings: "liga", "lnum", "salt", "ss##";
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;

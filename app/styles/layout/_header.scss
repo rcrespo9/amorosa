@@ -58,7 +58,6 @@
 						color: $gray;
 						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
-						@include font-weight(medium);
 
 						&:hover {
 							color: $pink;
@@ -85,13 +84,15 @@
 				.burger__text,
 				.burger__icon {
 					display: inline-block;
-					vertical-align: middle;
 				}
 
 				.burger__text {
+					position: relative;
+					top: 5px;
 					font-family: $sans-serif-font;
-					font-size: 18px;
-					@include uppercase-text;
+					font-size: 24px;
+					font-feature-settings: "c2sc";
+					@include uppercase-text(medium);
 				}
 
 				.burger__icon,
