@@ -8,7 +8,7 @@ p.blurb {
 	margin-left: auto;
 	font-family: $header-font;
 	font-size: modular-scale(3);
-	line-height: strip-units(modular-scale(2));
+	line-height: strip-units(modular-scale(1));
 	text-align: center;
 	@include font-weight(regular);
 	@include no-margin;
