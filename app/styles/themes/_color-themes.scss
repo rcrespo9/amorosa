@@ -1,5 +1,5 @@
 /*------------------------------------*\
-  #COLOR THEMES
+  #BACKGROUNDS
 \*------------------------------------*/
 
 .pink-bg {
@@ -9,4 +9,12 @@
 
 .gray-bg {
 	background-color: $bg-gray;
+}
+
+/*------------------------------------*\
+  #HEADER COLORS
+\*------------------------------------*/
+
+.section__title--pink {
+	color: $dark-pink;
 }

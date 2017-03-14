@@ -9,11 +9,13 @@ p {
 	margin-top: 0;
 }
 
-h1,
-h2 {
-	font-family: $header-font;
-	line-height: strip-units(modular-scale(0));
-	@include font-weight(semi-bold);
+
+.section__title {
+	margin-bottom: modular-scale(0);
+	font-family: $sans-serif-font;
+	font-size: modular-scale(-1);
+	text-align: center;
+	@include uppercase-text(semi-bold);
 }
 
 .page-content p {

@@ -2,12 +2,13 @@
   #BLURB
 \*------------------------------------*/
 
-.blurb__copy {
+p.blurb {
 	max-width: modular-scale(17);
 	margin-right: auto;
 	margin-left: auto;
-	font-size: modular-scale(4);
-	line-height: strip-units(modular-scale(1));
+	font-family: $header-font;
+	font-size: modular-scale(2);
+	line-height: strip-units(modular-scale(2));
 	text-align: center;
 	@include font-weight(regular);
 	@include no-margin;

@@ -30,6 +30,7 @@
 				margin-bottom: modular-scale(2);
 				font-family: $header-font;
 				font-size: modular-scale(7);
+				line-height: strip-units(modular-scale(0));
 				@include font-weight(black);
 			}
 

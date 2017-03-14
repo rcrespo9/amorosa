@@ -1,0 +1,21 @@
+/*------------------------------------*\
+  #PRODUCT ICONS
+\*------------------------------------*/
+
+.products {
+	@include flexbox-row;
+}
+
+	.product__item {
+		margin: 0;
+		@include flexbox-column;
+		@include flexbox-column-width(25%);
+	}
+
+		.product__icon {
+			display: inline-block;
+			width: modular-scale(9);
+			height: modular-scale(9);
+			margin: 0 auto;
+			fill: $pink;
+		}
