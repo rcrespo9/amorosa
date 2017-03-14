@@ -3,13 +3,19 @@
 \*------------------------------------*/
 
 .products {
+	margin-top: modular-scale(3);
 	@include flexbox-row;
 }
 
 	.product__item {
 		margin: 0;
+		text-align: center;
 		@include flexbox-column;
-		@include flexbox-column-width(25%);
+		@include flexbox-column-width(50%);
+	}
+
+	.product__img {
+		height: modular-scale(10);
 	}
 
 		.product__icon {
@@ -19,3 +25,16 @@
 			margin: 0 auto;
 			fill: $pink;
 		}
+
+	.product__name {
+		font-size: modular-scale(2);
+		@include font-weight(medium)
+	}
+
+	p.product__desc {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: modular-scale(14);
+		font-size: modular-scale(0);
+		@include no-margin;
+	}

@@ -19,9 +19,8 @@ p {
 }
 
 .page-content p {
-	margin-bottom: modular-scale(0);
 	font-size: modular-scale(1);
-	line-height: strip-units(modular-scale(2));
+	line-height: strip-units(modular-scale(3));
 }
 
 .page-content p a {
