@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .products {
-	margin-top: modular-scale(3);
+	margin-top: modular-scale(2);
 	@include flexbox-row;
 }
 
@@ -14,21 +14,19 @@
 		@include flexbox-column-width(50%);
 	}
 
-	.product__img {
+	.product__icon {
+		display: inline-block;
+		width: modular-scale(10);
 		height: modular-scale(10);
+		margin: 0 auto;
+		fill: $pink;
 	}
 
-		.product__icon {
-			display: inline-block;
-			width: modular-scale(10);
-			height: modular-scale(10);
-			margin: 0 auto;
-			fill: $pink;
-		}
-
 	.product__name {
-		font-size: modular-scale(2);
-		@include font-weight(medium)
+		margin-bottom: modular-scale(0);
+		font-family: $header-font;
+		font-size: modular-scale(3);
+		@include font-weight(semi-bold);
 	}
 
 	p.product__desc {

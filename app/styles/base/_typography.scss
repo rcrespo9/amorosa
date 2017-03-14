@@ -9,10 +9,14 @@ p {
 	margin-top: 0;
 }
 
+h1,
+h3, {
+	font-family: $header-font;
+}
+
 
 .section__title {
 	margin-bottom: modular-scale(0);
-	font-family: $sans-serif-font;
 	font-size: modular-scale(-1);
 	text-align: center;
 	@include uppercase-text(semi-bold);
@@ -20,7 +24,7 @@ p {
 
 .page-content p {
 	font-size: modular-scale(1);
-	line-height: strip-units(modular-scale(3));
+	line-height: strip-units(modular-scale(2));
 }
 
 .page-content p a {
