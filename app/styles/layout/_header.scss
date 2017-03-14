@@ -56,7 +56,6 @@
 
 					.nav__link {
 						color: $gray;
-						font-size: modular-scale(1);
 						transition: all .5s ease-in-out;
 
 						&:hover {
@@ -64,85 +63,10 @@
 						}
 					}
 
-
-		.header__burger {
-			text-align: right;
-			@include flexbox-column-width(25%);
-		}
-
-			.burger__btn {
-				height: $burger-icon-height + $burger-icon-spacing*3;
-				padding: 0;
-				background-color: transparent;
-				color: $gray;
-
-				&:focus {
-					outline: none;
-				}
-			}
-
-				.burger__text,
-				.burger__icon {
-					display: inline-block;
-				}
-
-				.burger__text {
-					position: relative;
-					top: 5px;
-					font-family: $sans-serif-font;
-					font-size: 24px;
-					font-feature-settings: "c2sc";
-					@include uppercase-text(medium);
-				}
-
-				.burger__icon,
-				.burger__icon:before,
-				.burger__icon:after {
-					height: $burger-icon-height;
-					background-color: rgba($gray, 1);
-				}
-
-				.burger__icon {
-					position: relative;
-					width: 32px;
-					margin-left: 12px;
-					transition: all 0ms 300ms;
-				}
-
-					.burger__icon:before,
-					.burger__icon:after {
-						content: "";
-						position: absolute;
-						left: 0;
-						width: 100%;
-					}
-
-					.burger__icon:before {
-						bottom: $burger-icon-spacing;
-						transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
-									transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-					}
-
-					.burger__icon:after {
-						top: $burger-icon-spacing;
-						transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
-									transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
-					}
-
-				.open-nav .burger__icon {
-					background-color: rgba($gray, 0);
-				}
-
-					.open-nav .burger__icon:before {
-						bottom: 0;
-						transform: translateZ(0) rotate(-45deg);
-						transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
-									transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-					}
-
-					.open-nav .burger__icon:after {
-						top: 0;
-						transform: translateZ(0) rotate(45deg);
-						transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
-									transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
-					}
+						.nav__icon {
+							display: inline-block;
+							width: modular-scale(1);
+							height: modular-scale(1);
+							stroke: currentColor;
+							fill: currentColor;
+						}
