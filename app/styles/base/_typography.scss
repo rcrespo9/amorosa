@@ -5,12 +5,14 @@
 h1,
 h2,
 h3,
+h4,
 p {
 	margin-top: 0;
 }
 
 h1,
-h3, {
+h3,
+h4 {
 	font-family: $header-font;
 }
 
@@ -20,6 +22,17 @@ h3, {
 	font-size: modular-scale(-1);
 	text-align: center;
 	@include uppercase-text(semi-bold);
+}
+
+.section__blurb {
+	max-width: modular-scale(18);
+	margin-right: auto;
+	margin-left: auto;
+	font-size: modular-scale(3);
+	line-height: strip-units(modular-scale(1));
+	text-align: center;
+	@include font-weight(regular);
+	@include no-margin;
 }
 
 .page-content p {
