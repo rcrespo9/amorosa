@@ -25,7 +25,7 @@
 		margin-bottom: modular-scale(0);
 		font-family: $header-font;
 		font-size: modular-scale(3);
-		@include font-weight(semi-bold);
+		@include font-weight(medium);
 	}
 
 	p.product__desc {
