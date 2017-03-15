@@ -31,7 +31,7 @@
 	p.product__desc {
 		margin-right: auto;
 		margin-left: auto;
-		max-width: modular-scale(15, $second-strand);
+		max-width: modular-scale(14);
 		font-size: modular-scale(0);
 		@include no-margin;
 	}
