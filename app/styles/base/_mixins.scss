@@ -107,7 +107,7 @@
 	border-radius: 30px;
 	background-color: $bg-color;
 	color: $text-color;
-	transition: all .3s ease-in-out;
+	transition: all $anim-speed-ease;
 	@include uppercase-text;
 
 	&:hover {

@@ -56,7 +56,7 @@
 
 					.nav__link {
 						color: $gray;
-						transition: all .5s ease-in-out;
+						transition: all $anim-speed-ease;
 
 						&:hover {
 							color: $pink;

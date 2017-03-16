@@ -20,7 +20,7 @@ $dark-pink: #D7538F;
 \*------------------------------------*/
 
 $body-font: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$header-font: 'freight-display-pro', Georgia, Times, serif;
+$header-font: 'freight-big-pro', Georgia, Times, serif;
 
 $modular-scale-ratio: $major-third;
 $modular-scale-base: rem($em-base);
@@ -46,4 +46,4 @@ $large-desktop: 105rem;
   #ANIMATIONS
 \*------------------------------------*/
 
-$anim-speed-ease: .5s ease-in-out;
+$anim-speed-ease: .3s ease-in-out;
