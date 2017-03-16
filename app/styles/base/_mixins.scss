@@ -77,13 +77,11 @@
 	font-weight: $output;
 }
 
-@mixin link($color: $medium-gray, $hover-color: $color, $border-size: 2px, $border-color: transparent) {
+@mixin link($color: $purple, $hover-color: $dark-pink) {
 	color: $color;
-	border-bottom: $border-size solid $border-color;
-	transition: all $anim-speed-ease;
+	transition: color $anim-speed-ease;
 
 	&:hover {
-		border-color: $hover-color;
 		color: $hover-color;
 	}
 }
