@@ -18,11 +18,11 @@
 		width: modular-scale(10);
 		height: modular-scale(10);
 		margin: 0 auto;
-		fill: $pink;
+		fill: $medium-pink;
 	}
 
 	.product__name {
-		margin-bottom: modular-scale(0);
+		margin-bottom: modular-scale(-1);
 		font-family: $header-font;
 		font-size: modular-scale(3);
 		@include font-weight(bold);
