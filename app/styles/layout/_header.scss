@@ -56,6 +56,7 @@
 
 					.nav__link {
 						display: inherit;
+						padding-bottom: modular-scale(-6);
 						color: $gray;
 						font-size: modular-scale(1);
 						transition: all $anim-speed-ease;
