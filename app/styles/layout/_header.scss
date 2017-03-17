@@ -50,31 +50,18 @@
 					vertical-align: middle;
 
 					&:not(:last-child) {
-						margin-right: modular-scale(1);
+						margin-right: modular-scale(3);
 					}
 				}
 
 					.nav__link {
 						display: inherit;
-						width: modular-scale(3);
-						height: modular-scale(3);
-						border: rem(2px) solid;
-						border-radius: 50%;
-						color: #A6AAA6;
-						text-align: center;
+						color: $gray;
+						font-size: modular-scale(1);
 						transition: all $anim-speed-ease;
+						@include font-weight(medium);
 
 						&:hover {
 							color: $pink;
 						}
 					}
-
-						.nav__icon {
-							position: relative;
-							top: 50%;
-							display: inherit;
-							height: modular-scale(0);
-							margin-top: -(modular-scale(1) + rem(2px));
-							stroke: currentColor;
-							fill: currentColor;
-						}
