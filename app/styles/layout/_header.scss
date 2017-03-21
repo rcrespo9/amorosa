@@ -10,13 +10,13 @@
 	width: 100%;
 	height: $nav-height;
 	background-color: $white;
-	@include l-container;
 }
 
 	.header__inner {
 		width: inherit;
 		height: 100%;
 		align-items: center;
+		@include l-container;
 		@include flexbox-row;
 	}
 
@@ -31,8 +31,8 @@
 
 				.logo__img {
 					display: inherit;
-					width: rem(215px);
-					height: rem(70px);
+					width: rem(205px);
+					height: rem(67px);
 				}
 
 		.header__nav {

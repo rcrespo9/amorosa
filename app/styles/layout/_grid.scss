@@ -2,7 +2,11 @@
   #PAGE SECTION
 \*------------------------------------*/
 
-.section__content {
-	@include text-content;
-	@include c-container;
+.page-content {
+	@include page-padding;
 }
+
+	.section__content {
+		@include c-container;
+		@include text-content;
+	}

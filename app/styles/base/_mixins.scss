@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 @mixin l-container {
+	max-width: modular-scale(20);
+	margin: 0 auto;
 	padding-right: modular-scale(4);
 	padding-left: modular-scale(4);
 }
@@ -13,8 +15,8 @@
 }
 
 @mixin page-padding {
-	padding-right: modular-scale(2);
-	padding-left: modular-scale(2);
+	padding-right: modular-scale(3, 1vw);
+	padding-left: modular-scale(3, 1vw);
 }
 
 @mixin text-content {
