@@ -96,16 +96,19 @@
 		content: "";
 		position: absolute;
 		top: 100%;
+		right: 0;
 		left: 0;
-		height: 2px;
+		height: 1px;
 	}
 
 	&:before {
+		z-index: 1;
 		width: 100%;
 		background-color: $color;
 	}
 
 	&:after {
+		z-index: 2;
 		width: 0;
 		background-color: $hover-color;
 		transition: width $anim-speed-ease;
