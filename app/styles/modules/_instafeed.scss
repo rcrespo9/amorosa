@@ -2,15 +2,25 @@
   #INSTAFEED
 \*------------------------------------*/
 
-.instafeed__container {
-	@include flexbox-row;
+.instafeed {
+	text-align: center;
 }
 
-	.instafeed__item {
-		@include flexbox-column;
-		@include flexbox-column-width(100% / 3);
-
-		&:focus {
-			outline: none;
-		}
+	.instafeed__container {
+		margin-bottom: modular-scale(0);
+		@include flexbox-row;
 	}
+
+		.instafeed__item {
+			@include flexbox-column;
+			@include flexbox-column-width(100% / 3);
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.instafeed__cta {
+			font-size: modular-scale(1);
+			@include link-cta;
+		}

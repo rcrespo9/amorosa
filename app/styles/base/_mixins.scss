@@ -85,6 +85,41 @@
 	}
 }
 
+@mixin link-cta($color: $dark-gray, $hover-color: $dark-pink) {
+	position: relative;
+	color: $color;
+	transition: all $anim-speed-ease;
+	@include font-weight(bold);
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 2px;
+	}
+
+	&:before {
+		width: 100%;
+		background-color: $color;
+	}
+
+	&:after {
+		width: 0;
+		background-color: $hover-color;
+		transition: width $anim-speed-ease;
+	}
+
+	&:hover {
+		color: $hover-color;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+}
+
 @mixin uppercase-text($font-weight: semi-bold) {
 	text-transform: uppercase;
 	letter-spacing: modular-scale(-11);
