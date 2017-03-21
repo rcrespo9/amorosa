@@ -17,7 +17,7 @@ h4 {
 }
 
 .section__title {
-	margin-bottom: modular-scale(1);
+	margin-bottom: modular-scale(0);
 	font-size: modular-scale(-1);
 	text-align: center;
 	@include uppercase-text(semi-bold);
@@ -25,11 +25,15 @@ h4 {
 
 .section__blurb {
 	max-width: modular-scale(18);
-	margin: 0 auto modular-scale(-2);
+	margin: 0 auto modular-scale(1);
 	font-size: modular-scale(4);
 	line-height: strip-units(modular-scale(1));
 	text-align: center;
 	@include font-weight(regular);
+}
+
+.section__blurb--bold {
+	@include font-weight(semi-bold);
 }
 
 .page-content p {

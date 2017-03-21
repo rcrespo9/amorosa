@@ -2,47 +2,15 @@
   #INSTAFEED
 \*------------------------------------*/
 
-.instafeed {
-	position: relative;
+.instafeed__container {
+	@include flexbox-row;
 }
 
 	.instafeed__item {
-		position: relative;
-		display: block;
-		float: left;
-		width: calc(100% / 10);
-		@include background-tint(rgba(21,14,27,.5));
-
-		&:hover:before {
-			background-color: transparent;
-		}
+		@include flexbox-column;
+		@include flexbox-column-width(100% / 3);
 
 		&:focus {
 			outline: none;
 		}
 	}
-
-	.instafeed__cta {
-		position: absolute;
-		z-index: 2;
-		top: 50%;
-		left: 50%;
-		display: inline-block;
-		font-size: modular-scale(1);
-		transform: translate(-50%, -50%);
-		// @include button($bg-color: $pink, $text-color: $white);
-	}
-
-		.instafeed__ig-icon {
-			display: inline-block;
-			width: modular-scale(2);
-			height: modular-scale(2);
-			margin-right: modular-scale(-2);
-			stroke-width: 0;
-			stroke: currentColor;
-			fill: currentColor;
-		}
-
-		.instafeed__cta span {
-			vertical-align: text-bottom;
-		}
