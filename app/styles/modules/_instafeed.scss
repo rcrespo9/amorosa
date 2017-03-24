@@ -13,7 +13,7 @@
 
 		.instafeed__item {
 			@include flexbox-column;
-			@include flexbox-column-width(100% / 3);
+			@include flexbox-column-width(100% / 4);
 
 			&:focus {
 				outline: none;
