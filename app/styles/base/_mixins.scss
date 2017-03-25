@@ -102,13 +102,13 @@
 	position: relative;
 	color: $color;
 	transition: all $anim-speed-ease;
-	@include font-weight(bold);
+	@include uppercase-text(medium);
 
 	&:before,
 	&:after {
 		content: "";
 		position: absolute;
-		top: 100%;
+		top: 120%;
 		right: 0;
 		left: 0;
 		height: 1px;
@@ -117,7 +117,7 @@
 	&:before {
 		z-index: 1;
 		width: 100%;
-		background-color: $color;
+		background-color: rgba($color, .3);
 	}
 
 	&:after {

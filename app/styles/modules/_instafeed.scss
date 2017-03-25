@@ -30,6 +30,6 @@
 			}
 
 		.instafeed__cta {
-			font-size: modular-scale(1);
-			@include link-cta;
+			font-size: modular-scale(-1);
+			@include link-cta($color: $medium-gray);
 		}
