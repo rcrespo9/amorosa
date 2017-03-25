@@ -11,6 +11,18 @@
 	background-color: $bg-gray;
 }
 
+.purple-bg {
+	background-color: #5063AF;
+}
+
+	.purple-bg .section__title {
+		color: $light-pink;
+	}
+
+	.purple-bg .section__blurb {
+		color: $white;
+	}
+
 /*------------------------------------*\
   #HEADER COLORS
 \*------------------------------------*/

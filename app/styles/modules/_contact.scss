@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  #CONTACTO
+\*------------------------------------*/
+
+.contact-info {
+	@include flexbox-row;
+}
+
+	.contact-info__box {
+		@include l-container;
+		@include flexbox-column($padding: null);
+		@include flexbox-column-width(50%);
+	}

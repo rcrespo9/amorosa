@@ -369,8 +369,10 @@
 
       	<section class="page-section" id="products">
       		<div class="section__content">
-      			<h2 class="section__title section__title--pink">Nuestros Productos</h2>
-      			<h3 class="section__blurb">Nuestras líneas de productos abarcan pantis, sostenes, pijamas, lencería sexy y de ocasión, trajes de baño, accesorios complementarios para la intimidad, fragancias y cremas.</h3>
+      			<div class="section__header">
+	      			<h2 class="section__title section__title--pink">Nuestros Productos</h2>
+	      			<h3 class="section__blurb">Nuestras líneas de productos abarcan pantis, sostenes, pijamas, lencería sexy y de ocasión, trajes de baño, accesorios complementarios para la intimidad, fragancias y cremas.</h3>
+      			</div>
 
       			<div class="products">
       				<figure class="product__item">
@@ -436,21 +438,29 @@
     		</div>
     	</section>
 
-        <section class="page-section page-section--instafeed" id="instagram-feed">
+        <section class="page-section" id="instagram-feed">
         	<div class="section__content instafeed">
-        		<h2 class="section__title section__title--pink">@yosoyamorosaytu</h2>
-        		<h3 class="section__blurb">Síguenos en Instagram</h3>
+        		<div class="section__header">
+	        		<h2 class="section__title section__title--pink">@yosoyamorosaytu</h2>
+	        		<h3 class="section__blurb">Síguenos en Instagram</h3>
+        		</div>
 
         		<ul class="instafeed__list" id="instafeed"></ul>
         		<a href="https://www.instagram.com/soyamorosaytu/" class="instafeed__cta" rel="noopener noreferrer" target="_blank">Ver más</a>
         	</div>
         </section>
 
-<!--         <section class="page-section" id="contacto">
-        	<div class="section__content">
-        		<h1 class="section__title">Contacto</h1>
+        <section class="page-section" id="contacto">
+        	<div class="contact-info">
+        		<div class="contact-info__box contact-info__box--copy section__content purple-bg">
+	        		<div class="section__header section__header--left">
+		        		<h2 class="section__title section__title--pink">Contacto</h2>
+		        		<h3 class="section__blurb">¡Di hola!</h3>
+	        		</div>
+        		</div>
+        		<div class="contact-info__box contact-info__box--map" id="js-amorosa-map"></div>
         	</div>
-        </section> -->
+        </section>
     </main>
 
     <footer class="page-footer" role="contentinfo">
@@ -474,6 +484,9 @@
     	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     	ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe6-3rBOY-MWocQL22MutTdwjagcG_dKA"
+    type="text/javascript"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
