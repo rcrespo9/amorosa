@@ -2,12 +2,27 @@
   #CONTACTO
 \*------------------------------------*/
 
-.contact-info {
+.contact {
 	@include flexbox-row;
 }
 
-	.contact-info__box {
+	.contact__info,
+	.contact__map {
 		@include l-container;
 		@include flexbox-column($padding: null);
 		@include flexbox-column-width(50%);
 	}
+
+		.info__section h4 {
+			margin-bottom: modular-scale(-5);
+			@include section-title;
+		}
+
+		.info__section p:last-child {
+			@include no-margin;
+		}
+
+		.info__section a {
+			font-family: $body-font;
+			@include link-cta($color: $white, $hover-color: $light-pink);
+		}

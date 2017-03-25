@@ -26,17 +26,17 @@ a {
 
 .section__header {
 	text-align: center;
+	margin-bottom: modular-scale(1);
 }
 
 	.section__title {
 		margin-bottom: modular-scale(0);
-		font-size: modular-scale(-1);
-		@include uppercase-text(semi-bold);
+		@include section-title;
 	}
 
 	.section__blurb {
 		max-width: modular-scale(18);
-		margin: 0 auto modular-scale(1);
+		margin: 0 auto;
 		font-size: modular-scale(4);
 		line-height: strip-units(modular-scale(1));
 		@include font-weight(regular);
@@ -51,10 +51,6 @@ a {
 \*------------------------------------*/
 
 .page-content p {
-	font-size: modular-scale(1);
+	font-size: modular-scale(0);
 	line-height: strip-units(modular-scale(2));
-}
-
-.page-content p a {
-	@include link;
 }

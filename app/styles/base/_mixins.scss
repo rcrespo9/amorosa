@@ -86,6 +86,12 @@
 	@include font-weight($font-weight);
 }
 
+@mixin section-title {
+	font-family: $body-font;
+	font-size: modular-scale(-1);
+	@include uppercase-text;
+}
+
 @mixin link($color: $purple, $hover-color: $dark-pink) {
 	padding-bottom: modular-scale(-11);
 	border-bottom: 1px solid transparent;
@@ -100,7 +106,9 @@
 
 @mixin link-cta($color: $dark-gray, $hover-color: $dark-pink) {
 	position: relative;
+	padding-bottom: modular-scale(-7);
 	color: $color;
+	font-size: modular-scale(-1);
 	transition: all $anim-speed-ease;
 	@include uppercase-text(medium);
 
@@ -108,7 +116,7 @@
 	&:after {
 		content: "";
 		position: absolute;
-		top: 120%;
+		top: 100%;
 		right: 0;
 		left: 0;
 		height: 1px;

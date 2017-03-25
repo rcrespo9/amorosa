@@ -12,15 +12,12 @@
 }
 
 .purple-bg {
-	background-color: #5063AF;
+	background-color: $purple;
+	color: $white;
 }
 
 	.purple-bg .section__title {
 		color: $light-pink;
-	}
-
-	.purple-bg .section__blurb {
-		color: $white;
 	}
 
 /*------------------------------------*\
