@@ -42,6 +42,10 @@
 	max-width: $width;
 }
 
+@mixin no-margin() {
+	margin-bottom: 0;
+}
+
 /*------------------------------------*\
   #TYPOGRAPHY MIXINS
 \*------------------------------------*/
@@ -76,12 +80,21 @@
 	font-weight: $output;
 }
 
+@mixin uppercase-text($font-weight: semi-bold) {
+	text-transform: uppercase;
+	letter-spacing: modular-scale(-11);
+	@include font-weight($font-weight);
+}
+
 @mixin link($color: $purple, $hover-color: $dark-pink) {
+	padding-bottom: modular-scale(-11);
+	border-bottom: 1px solid transparent;
 	color: $color;
-	transition: color $anim-speed-ease;
+	transition: all $anim-speed-ease;
 
 	&:hover {
 		color: $hover-color;
+		border-color: $hover-color;
 	}
 }
 
@@ -121,16 +134,6 @@
 	&:hover:after {
 		width: 100%;
 	}
-}
-
-@mixin uppercase-text($font-weight: semi-bold) {
-	text-transform: uppercase;
-	letter-spacing: modular-scale(-11);
-	@include font-weight($font-weight);
-}
-
-@mixin no-margin() {
-	margin-bottom: 0;
 }
 
 /*------------------------------------*\
