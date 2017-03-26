@@ -16,14 +16,26 @@
 	color: $white;
 }
 
-	.purple-bg .section__title {
-		color: $light-pink;
-	}
-
 /*------------------------------------*\
   #HEADER COLORS
 \*------------------------------------*/
 
-.section__title--pink {
+.section__title {
 	color: $dark-pink;
+}
+
+.purple-bg .section__title {
+	color: $light-pink;
+}
+
+/*------------------------------------*\
+  #LINK COLORS
+\*------------------------------------*/
+
+.section__content .link-cta  {
+	@include link-cta($color: $medium-gray);
+}
+
+.purple-bg .link-cta  {
+	@include link-cta($color: $white, $hover-color: $light-pink);
 }

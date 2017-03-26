@@ -10,7 +10,7 @@
 
 	.brand__item {
 		justify-content: center;
-		opacity: .6;
+		opacity: .5;
 		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
 		@include flexbox-column-width(100% / 6);

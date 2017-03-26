@@ -2,27 +2,26 @@
   #CONTACTO
 \*------------------------------------*/
 
-.contact {
+.contact__map {
+	height: modular-scale(14);
+	margin: 0;
+}
+
+.contact__row {
 	@include flexbox-row;
 }
 
-	.contact__info,
-	.contact__map {
-		@include l-container;
-		@include flexbox-column($padding: null);
-		@include flexbox-column-width(50%);
+	.contact__col {
+		text-align: center;
+		@include flexbox-column;
+		@include flexbox-column-width(100% / 3);
 	}
 
-		.info__section h4 {
-			margin-bottom: modular-scale(-5);
+		.contact__header {
+			margin-bottom: modular-scale(-3);
 			@include section-title;
 		}
 
-		.info__section p:last-child {
+		.contact__copy:last-child {
 			@include no-margin;
-		}
-
-		.info__section a {
-			font-family: $body-font;
-			@include link-cta($color: $white, $hover-color: $light-pink);
 		}

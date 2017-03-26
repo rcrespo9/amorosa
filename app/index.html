@@ -370,7 +370,7 @@
       	<section class="page-section" id="products">
       		<div class="section__content">
       			<div class="section__header">
-	      			<h2 class="section__title section__title--pink">Nuestros Productos</h2>
+	      			<h2 class="section__title">Nuestros Productos</h2>
 	      			<h3 class="section__blurb">Nuestras líneas de productos abarcan pantis, sostenes, pijamas, lencería sexy y de ocasión, trajes de baño, accesorios complementarios para la intimidad, fragancias y cremas.</h3>
       			</div>
 
@@ -412,13 +412,13 @@
 
         <section class="page-section gray-bg" id="marcas">
     		<div class="section__content brands">
-				<a href="https://www.victoriassecret.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
-					<svg class="brand__logo"><use xlink:href="#victorias-secret-logo"></use></svg>
-				</a>
+			<a href="https://www.victoriassecret.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
+				<svg class="brand__logo"><use xlink:href="#victorias-secret-logo"></use></svg>
+			</a>
 
-				<a href="http://www.renerofe.com.sg/" class="brand__item" rel="noopener noreferrer" target="_blank">
-					<svg class="brand__logo"><use xlink:href="#rene-rofe-logo"></use></svg>
-				</a>
+			<a href="http://www.renerofe.com.sg/" class="brand__item" rel="noopener noreferrer" target="_blank">
+				<svg class="brand__logo"><use xlink:href="#rene-rofe-logo"></use></svg>
+			</a>
 
     			<a href="http://www.calvinklein.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
     				<svg class="brand__logo"><use xlink:href="#ck-logo"></use></svg>
@@ -441,43 +441,46 @@
         <section class="page-section" id="instagram-feed">
         	<div class="section__content instafeed">
         		<div class="section__header">
-	        		<h2 class="section__title section__title--pink">@yosoyamorosaytu</h2>
+	        		<h2 class="section__title">@yosoyamorosaytu</h2>
 	        		<h3 class="section__blurb">Síguenos en Instagram.</h3>
         		</div>
 
         		<ul class="instafeed__list" id="instafeed"></ul>
-        		<a href="https://www.instagram.com/soyamorosaytu/" class="instafeed__cta" rel="noopener noreferrer" target="_blank">Ver más</a>
+        		<a href="https://www.instagram.com/soyamorosaytu/" class="link-cta" rel="noopener noreferrer" target="_blank">Ver más</a>
         	</div>
         </section>
 
-        <section class="page-section" id="contacto">
-        	<div class="contact">
-        		<div class="contact__info section__content purple-bg">
-	        		<div class="section__header section__header--left">
-		        		<h2 class="section__title section__title--pink">Contacto</h2>
-		        		<h3 class="section__blurb">Dejanos ayudarte.</h3>
-	        		</div>
-					
-	        		<div class="info__section">
-						<!-- <h4>Dirección</h4> -->
+        <section class="page-section page-section--contact" id="contacto">
+            <figure class="contact__map" id="js-amorosa-map"></figure>
 
-	        			<p>
-	        				Calle Francisco J. Peynado #14
-	        				<br>
-	        				San Cristóbal, R.D.
-	        			</p>
+  		<div class="contact__info purple-bg">
+                  <div class="section__content">
+              		<div class="section__header">
+      	        		<h2 class="section__title">Contáctenos</h2>
+      	        		<h3 class="section__blurb">Dejanos ayudarte.</h3>
+              		</div>
 
-	        			<p>
-	        				Lunes-sábado: 9:00am-6:30pm
-	        			</p>
+                        <div class="contact__row">
+                    		<div class="contact__col">
+            				<h4 class="contact__header">Visítanos</h4>
 
-	        			<p>
-	        				<a href="#">Ver direcciones</a>
-	        			</p>
-	        		</div>
-        		</div>
-        		<div class="contact__map" id="js-amorosa-map"></div>
-        	</div>
+                    			<p class="contact__copy">
+                    				Calle Francisco J. Peynado #14
+                    				<br>
+                    				San Cristóbal, R.D.
+                    			</p>
+
+                    			<p class="contact__copy">
+                    				Lunes-sábado: 9:00am-6:30pm
+                    			</p>
+
+                    			<p class="contact__copy">
+                    				<a class="link-cta" href="#">Ver direcciones</a>
+                    			</p>
+                    		</div>
+                        </div>
+                  </div>
+  		</div>
         </section>
     </main>
 
@@ -503,8 +506,7 @@
     	ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe6-3rBOY-MWocQL22MutTdwjagcG_dKA"
-    type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe6-3rBOY-MWocQL22MutTdwjagcG_dKA"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

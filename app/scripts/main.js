@@ -178,8 +178,9 @@
 			  	],
 			      {name: 'Styled Map'});
 			  var map = new google.maps.Map(document.getElementById('js-amorosa-map'), {
-			    zoom: 17,
-			    center: uluru
+			    zoom: 19,
+			    center: uluru,
+			    scrollwheel: false
 			  });
 			  var marker = new google.maps.Marker({
 			    position: uluru,
