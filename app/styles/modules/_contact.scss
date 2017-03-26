@@ -18,10 +18,14 @@
 	}
 
 		.contact__header {
-			margin-bottom: modular-scale(-3);
+			margin-bottom: modular-scale(-2);
 			@include section-title;
 		}
 
-		.contact__copy:last-child {
+		.contact__col p:last-child {
 			@include no-margin;
+		}
+
+		.contact__divider {
+			margin: 0 modular-scale(-8);
 		}

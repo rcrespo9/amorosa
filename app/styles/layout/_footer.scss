@@ -25,10 +25,6 @@
 			font-size: modular-scale(0);
 		}
 
-			.footer__text a {
-				@include link($color: inherit, $hover-color: $dark-gray);
-			}
-
 	.footer__col--attribution {
 		text-align: right;
 	}

@@ -92,7 +92,7 @@
 	@include uppercase-text;
 }
 
-@mixin link($color: $purple, $hover-color: $dark-pink) {
+@mixin link($color, $hover-color) {
 	padding-bottom: modular-scale(-11);
 	border-bottom: 1px solid transparent;
 	color: $color;
