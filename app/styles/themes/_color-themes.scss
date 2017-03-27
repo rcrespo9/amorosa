@@ -17,11 +17,15 @@
 }
 
 /*------------------------------------*\
-  #HEADER COLORS
+  #HEADER STYLES
 \*------------------------------------*/
 
 .section__title {
 	color: $dark-pink;
+}
+
+.purple-bg .section__header--left:after {
+	border-color: $light-pink;
 }
 
 .purple-bg .section__title {
@@ -29,7 +33,7 @@
 }
 
 /*------------------------------------*\
-  #LINK COLORS
+  #LINK STYLES
 \*------------------------------------*/
 
 .section__content .link-cta  {

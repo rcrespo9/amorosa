@@ -44,6 +44,15 @@ a {
 
 .section__header--left {
 	text-align: left;
+
+	&:after {
+		content: "";
+		display: block;
+		width: modular-scale(5);
+		height: modular-scale(2);
+		margin-bottom: modular-scale(-3);
+		border-bottom: 3px solid;
+	}
 }
 
 /*------------------------------------*\
