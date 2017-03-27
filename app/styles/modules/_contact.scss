@@ -26,6 +26,11 @@
 			@include no-margin;
 		}
 
+		abbr.contact__abbr {
+			color: $light-pink;
+			text-decoration: none;
+		}
+
 		.contact__divider {
 			margin: 0 modular-scale(-8);
 		}
