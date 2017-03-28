@@ -22,10 +22,10 @@
 	padding-bottom: modular-scale(6);
 }
 
-@mixin flexbox-row {
+@mixin flexbox-row($direction: row) {
 	display: flex;
 	flex: 0 1 auto;
-	flex-direction: row;
+	flex-direction: $direction;
 	flex-wrap: wrap;
 }
 

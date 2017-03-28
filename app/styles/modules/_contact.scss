@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 .contact {
-	@include flexbox-row;
-	flex-direction: row-reverse;
+	@include flexbox-row(row-reverse);
 }
 
 	.contact__map,
