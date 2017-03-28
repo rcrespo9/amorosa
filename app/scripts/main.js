@@ -19,7 +19,7 @@
 })();
 
 function initMap() {
-	const amorosaLocation = {lat: 18.417541, lng: -70.112982};
+	const amorosaLocation = {lat: 18.4178000, lng: -70.1124820};
 
 	const styledMapType = new google.maps.StyledMapType(
 		[{
