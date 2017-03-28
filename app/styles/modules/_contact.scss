@@ -4,6 +4,7 @@
 
 .contact {
 	@include flexbox-row;
+	flex-direction: row-reverse;
 }
 
 	.contact__map,
