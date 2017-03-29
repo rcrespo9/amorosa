@@ -24,4 +24,5 @@
 			display: inherit;
 			width: ceil(rem(205px));
 			height: ceil(rem(67px));
+			transition: all $anim-speed-ease;
 		}
