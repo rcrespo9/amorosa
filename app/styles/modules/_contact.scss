@@ -21,7 +21,7 @@
 	}
 
 		.contact__section:not(:last-child) {
-			margin-bottom: modular-scale(1);
+			margin-bottom: modular-scale(0);
 		}
 
 			.contact__header {
@@ -30,10 +30,6 @@
 			}
 
 			.contact__section p {
-				margin-bottom: modular-scale(-4);
-			}
-
-			.contact__section p:last-child {
 				@include no-margin;
 			}
 
