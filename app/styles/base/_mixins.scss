@@ -94,7 +94,7 @@
 
 @mixin link($color, $hover-color) {
 	padding-bottom: modular-scale(-11);
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid rgba($color, .3);
 	color: $color;
 	transition: all $anim-speed-ease;
 

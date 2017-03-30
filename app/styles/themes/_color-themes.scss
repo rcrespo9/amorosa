@@ -44,11 +44,14 @@
 	@include link-cta($color: $white, $hover-color: $light-pink);
 }
 
-.section__content .link,
-.page-footer .link {
-	@include link($color: inherit, $hover-color: $dark-gray);
+.section__content .link {
+	@include link($color: $dark-gray, $hover-color: $dark-gray);
 }
 
 .purple-bg .link {
-	@include link($color: inherit, $hover-color: $light-pink);
+	@include link($color: $white, $hover-color: $light-pink);
+}
+
+.page-footer .link {
+	@include link($color: $gray, $hover-color: $dark-gray);
 }
