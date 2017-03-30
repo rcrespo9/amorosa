@@ -63,3 +63,7 @@ a {
 	font-size: modular-scale(0);
 	line-height: strip-units(modular-scale(2));
 }
+
+.page-content strong {
+	@include font-weight(semi-bold);
+}
