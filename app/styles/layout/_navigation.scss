@@ -29,7 +29,7 @@
 
 	.nav-toggle__inner {
 		left: 50%;
-		margin-left: -13px;
+		margin-left: -$burger-icon-width / 2;
 	}
 
 	.nav-toggle__inner,
@@ -37,8 +37,8 @@
 	.nav-toggle__inner:after {
 		position: absolute;
 		display: block;
-		width: 26px;
-		height: 3px;
+		width: $burger-icon-width;
+		height: $burger-icon-height;
 		background-color: $gray;
 		transition: transform $anim-speed-ease;
 	}
@@ -50,9 +50,9 @@
 	}
 
 	.nav-toggle__inner:before {
-		top: -7px;
+		top: -$burger-icon-spacing;
 	}
 
 	.nav-toggle__inner:after {
-		top: 7px;
+		top: $burger-icon-spacing;
 	}
