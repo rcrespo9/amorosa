@@ -2,10 +2,24 @@
   #CONTAINERS
 \*------------------------------------*/
 
-.open-nav {
-	overflow: hidden;
-}
+// .open-nav .page-wrapper {
+// 	overflow: hidden;
+// }
 
 /*------------------------------------*\
   #NAVIGATION TOGGLE
 \*------------------------------------*/
+
+.open-nav .nav-toggle__inner {
+	background-color: rgba($gray, 0);
+}
+
+.open-nav .nav-toggle__inner:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+
+.open-nav .nav-toggle__inner:after {
+	top: 0;
+	transform: rotate(45deg);
+}

@@ -39,18 +39,18 @@
 		display: block;
 		width: $burger-icon-width;
 		height: $burger-icon-height;
-		background-color: $gray;
-		transition: transform $anim-speed-ease;
+		background-color: rgba($gray, 1);
+		transition: all $anim-speed-ease;
 	}
 
 	.nav-toggle__inner:before,
 	.nav-toggle__inner:after {
 		content: "";
-		right: 0;
+		left: 0;
 	}
 
 	.nav-toggle__inner:before {
-		top: -$burger-icon-spacing;
+		bottom: $burger-icon-spacing;
 	}
 
 	.nav-toggle__inner:after {
