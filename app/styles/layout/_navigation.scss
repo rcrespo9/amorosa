@@ -9,7 +9,7 @@
 .nav-toggle {
 	display: block;
 	position: fixed;
-	top: 40px;
+	top: rem(31px);
 	right: modular-scale(4);
 	z-index: 9999;
 	width: 50px;

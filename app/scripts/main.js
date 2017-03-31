@@ -1,6 +1,22 @@
 (function() {
 	'use strict';
 
+	class Navigation {
+		constructor() {
+			this.theBody = document.body;
+			this.openNavClass = 'open-nav';
+			this.toggleNavBtn = document.getElementById('js-nav-toggle');
+		}
+
+		toggleNav() {
+			this.theBody.classList.toggle(this.openNavClass);
+		}
+
+		init() {
+			this.toggleNavBtn.addEventListener('click', this.toggleNav.bind(this));
+		}
+	}
+
 	class Main {
 		constructor() {
 			const userFeed = new Instafeed({
@@ -12,6 +28,9 @@
 				template: '<li class="instafeed__item"><a class="instafeed__link" href="{{link}}" rel="noopener noreferrer" target="_blank"><div class="instafeed__overlay"><div class="instafeed__counters"><span class="instafeed__counter"><svg class="instafeed__icon"><use xlink:href="#icon-heart"></use></svg>{{likes}}</span><span class="instafeed__counter"><svg class="instafeed__icon"><use xlink:href="#icon-bubble"></use></svg>{{comments}}</span></div></div><img class="instafeed__img" src="{{image}}" alt="{{caption}}" /></a></li>'
 			});
 			userFeed.run();
+
+			const navigation = new Navigation();
+			navigation.init();
 		}
 	}
 
