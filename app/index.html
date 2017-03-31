@@ -325,202 +325,199 @@
       	</defs>
       </svg>
 
+	<header class="page-header" role="banner">
+		<a href="#page-content" class="skip-to-content visuallyhidden">Skip to content</a>
+		<a class="header__logo" href="/">
+			<span class="logo__text visuallyhidden">Amorosa Lingerie</span>
+			<svg class="logo__img">
+				<use xlink:href="#amorosa-logo"></use>
+			</svg>
+		</a>
 
-<!-- 	<nav class="page-nav" id="js-nav">
-	    <ul class="nav__list">
-	        <li class="nav__item">
-	            <a href="#inicio" class="nav__link">Nosotros</a>
-	        </li>
-	        <li class="nav__item">
-	            <a href="#products" class="nav__link">Productos</a>
-	        </li>
-	        <li class="nav__item">
-	            <a href="#contacto" class="nav__link">Contacto</a>
-	        </li>
-	    </ul>
-	</nav> -->
+		<button class="nav-toggle" id="js-nav-toggle">
+			<span class="visuallyhidden">Alternar menú</span>
+			<span class="nav-toggle__inner"></span>
+		</button>
 
-	<button class="nav-toggle" id="js-nav-toggle">
-		<span class="visuallyhidden">Alternar menú</span>
-		<span class="nav-toggle__inner"></span>
-	</button>
+		<!-- 	<nav class="page-nav" id="js-nav">
+			    <ul class="nav__list">
+			        <li class="nav__item">
+			            <a href="#inicio" class="nav__link">Nosotros</a>
+			        </li>
+			        <li class="nav__item">
+			            <a href="#products" class="nav__link">Productos</a>
+			        </li>
+			        <li class="nav__item">
+			            <a href="#contacto" class="nav__link">Contacto</a>
+			        </li>
+			    </ul>
+			</nav> -->
+	</header>
 
-	<div class="page-wrapper" id="js-page-wrapper">
-		<header class="page-header" role="banner">
-			<a href="#page-content" class="skip-to-content visuallyhidden">Skip to content</a>
-			<a class="header__logo" href="/">
-				<span class="logo__text visuallyhidden">Amorosa Lingerie</span>
-				<svg class="logo__img">
-					<use xlink:href="#amorosa-logo"></use>
-				</svg>
-			</a>
+	<main class="page-content" id="page-content" role="main">
+		<header class="page-hero" id="inicio">
+			<div class="hero__inner">
+				<div class="hero__content">
+					<h1 class="hero__tagline">
+						Donde tu intimidad
+						<span class="tagline__br">es lo primero.</span>
+					</h1>
+
+					<p class="hero__blurb">Somos Amorosa Lingerie, un espacio comercial donde seleccionamos las mejores marcas de ropa intima.</p>
+
+					<button class="hero__cta" data-target="contacto">Visítanos</button>
+				</div>
+
+				<div class="hero__arrow-container">
+					<a href="#nosotros" class="hero__arrow">
+						<svg class="arrow__icon"><use xlink:href="#icon-keyboard_arrow_down"></use></svg>
+					</a>
+				</div>
+			</div>
 		</header>
 
-		<main class="page-content" id="page-content" role="main">
-			<header class="page-hero" id="inicio">
-				<div class="hero__inner">
-					<div class="hero__content">
-						<h1 class="hero__tagline">
-							Donde tu intimidad
-							<span class="tagline__br">es lo primero.</span>
-						</h1>
+		<section class="page-section" id="products">
+			<div class="section__content">
+				<div class="section__header">
+					<h2 class="section__title">Nuestros Productos</h2>
+					<h3 class="section__blurb">Nuestras líneas de productos abarcan pantis, sostenes, pijamas, lencería sexy y de ocasión, trajes de baño, accesorios complementarios para la intimidad, fragancias y cremas.</h3>
+				</div>
 
-						<p class="hero__blurb">Somos Amorosa Lingerie, un espacio comercial donde seleccionamos las mejores marcas de ropa intima.</p>
+				<div class="products">
+					<figure class="product__item">
+						<svg class="product__icon"><use xlink:href="#icon-lenceria"></use></svg>
+						<figcaption class="product__caption">
+							<h4 class="product__name">Lencería</h4>
+							<p class="product__desc">Amorosa Lingerie contamos con ropas de cama acogedoras, para esas noches en casa donde solo quieres relajarte y sentirte confortable. Pero si eres una apasionada de la lencería sexy y atrevida, te brindamos una amplia variedad capaz de cautiva las miradas.</p>
+						</figcaption>
+					</figure>
 
-						<button class="hero__cta" data-target="contacto">Visítanos</button>
+					<figure class="product__item">
+						<svg class="product__icon"><use xlink:href="#icon-sostenes"></use></svg>
+						<figcaption class="product__caption">
+							<h4 class="product__name">Sostenes</h4>
+							<p class="product__desc">El sostén es una pieza esencial en el diario vivir femenino, es por ello que ofrecemos una gama variada de tallas y estilos, brindándote experiencias de seguridad, sensualidad y comodidad en cada pieza que selecciones.</p>
+						</figcaption>
+					</figure>
+
+					<figure class="product__item">
+						<svg class="product__icon"><use xlink:href="#icon-pantis"></use></svg>
+						<figcaption class="product__caption">
+							<h4 class="product__name">Pantis</h4>
+							<p class="product__desc">La elección de los pantis que utilizas impacta tanto en la apariencia de tu silueta como en tu higiene íntima. En Amorosa Lingerie tenemos un universo de pantis que abarca todas las texturas, estilos, formas y colores, con el objetivo de satisfacer a las conservadoras y a las más&nbsp;atrevidas.</p>
+						</figcaption>
+					</figure>
+
+					<figure class="product__item">
+						<svg class="product__icon"><use xlink:href="#icon-bathing"></use></svg>
+						<figcaption class="product__caption">
+							<h4 class="product__name">Trajes de Baño</h4>
+							<p class="product__desc">Amorosa Lingerie contamos con ropas de cama acogedoras, para esas noches en casa donde solo quieres relajarte y sentirte confortable. Pero si eres una apasionada de la lencería sexy y atrevida, te brindamos una  amplia variedad capaz de cautiva las miradas.</p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="page-section gray-bg" id="marcas">
+			<div class="section__content brands">
+				<a href="https://www.victoriassecret.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<svg class="brand__logo"><use xlink:href="#victorias-secret-logo"></use></svg>
+				</a>
+
+				<a href="http://www.renerofe.com.sg/" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<svg class="brand__logo"><use xlink:href="#rene-rofe-logo"></use></svg>
+				</a>
+
+				<a href="http://www.calvinklein.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<svg class="brand__logo"><use xlink:href="#ck-logo"></use></svg>
+				</a>
+
+				<a href="http://xoxo.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<svg class="brand__logo"><use xlink:href="#xoxo-logo"></use></svg>
+				</a>
+
+				<a href="http://hanes.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<svg class="brand__logo"><use xlink:href="#hanes-logo"></use></svg>
+				</a>
+
+				<a href="http://jessicasimpson.com" class="brand__item" rel="noopener noreferrer" target="_blank">
+					<img src="images/jessica-simpson-logo.png" alt="" class="brand__logo">
+				</a>
+			</div>
+		</section>
+
+		<section class="page-section" id="instagram-feed">
+			<div class="section__content instafeed">
+				<div class="section__header">
+					<h2 class="section__title">@yosoyamorosaytu</h2>
+					<h3 class="section__blurb">Síguenos en Instagram.</h3>
+				</div>
+
+				<ul class="instafeed__list" id="instafeed"></ul>
+				<a href="https://www.instagram.com/soyamorosaytu/" class="link-cta" rel="noopener noreferrer" target="_blank">Ver más</a>
+			</div>
+		</section>
+
+		<section class="page-section page-section--contact" id="contacto">
+			<div class="contact">
+				<figure class="contact__map" id="js-amorosa-map"></figure>
+
+				<div class="contact__info purple-bg">
+					<div class="section__header section__header--left">
+						<h2 class="section__title">Contáctenos</h2>
+						<h3 class="section__blurb">Dejanos ayudarte.</h3>
 					</div>
 
-					<div class="hero__arrow-container">
-						<a href="#nosotros" class="hero__arrow">
-							<svg class="arrow__icon"><use xlink:href="#icon-keyboard_arrow_down"></use></svg>
-						</a>
+					<div class="contact__section">
+						<h4 class="contact__header">Visítanos</h4>
+						<p>
+							<a class="link" href="https://goo.gl/maps/pWYRuVwqJXL2" rel="noopener noreferrer" target="_blank">
+								Calle Francisco J. Peynado #14
+								<br>
+								San Cristóbal, R.D.
+							</a>
+						</p>
+					</div>
+
+					<div class="contact__section">
+						<h4 class="contact__header">Horario</h4>
+						<p>Lunes a sábado, de 9:00 a.m. a 6:30 p.m.</p>
+					</div>
+
+					<div class="contact__section">
+						<h4 class="contact__header">Háblanos</h4>
+						<p>
+							<abbr title="Telefono" class="contact__abbr">T</abbr> <a class="link" href="tel:809-288-0721">(809) 288-0721</a>
+							<br/>
+							<abbr title="E-mail" class="contact__abbr">E</abbr> <a class="link" href="mailto:info@amorosalingerie.com">info@amorosalingerie.com</a>
+						</p>
+					</div>
+
+					<div class="contact__section">
+						<h4 class="contact__header">Síguenos</h4>
+						<p>
+							<a class="link" href="https://www.facebook.com/Amorosa-Lingerie-Dominicana-235771910137329/" rel="noopener noreferrer" target="_blank">Facebook</a>
+							<span class="contact__divider">/</span>
+							<a class="link" href="https://www.instagram.com/soyamorosaytu/" rel="noopener noreferrer" target="_blank">Instagram</a>
+						</p>
 					</div>
 				</div>
-			</header>
+			</div>
+		</section>
+	</main>
 
-			<section class="page-section" id="products">
-				<div class="section__content">
-					<div class="section__header">
-						<h2 class="section__title">Nuestros Productos</h2>
-						<h3 class="section__blurb">Nuestras líneas de productos abarcan pantis, sostenes, pijamas, lencería sexy y de ocasión, trajes de baño, accesorios complementarios para la intimidad, fragancias y cremas.</h3>
-					</div>
+    <footer class="page-footer" role="contentinfo">
+    	<div class="footer__inner">
+    		<div class="footer__col footer__col--copyright">
+    			<p class="footer__text">&copy; 2017 Amorosa Lingerie. Todos los derechos reservados.</p>
+    		</div>
 
-					<div class="products">
-						<figure class="product__item">
-							<svg class="product__icon"><use xlink:href="#icon-lenceria"></use></svg>
-							<figcaption class="product__caption">
-								<h4 class="product__name">Lencería</h4>
-								<p class="product__desc">Amorosa Lingerie contamos con ropas de cama acogedoras, para esas noches en casa donde solo quieres relajarte y sentirte confortable. Pero si eres una apasionada de la lencería sexy y atrevida, te brindamos una amplia variedad capaz de cautiva las miradas.</p>
-							</figcaption>
-						</figure>
-
-						<figure class="product__item">
-							<svg class="product__icon"><use xlink:href="#icon-sostenes"></use></svg>
-							<figcaption class="product__caption">
-								<h4 class="product__name">Sostenes</h4>
-								<p class="product__desc">El sostén es una pieza esencial en el diario vivir femenino, es por ello que ofrecemos una gama variada de tallas y estilos, brindándote experiencias de seguridad, sensualidad y comodidad en cada pieza que selecciones.</p>
-							</figcaption>
-						</figure>
-
-						<figure class="product__item">
-							<svg class="product__icon"><use xlink:href="#icon-pantis"></use></svg>
-							<figcaption class="product__caption">
-								<h4 class="product__name">Pantis</h4>
-								<p class="product__desc">La elección de los pantis que utilizas impacta tanto en la apariencia de tu silueta como en tu higiene íntima. En Amorosa Lingerie tenemos un universo de pantis que abarca todas las texturas, estilos, formas y colores, con el objetivo de satisfacer a las conservadoras y a las más&nbsp;atrevidas.</p>
-							</figcaption>
-						</figure>
-
-						<figure class="product__item">
-							<svg class="product__icon"><use xlink:href="#icon-bathing"></use></svg>
-							<figcaption class="product__caption">
-								<h4 class="product__name">Trajes de Baño</h4>
-								<p class="product__desc">Amorosa Lingerie contamos con ropas de cama acogedoras, para esas noches en casa donde solo quieres relajarte y sentirte confortable. Pero si eres una apasionada de la lencería sexy y atrevida, te brindamos una  amplia variedad capaz de cautiva las miradas.</p>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-
-			<section class="page-section gray-bg" id="marcas">
-				<div class="section__content brands">
-					<a href="https://www.victoriassecret.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<svg class="brand__logo"><use xlink:href="#victorias-secret-logo"></use></svg>
-					</a>
-
-					<a href="http://www.renerofe.com.sg/" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<svg class="brand__logo"><use xlink:href="#rene-rofe-logo"></use></svg>
-					</a>
-
-					<a href="http://www.calvinklein.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<svg class="brand__logo"><use xlink:href="#ck-logo"></use></svg>
-					</a>
-
-					<a href="http://xoxo.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<svg class="brand__logo"><use xlink:href="#xoxo-logo"></use></svg>
-					</a>
-
-					<a href="http://hanes.com/" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<svg class="brand__logo"><use xlink:href="#hanes-logo"></use></svg>
-					</a>
-
-					<a href="http://jessicasimpson.com" class="brand__item" rel="noopener noreferrer" target="_blank">
-						<img src="images/jessica-simpson-logo.png" alt="" class="brand__logo">
-					</a>
-				</div>
-			</section>
-
-			<section class="page-section" id="instagram-feed">
-				<div class="section__content instafeed">
-					<div class="section__header">
-						<h2 class="section__title">@yosoyamorosaytu</h2>
-						<h3 class="section__blurb">Síguenos en Instagram.</h3>
-					</div>
-
-					<ul class="instafeed__list" id="instafeed"></ul>
-					<a href="https://www.instagram.com/soyamorosaytu/" class="link-cta" rel="noopener noreferrer" target="_blank">Ver más</a>
-				</div>
-			</section>
-
-			<section class="page-section page-section--contact" id="contacto">
-				<div class="contact">
-					<figure class="contact__map" id="js-amorosa-map"></figure>
-
-					<div class="contact__info purple-bg">
-						<div class="section__header section__header--left">
-							<h2 class="section__title">Contáctenos</h2>
-							<h3 class="section__blurb">Dejanos ayudarte.</h3>
-						</div>
-
-						<div class="contact__section">
-							<h4 class="contact__header">Visítanos</h4>
-							<p>
-								<a class="link" href="https://goo.gl/maps/pWYRuVwqJXL2" rel="noopener noreferrer" target="_blank">
-									Calle Francisco J. Peynado #14
-									<br>
-									San Cristóbal, R.D.
-								</a>
-							</p>
-						</div>
-
-						<div class="contact__section">
-							<h4 class="contact__header">Horario</h4>
-							<p>Lunes a sábado, de 9:00 a.m. a 6:30 p.m.</p>
-						</div>
-
-						<div class="contact__section">
-							<h4 class="contact__header">Háblanos</h4>
-							<p>
-								<abbr title="Telefono" class="contact__abbr">T</abbr> <a class="link" href="tel:809-288-0721">(809) 288-0721</a>
-								<br/>
-								<abbr title="E-mail" class="contact__abbr">E</abbr> <a class="link" href="mailto:info@amorosalingerie.com">info@amorosalingerie.com</a>
-							</p>
-						</div>
-
-						<div class="contact__section">
-							<h4 class="contact__header">Síguenos</h4>
-							<p>
-								<a class="link" href="https://www.facebook.com/Amorosa-Lingerie-Dominicana-235771910137329/" rel="noopener noreferrer" target="_blank">Facebook</a>
-								<span class="contact__divider">/</span>
-								<a class="link" href="https://www.instagram.com/soyamorosaytu/" rel="noopener noreferrer" target="_blank">Instagram</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-
-	    <footer class="page-footer" role="contentinfo">
-	    	<div class="footer__inner">
-	    		<div class="footer__col footer__col--copyright">
-	    			<p class="footer__text">&copy; 2017 Amorosa Lingerie. Todos los derechos reservados.</p>
-	    		</div>
-
-	    		<div class="footer__col footer__col--attribution">
-	    			<p class="footer__text">Creado por <a class="link" href="http://rudycrespo.com" target="_blank">Rudy Crespo</a></p>
-	    		</div>
-	    	</div>
-	    </footer>
-    </div>
+    		<div class="footer__col footer__col--attribution">
+    			<p class="footer__text">Creado por <a class="link" href="http://rudycrespo.com" target="_blank">Rudy Crespo</a></p>
+    		</div>
+    	</div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
