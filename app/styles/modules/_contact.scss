@@ -25,8 +25,9 @@
 		}
 
 			.contact__header {
-				margin-bottom: modular-scale(-5);
-				@include section-title;
+				margin-bottom: modular-scale(-11);
+				font-family: $body-font;
+				@include font-weight(semi-bold);
 			}
 
 			.contact__section p {
