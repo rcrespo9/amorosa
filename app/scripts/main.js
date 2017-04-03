@@ -4,16 +4,22 @@
 	class Navigation {
 		constructor() {
 			this.theBody = document.body;
-			this.openNavClass = 'open-nav';
 			this.toggleNavBtn = document.getElementById('js-nav-toggle');
+			this.pageOverlay = document.getElementById('js-page-overlay');
+			this.openNavClass = 'open-nav';
 		}
 
 		toggleNav() {
 			this.theBody.classList.toggle(this.openNavClass);
 		}
 
+		closeNav() {
+			this.theBody.classList.remove(this.openNavClass);
+		}
+
 		init() {
 			this.toggleNavBtn.addEventListener('click', this.toggleNav.bind(this));
+			this.pageOverlay.addEventListener('click', this.closeNav.bind(this));
 		}
 	}
 

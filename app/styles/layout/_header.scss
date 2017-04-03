@@ -4,11 +4,11 @@
 
 .page-header {
 	position: absolute;
-	z-index: 9998;
+	z-index: 9;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: $nav-height;
+	height: $header-height;
 	background-color: $white;
 	@include l-container;
 }
@@ -25,75 +25,3 @@
 			width: ceil(rem(205px));
 			height: ceil(rem(67px));
 		}
-
-/*------------------------------------*\
-  #OFFCANVAS NAVIGATION
-\*------------------------------------*/
-
-.page-nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 9997;
-	width: modular-scale(14);
-	height: 100%;
-	background-color: $white;
-	transition: transform $anim-speed-ease;
-	transform: translateX(100%);
-}
-
-/*------------------------------------*\
-  #NAVIGATION TOGGLE
-\*------------------------------------*/
-
-.nav-toggle {
-	display: block;
-	position: fixed;
-	top: rem(31px);
-	right: modular-scale(4);
-	z-index: 9999;
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	border: 0;
-	border-radius: 50%;
-	background-color: $white;
-	outline: none;
-	appearance: none;
-	transition: all $anim-speed-ease;
-
-	&:focus {
-		outline: none;
-	}
-}
-
-	.nav-toggle__inner {
-		left: 50%;
-		margin-left: -$burger-icon-width / 2;
-	}
-
-	.nav-toggle__inner,
-	.nav-toggle__inner:before,
-	.nav-toggle__inner:after {
-		position: absolute;
-		display: block;
-		width: $burger-icon-width;
-		height: $burger-icon-height;
-		background-color: rgba($gray, 1);
-		transition: all $anim-speed-ease;
-	}
-
-	.nav-toggle__inner:before,
-	.nav-toggle__inner:after {
-		content: "";
-		left: 0;
-	}
-
-	.nav-toggle__inner:before {
-		bottom: $burger-icon-spacing;
-	}
-
-	.nav-toggle__inner:after {
-		top: $burger-icon-spacing;
-	}

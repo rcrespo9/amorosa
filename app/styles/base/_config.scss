@@ -31,10 +31,11 @@ $modular-scale-base: rem($em-base);
 $second-strand: rem(14px);
 
 /*------------------------------------*\
-  #HEADER VARIABLES
+  #NAVIGATION VARIABLES
 \*------------------------------------*/
 
-$nav-height: modular-scale(8);
+$header-height: modular-scale(8);
+$offcanvas-nav-width: modular-scale(14);
 
 $burger-icon-width: 26px;
 $burger-icon-height: 3px;
