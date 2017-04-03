@@ -2,9 +2,17 @@
   #CONTAINERS
 \*------------------------------------*/
 
-// .open-nav .page-wrapper {
-// 	overflow: hidden;
-// }
+.open-nav {
+	overflow: hidden;
+}
+
+/*------------------------------------*\
+  #OFFCANVAS NAVIGATION
+\*------------------------------------*/
+
+.open-nav .page-nav {
+	transform: translateX(0);
+}
 
 /*------------------------------------*\
   #NAVIGATION TOGGLE
