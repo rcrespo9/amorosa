@@ -25,3 +25,62 @@
 			width: ceil(rem(205px));
 			height: ceil(rem(67px));
 		}
+
+/*------------------------------------*\
+  #OFFCANVAS NAVIGATION
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #NAVIGATION TOGGLE
+\*------------------------------------*/
+
+.nav-toggle {
+	display: block;
+	position: fixed;
+	top: rem(31px);
+	right: modular-scale(4);
+	z-index: 9999;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background-color: $white;
+	outline: none;
+	appearance: none;
+	transition: all $anim-speed-ease;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+	.nav-toggle__inner {
+		left: 50%;
+		margin-left: -$burger-icon-width / 2;
+	}
+
+	.nav-toggle__inner,
+	.nav-toggle__inner:before,
+	.nav-toggle__inner:after {
+		position: absolute;
+		display: block;
+		width: $burger-icon-width;
+		height: $burger-icon-height;
+		background-color: rgba($gray, 1);
+		transition: all $anim-speed-ease;
+	}
+
+	.nav-toggle__inner:before,
+	.nav-toggle__inner:after {
+		content: "";
+		left: 0;
+	}
+
+	.nav-toggle__inner:before {
+		bottom: $burger-icon-spacing;
+	}
+
+	.nav-toggle__inner:after {
+		top: $burger-icon-spacing;
+	}
