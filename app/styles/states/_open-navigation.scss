@@ -21,7 +21,7 @@
 
 		@for $nav-item from 1 through 3 {
 			&:nth-child(#{$nav-item}) {
-				transition-delay: (#{$nav-item / 5}s);
+				transition-delay: (#{$nav-item / 4}s);
 			}
 		}
 	}
