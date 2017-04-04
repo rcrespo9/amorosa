@@ -7,21 +7,13 @@
 }
 
 /*------------------------------------*\
-  #PAGE OVERLAY
+  #NAVIGATION
 \*------------------------------------*/
 
-.open-nav .page-overlay {
+.open-nav .header__nav {
 	opacity: 1;
-	cursor: pointer;
+	visibility: visible;
 	pointer-events: auto;
-}
-
-/*------------------------------------*\
-  #OFFCANVAS NAVIGATION
-\*------------------------------------*/
-
-.open-nav .page-nav {
-	transform: translateX(0);
 }
 
 /*------------------------------------*\
