@@ -47,13 +47,12 @@
 .nav-toggle {
 	position: relative;
 	z-index: 12;
-	width: 50px;
-	height: 50px;
+	width: $burger-icon-width;
+	height: $burger-icon-height + $burger-icon-spacing * 3;
 	margin-left: auto;
 	padding: 0;
 	border: 0;
-	border-radius: 50%;
-	background-color: $white;
+	background-color: transparent;
 	outline: none;
 	appearance: none;
 	transition: all $anim-speed-ease;
@@ -109,30 +108,32 @@
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	background-color: $dark-pink;
+	transition: all $anim-speed-ease;
 	@include flexbox-row;
 }
 
+	.nav__list {
+		position: absolute;
+		top: 50%;
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		transform: translateY(-50%);
+	}
+
 		.nav__item {
-			justify-content: center;
-			height: inherit;
-			padding: 0 modular-scale(4);
-			color: $white;
-			font-size: modular-scale(5);
-			font-family: $header-font;
-			@include font-weight(black);
-			@include flexbox-column($padding: null);
-			@include flexbox-column-width(100% / 3);
+			&:not(:last-child) {
+				margin-bottom: modular-scale(3, 1vh);
+			}
 		}
 
-		.nav__item--nosotros {
-			background-color: $pink;
-		}
-
-		.nav__item--productos {
-			background-color: $medium-pink;
-		}
-
-		.nav__item--contacto {
-			background-color: $dark-pink;
-		}
+			.nav__link {
+				color: $white;
+				font-family: $header-font;
+				font-size: modular-scale(6);
+				@include font-weight(black);
+			}
 

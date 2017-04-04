@@ -21,7 +21,7 @@
 \*------------------------------------*/
 
 .open-nav .nav-toggle__inner {
-	background-color: rgba($gray, 0);
+	background-color: rgba($white, 0);
 }
 
 .open-nav .nav-toggle__inner:before {
@@ -32,4 +32,9 @@
 .open-nav .nav-toggle__inner:after {
 	top: 0;
 	transform: rotate(45deg);
+}
+
+.open-nav .nav-toggle__inner:before,
+.open-nav .nav-toggle__inner:after {
+	background-color: rgba($white, 1);
 }
