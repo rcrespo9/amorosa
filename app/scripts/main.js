@@ -5,7 +5,6 @@
 		constructor() {
 			this.theBody = document.body;
 			this.toggleNavBtn = document.getElementById('js-nav-toggle');
-			this.pageOverlay = document.getElementById('js-page-overlay');
 			this.openNavClass = 'open-nav';
 		}
 
@@ -19,7 +18,6 @@
 
 		init() {
 			this.toggleNavBtn.addEventListener('click', this.toggleNav.bind(this));
-			this.pageOverlay.addEventListener('click', this.closeNav.bind(this));
 		}
 	}
 

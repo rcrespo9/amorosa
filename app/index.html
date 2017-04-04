@@ -325,34 +325,39 @@
 		</defs>
 	</svg>
 
-	<button class="nav-toggle" id="js-nav-toggle">
-		<span class="visuallyhidden">Alternar menú</span>
-		<span class="nav-toggle__inner"></span>
-	</button>
-
-	<nav class="page-nav" id="js-nav">
-	    <ul class="nav__list">
-	        <li class="nav__item">
-	            <a href="#inicio" class="nav__link">Nosotros</a>
-	        </li>
-	        <li class="nav__item">
-	            <a href="#products" class="nav__link">Productos</a>
-	        </li>
-	        <li class="nav__item">
-	            <a href="#contacto" class="nav__link">Contacto</a>
-	        </li>
-	    </ul>
-	</nav>
-
 	<header class="page-header" role="banner">
 		<a href="#page-content" class="skip-to-content visuallyhidden">Skip to content</a>
+		<div class="header__inner">
+			<div class="header__logo">
+				<a class="logo__link" href="/">
+					<span class="logo__text visuallyhidden">Amorosa Lingerie</span>
+					<svg class="logo__img">
+						<use xlink:href="#amorosa-logo"></use>
+					</svg>
+				</a>
+			</div>
 
-		<a class="header__logo" href="/">
-			<span class="logo__text visuallyhidden">Amorosa Lingerie</span>
-			<svg class="logo__img">
-				<use xlink:href="#amorosa-logo"></use>
-			</svg>
-		</a>
+			<div class="header__controls">
+				<button class="nav-toggle" id="js-nav-toggle">
+					<span class="visuallyhidden">Alternar menú</span>
+					<span class="nav-toggle__inner"></span>
+				</button>
+			</div>
+		</div>
+
+<!-- 		<nav class="header__nav" id="js-nav">
+		    <ul class="nav__list">
+		        <li class="nav__item">
+		            <a href="#inicio" class="nav__link">Nosotros</a>
+		        </li>
+		        <li class="nav__item">
+		            <a href="#products" class="nav__link">Productos</a>
+		        </li>
+		        <li class="nav__item">
+		            <a href="#contacto" class="nav__link">Contacto</a>
+		        </li>
+		    </ul>
+		</nav> -->
 	</header>
 
 	<main class="page-content" id="page-content" role="main">
@@ -519,8 +524,6 @@
     		</div>
     	</div>
     </footer>
-
-    <div class="page-overlay" id="js-page-overlay"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
