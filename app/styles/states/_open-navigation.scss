@@ -11,10 +11,20 @@
 \*------------------------------------*/
 
 .open-nav .header__nav {
-	opacity: 1;
-	visibility: visible;
 	pointer-events: auto;
+	transform: translateY(0);
 }
+
+	.open-nav .nav__item {
+		opacity: 1;
+		transform: translateY(0);
+
+		@for $nav-item from 1 through 3 {
+			&:nth-child(#{$nav-item}) {
+				transition-delay: (#{$nav-item / 5}s);
+			}
+		}
+	}
 
 /*------------------------------------*\
   #NAVIGATION TOGGLE
