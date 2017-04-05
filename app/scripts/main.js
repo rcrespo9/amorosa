@@ -33,8 +33,8 @@
 			});
 			userFeed.run();
 
-			const navigation = new Navigation();
-			navigation.init();
+			// const navigation = new Navigation();
+			// navigation.init();
 		}
 	}
 
