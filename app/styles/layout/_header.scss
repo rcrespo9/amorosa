@@ -127,7 +127,7 @@
 			.nav__link {
 				display: block;
 				padding: modular-scale(0, 1vh) 0;
-				color: #FFF3F8;
+				color: $white;
 				font-family: $header-font;
 				font-size: modular-scale(6);
 				transition: all $anim-speed-ease;
