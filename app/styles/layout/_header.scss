@@ -62,7 +62,7 @@
 		vertical-align: middle;
 
 		&:not(:last-child) {
-			margin-right: modular-scale(3);
+			margin-right: modular-scale(2);
 		}
 	}
 
@@ -77,6 +77,12 @@
 				color: $pink;
 			}
 		}
+
+			.nav__icon {
+				width: modular-scale(1);
+				height: modular-scale(1);
+				@include svg-icon;
+			}
 
 /*------------------------------------*\
   #NAVIGATION TOGGLE

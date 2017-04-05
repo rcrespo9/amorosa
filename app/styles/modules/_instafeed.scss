@@ -64,14 +64,11 @@
 						}
 
 							.instafeed__icon {
-								display: inline-block;
 								vertical-align: middle;
 								width: modular-scale(1);
 								height: modular-scale(1);
 								margin-right: modular-scale(-5);
-								stroke-width: 0;
-								stroke: currentColor;
-								fill: currentColor;
+								@include svg-icon;
 							}
 
 						.instafeed__img {
