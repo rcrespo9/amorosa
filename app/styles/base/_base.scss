@@ -18,7 +18,7 @@ html {
 	}
 
 	@media(min-width: $large-desktop) {
-		font-size: 22px;
+		font-size: modular-scale(1, 1vw);
 	}
 }
 
