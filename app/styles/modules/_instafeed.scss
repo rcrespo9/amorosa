@@ -16,7 +16,11 @@
 
 		.instafeed__item {
 			@include flexbox-column;
-			@include flexbox-column-width(100% / 4);
+			@include flexbox-column-width(100% / 2);
+
+			@media(min-width: $tablet) {
+				@include flexbox-column-width(100% / 4);
+			}
 		}
 
 			.instafeed__link {

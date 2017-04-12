@@ -3,17 +3,29 @@
 \*------------------------------------*/
 
 .contact {
-	@include flexbox-row(row-reverse);
+	@include flexbox-row(column);
+
+	@media(min-width: $tablet) {
+		@include flexbox-row(row-reverse);
+	}
 }
 
 	.contact__map,
 	.contact__info {
 		@include flexbox-column($padding: null);
-		@include flexbox-column-width(50%);
+
+		@media(min-width: $tablet) {
+			@include flexbox-column-width(50%);
+		}
 	}
 
 	.contact__map {
 		margin: 0;
+		padding-bottom: 66%;
+
+		@media(min-width: $tablet) {
+			padding-bottom: 0;
+		}
 	}
 
 	.contact__info {

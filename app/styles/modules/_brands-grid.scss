@@ -3,18 +3,26 @@
 \*------------------------------------*/
 
 .brands {
-	height: modular-scale(11, 1vw);
 	padding-top: 0;
 	padding-bottom: 0;
 	@include flexbox-row;
+
+	@media(min-width: $tablet) {
+		height: modular-scale(11, 1vw);
+	}
 }
 
 	.brand__item {
 		justify-content: center;
 		opacity: .5;
 		transition: opacity $anim-speed-ease;
-		@include flexbox-column($padding: 0 modular-scale(1));
-		@include flexbox-column-width(100% / 6);
+		@include flexbox-column;
+		@include flexbox-column-width(100% / 3);
+
+		@media(min-width: $tablet) {
+			@include flexbox-column($padding: 0 modular-scale(1));
+			@include flexbox-column-width(100% / 6);
+		}
 
 		&:hover {
 			opacity: 1;

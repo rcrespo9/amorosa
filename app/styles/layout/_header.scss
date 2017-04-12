@@ -51,37 +51,43 @@
   #NAVIGATION
 \*------------------------------------*/
 
-.nav__list {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+.header__nav {
+	@media(max-width: $tablet) {
+		display: none;
+	}
 }
 
-	.nav__item {
-		display: inline-block;
-		vertical-align: middle;
-
-		&:not(:last-child) {
-			margin-right: modular-scale(2);
-		}
+	.nav__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 	}
 
-		.nav__link {
-			display: inherit;
-			color: $gray;
-			font-size: modular-scale(0);
-			transition: all $anim-speed-ease;
-			@include uppercase-text;
+		.nav__item {
+			display: inline-block;
+			vertical-align: middle;
 
-			&:hover {
-				color: $pink;
+			&:not(:last-child) {
+				margin-right: modular-scale(2);
 			}
 		}
 
-			.nav__icon {
-				width: modular-scale(2);
-				height: modular-scale(2);
-				@include svg-icon;
+			.nav__link {
+				display: inherit;
+				color: $gray;
+				font-size: modular-scale(0);
+				transition: all $anim-speed-ease;
+				@include uppercase-text;
+
+				&:hover {
+					color: $pink;
+				}
+			}
+
+				.nav__icon {
+					width: modular-scale(2);
+					height: modular-scale(2);
+					@include svg-icon;
 			}
 
 /*------------------------------------*\
@@ -89,7 +95,9 @@
 \*------------------------------------*/
 
 .header__controls {
-	display: none;
+	@media(min-width: $tablet) {
+		display: none;
+	}
 }
 
 	.nav-toggle {
