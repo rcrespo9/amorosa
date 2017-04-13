@@ -21,16 +21,11 @@
 	}
 
 		.header__logo,
-		.header__nav,
 		.header__controls {
 			@include flexbox-column($padding: null);
 			@include flexbox-column-width(50%);
 		}
 
-		.header__nav,
-		.header__controls {
-			text-align: right;
-		}
 
 /*------------------------------------*\
   #LOGO
@@ -51,45 +46,92 @@
   #NAVIGATION
 \*------------------------------------*/
 
-.nav__list {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+.header__nav {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $dark-pink;
+
+	@media(min-width: $tablet) {
+		position: static;
+		align-items: initial;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		text-align: right;
+		@include flexbox-column($padding: null);
+		@include flexbox-column-width(50%);
+	}
 }
 
-	.nav__item {
-		display: inline-block;
-		vertical-align: middle;
-
-		&:not(:last-child) {
-			margin-right: modular-scale(2);
-		}
+	.nav__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
 	}
 
-		.nav__link {
-			display: inherit;
-			color: $gray;
-			font-size: modular-scale(0);
-			transition: all $anim-speed-ease;
-			@include uppercase-text;
+		.nav__item {
+			@media(min-width: $tablet) {
+				display: inline-block;
+				vertical-align: middle;
 
-			&:hover {
-				color: $pink;
+				&:not(:last-child) {
+					margin-right: modular-scale(2);
+				}
 			}
 		}
 
-			.nav__icon {
-				width: modular-scale(2);
-				height: modular-scale(2);
-				@include svg-icon;
-		}
+			.nav__link {
+				color: $white;
+				font-family: $header-font;
+				font-size: modular-scale(5);
+				transition: all $anim-speed-ease;
+				@include font-weight(bold);
+
+				@media(min-width: $tablet) {
+					display: inherit;
+					color: $gray;
+					font-family: inherit;
+					font-size: modular-scale(0);
+					@include uppercase-text;
+
+					&:hover {
+						color: $pink;
+					}
+				}
+			}
+
+				.nav__icon {
+					display: none;
+
+					@media(min-width: $tablet) {
+						width: modular-scale(2);
+						height: modular-scale(2);
+						@include svg-icon;
+					}
+				}
+
+				.link--icon__text {
+					display: block;
+					@media(min-width: $tablet) {
+						display: none;
+					}
+				}
 
 /*------------------------------------*\
   #NAVIGATION TOGGLE
 \*------------------------------------*/
 
 .header__controls {
-	display: none;
+	text-align: right;
+
+	@media(min-width: $tablet) {
+		display: none;
+	}
 }
 
 	.nav-toggle {

@@ -8,7 +8,7 @@
 	@include flexbox-row;
 
 	@media(min-width: $tablet) {
-		height: modular-scale(11, 1vw);
+		height: modular-scale(10);
 	}
 }
 

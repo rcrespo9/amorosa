@@ -20,11 +20,11 @@
 	}
 
 	.contact__map {
+		height: modular-scale(14);
 		margin: 0;
-		padding-bottom: 66%;
 
 		@media(min-width: $tablet) {
-			padding-bottom: 0;
+			height: auto;
 		}
 	}
 
