@@ -21,7 +21,7 @@
 	}
 
 		.header__logo,
-		.header__controls {
+		.header__nav {
 			@include flexbox-column($padding: null);
 			@include flexbox-column-width(50%);
 		}
@@ -47,25 +47,7 @@
 \*------------------------------------*/
 
 .header__nav {
-	display: flex;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: $dark-pink;
-
-	@media(min-width: $tablet) {
-		position: static;
-		align-items: initial;
-		width: auto;
-		height: auto;
-		background-color: transparent;
-		text-align: right;
-		@include flexbox-column($padding: null);
-		@include flexbox-column-width(50%);
-	}
+	text-align: right;
 }
 
 	.nav__list {
@@ -75,104 +57,40 @@
 	}
 
 		.nav__item {
-			@media(min-width: $tablet) {
-				display: inline-block;
-				vertical-align: middle;
+			display: inline-block;
+			vertical-align: middle;
 
-				&:not(:last-child) {
-					margin-right: modular-scale(2);
-				}
+			&:not(:last-child) {
+				margin-right: modular-scale(2);
 			}
 		}
 
 			.nav__link {
-				color: $white;
-				font-family: $header-font;
-				font-size: modular-scale(5);
+				color: $gray;
+				font-family: inherit;
+				font-size: modular-scale(0);
 				transition: all $anim-speed-ease;
-				@include font-weight(bold);
+				@include uppercase-text;
 
-				@media(min-width: $tablet) {
-					display: inherit;
-					color: $gray;
-					font-family: inherit;
-					font-size: modular-scale(0);
-					@include uppercase-text;
+				&:hover {
+					color: $pink;
+				}
 
-					&:hover {
-						color: $pink;
+				&:not(.nav__link--icon) {
+					display: none;
+
+					@media(min-width: $tablet) {
+						display: inherit;
 					}
 				}
 			}
 
+			.nav__link--icon {
+				display: inherit;
+			}
+
 				.nav__icon {
-					display: none;
-
-					@media(min-width: $tablet) {
-						width: modular-scale(2);
-						height: modular-scale(2);
-						@include svg-icon;
-					}
+					width: modular-scale(2);
+					height: modular-scale(2);
+					@include svg-icon;
 				}
-
-				.link--icon__text {
-					display: block;
-					@media(min-width: $tablet) {
-						display: none;
-					}
-				}
-
-/*------------------------------------*\
-  #NAVIGATION TOGGLE
-\*------------------------------------*/
-
-.header__controls {
-	text-align: right;
-
-	@media(min-width: $tablet) {
-		display: none;
-	}
-}
-
-	.nav-toggle {
-		position: relative;
-		z-index: 12;
-		width: $burger-icon-width;
-		height: $burger-icon-height + $burger-icon-spacing * 3;
-		margin-left: auto;
-		padding: 0;
-		border: 0;
-		background-color: transparent;
-		outline: none;
-		appearance: none;
-		transition: all $anim-speed-ease;
-
-		&:focus {
-			outline: none;
-		}
-	}
-
-		.nav-toggle__inner,
-		.nav-toggle__inner:before,
-		.nav-toggle__inner:after {
-			position: absolute;
-			display: block;
-			width: $burger-icon-width;
-			height: $burger-icon-height;
-			background-color: rgba($gray, 1);
-			transition: all $anim-speed-ease;
-		}
-
-		.nav-toggle__inner:before,
-		.nav-toggle__inner:after {
-			content: "";
-			left: 0;
-		}
-
-		.nav-toggle__inner:before {
-			bottom: $burger-icon-spacing;
-		}
-
-		.nav-toggle__inner:after {
-			top: $burger-icon-spacing;
-		}
