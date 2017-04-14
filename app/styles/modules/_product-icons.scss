@@ -3,14 +3,22 @@
 \*------------------------------------*/
 
 .products {
-	@include flexbox-row;
+	@include flexbox-row(column);
+
+	@media(min-width: $tablet) {
+		@include flexbox-row;
+	}
 }
 
 	.product__item {
 		margin: 0;
 		text-align: center;
+
 		@include flexbox-column;
-		@include flexbox-column-width(50%);
+
+		@media(min-width: $tablet) {
+			@include flexbox-column-width(50%);
+		}
 	}
 
 	.product__icon {

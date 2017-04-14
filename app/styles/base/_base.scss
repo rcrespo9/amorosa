@@ -10,15 +10,19 @@
 }
 
 html {
-	font-size: modular-scale(3, 1vw);
+	font-size: rem(16px);
 	line-height: strip-units(modular-scale(1));
 
 	@media(min-width: $tablet) {
-		font-size: modular-scale(2, 1vw);
+		font-size: rem(18px);
 	}
 
 	@media(min-width: $medium-desktop) {
-		font-size: modular-scale(1, 1vw);
+		font-size: rem(20px);
+	}
+
+	@media(min-width: $large-desktop) {
+		font-size: rem(22px);
 	}
 }
 
