@@ -1,23 +1,26 @@
 (function() {
 	'use strict';
 
-	class Navigation {
+	class AnchorLinks {
 		constructor() {
-			this.theBody = document.body;
-			this.toggleNavBtn = document.getElementById('js-nav-toggle');
-			this.openNavClass = 'open-nav';
+			this.anchorLinks = $('.js-anchor-link');
 		}
 
-		toggleNav() {
-			this.theBody.classList.toggle(this.openNavClass);
-		}
+		goToElement() {
+			const $htmlBody = $('html, body');
+			const target = $(this.hash);
 
-		closeNav() {
-			this.theBody.classList.remove(this.openNavClass);
+			if(target.length) {
+				$htmlBody.animate({
+					scrollTop: target.offset().top
+				}, 1000);
+			}
+
+			return false;
 		}
 
 		init() {
-			this.toggleNavBtn.addEventListener('click', this.toggleNav.bind(this));
+			this.anchorLinks.on('click', this.goToElement);
 		}
 	}
 
@@ -33,8 +36,8 @@
 			});
 			userFeed.run();
 
-			// const navigation = new Navigation();
-			// navigation.init();
+			const anchorLinks = new AnchorLinks();
+			anchorLinks.init();
 		}
 	}
 
