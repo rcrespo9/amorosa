@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 @mixin l-container {
-	padding-right: modular-scale(5);
-	padding-left: modular-scale(5);
+	padding-right: modular-scale(7, 1vw);
+	padding-left: modular-scale(7, 1vw);
 }
 
 @mixin c-container {
@@ -13,8 +13,8 @@
 }
 
 @mixin page-padding {
-	padding-right: modular-scale(3);
-	padding-left: modular-scale(3);
+	padding-right: modular-scale(5, 1vw);
+	padding-left: modular-scale(5, 1vw);
 }
 
 @mixin text-content {

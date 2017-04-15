@@ -29,7 +29,7 @@
 	}
 
 	.contact__info {
-		padding: modular-scale(6);
+		padding: modular-scale(6) modular-scale(5);
 	}
 
 		.contact__section:not(:last-child) {
@@ -37,13 +37,17 @@
 		}
 
 			.contact__header {
-				margin-bottom: modular-scale(-11);
+				margin-bottom: modular-scale(-7);
 				font-family: $body-font;
 				@include font-weight(semi-bold);
 			}
 
 			.contact__section p {
 				@include no-margin;
+			}
+
+			.contact__section p ~ p {
+				margin-top: modular-scale(-2);
 			}
 
 			.contact__icon,
