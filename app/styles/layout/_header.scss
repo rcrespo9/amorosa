@@ -77,13 +77,13 @@
 					color: $pink;
 				}
 
-				&:not(.nav__link--icon) {
-					display: none;
+				// &:not(.nav__link--icon) {
+				// 	display: none;
 
-					@media(min-width: $tablet) {
-						display: inherit;
-					}
-				}
+				// 	@media(min-width: $tablet) {
+				// 		display: inherit;
+				// 	}
+				// }
 			}
 
 			.nav__link--icon {

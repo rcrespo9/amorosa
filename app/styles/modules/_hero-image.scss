@@ -20,13 +20,18 @@
 		position: relative;
 		z-index: 2;
 		width: 100%;
+		@include text-content;
 	}
 
 		.hero__tagline {
 			margin-bottom: modular-scale(2);
-			font-size: modular-scale(7);
+			font-size: modular-scale(10, 1vmin);
 			line-height: strip-units(modular-scale(0));
 			@include font-weight(black);
+
+			@media(min-width: $tablet) {
+				font-size: modular-scale(7);
+			}
 		}
 
 			.tagline__br {

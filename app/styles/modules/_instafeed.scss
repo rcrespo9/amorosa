@@ -80,7 +80,9 @@
 						}
 
 				.instafeed__link:hover .instafeed__overlay {
-					opacity: 1;
+					@media(min-width: $mobile) {
+						opacity: 1;
+					}
 				}
 
 				.instafeed__link:hover .instafeed__counters {

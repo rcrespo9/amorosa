@@ -7,7 +7,7 @@
 	padding-bottom: 0;
 	@include flexbox-row;
 
-	@media(min-width: $tablet) {
+	@media(min-width: $small-desktop) {
 		height: modular-scale(11, 1vw);
 	}
 }
@@ -17,9 +17,13 @@
 		opacity: .5;
 		transition: opacity $anim-speed-ease;
 		@include flexbox-column;
-		@include flexbox-column-width(100% / 3);
+		@include flexbox-column-width(100% / 2);
 
-		@media(min-width: $tablet) {
+		@media(min-width: $mobile) {
+			@include flexbox-column-width(100% / 3);
+		}
+
+		@media(min-width: $small-desktop) {
 			@include flexbox-column($padding: 0 modular-scale(1));
 			@include flexbox-column-width(100% / 6);
 		}

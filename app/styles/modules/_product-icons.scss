@@ -3,7 +3,11 @@
 \*------------------------------------*/
 
 .products {
-	@include flexbox-row;
+	@include flexbox-row(column);
+
+	@media(min-width: $mobile) {
+		@include flexbox-row;
+	}
 }
 
 	.product__item {
@@ -11,7 +15,10 @@
 		text-align: center;
 
 		@include flexbox-column;
-		@include flexbox-column-width(50%);
+
+		@media(min-width: $mobile) {
+			@include flexbox-column-width(50%);
+		}
 	}
 
 	.product__icon {
