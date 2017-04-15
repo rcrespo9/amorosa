@@ -44,29 +44,3 @@
 			font-size: modular-scale(-1);
 			@include button($bg-color: $white, $text-color: $dark-pink, $bg-hover-color: null, $text-hover-color: null);
 		}
-
-	.hero__arrow-container {
-		position: absolute;
-		left: 0;
-		bottom: modular-scale(-1);
-		z-index: 2;
-		width: 100%;
-	}
-
-		.hero__arrow {
-			display: inline-block;
-			transition: transform $anim-speed-ease;
-
-			&:hover {
-				transform: translateY(modular-scale(-3));
-			}
-		}
-
-			.arrow__icon {
-				display: inline-block;
-				width: modular-scale(5);
-				height: modular-scale(5);
-				stroke-width: 0;
-				stroke: $white;
-				fill: $white;
-			}
