@@ -43,15 +43,17 @@ a {
 	}
 
 .section__header--left {
-	text-align: left;
+	@media(min-width: $small-tablet) {
+		text-align: left;
 
-	&:after {
-		content: "";
-		display: block;
-		width: modular-scale(5);
-		height: modular-scale(2);
-		margin-bottom: modular-scale(-4);
-		border-bottom: 3px solid;
+		&:after {
+			content: "";
+			display: block;
+			width: modular-scale(5);
+			height: modular-scale(2);
+			margin-bottom: modular-scale(-4);
+			border-bottom: 3px solid;
+		}
 	}
 }
 

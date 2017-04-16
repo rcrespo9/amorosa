@@ -3,16 +3,18 @@
 \*------------------------------------*/
 
 .contact {
+	text-align: center;
 	@include flexbox-row(column);
 
-	@media(min-width: $mobile) {
+	@media(min-width: $small-tablet) {
+		text-align: initial;
 		@include flexbox-row(row-reverse);
 	}
 }
 
 	.contact__map,
 	.contact__info {
-		@media(min-width: $mobile) {
+		@media(min-width: $small-tablet) {
 			@include flexbox-column($padding: null);
 			@include flexbox-column-width(50%);
 		}
@@ -22,17 +24,25 @@
 		margin: 0;
 		height: modular-scale(13);
 
-		@media(min-width: $mobile) {
+		@media(min-width: $small-tablet) {
 			height: auto;
 		}
 	}
 
 	.contact__info {
-		padding: modular-scale(6);
+		@include text-content;
+
+		@media(min-width: $small-tablet) {
+			padding: modular-scale(6);
+		}
 	}
 
 		.contact__section:not(:last-child) {
-			margin-bottom: modular-scale(1);
+			margin-bottom: modular-scale(2);
+
+			@media(min-width: $small-tablet) {
+				margin-bottom: modular-scale(1);
+			}
 		}
 
 			.contact__header {
