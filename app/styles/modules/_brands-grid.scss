@@ -7,7 +7,7 @@
 	padding-bottom: 0;
 	@include flexbox-row;
 
-	@media(min-width: $small-desktop) {
+	@media(min-width: $medium-desktop) {
 		height: modular-scale(11, 1vw);
 	}
 }
@@ -23,7 +23,7 @@
 			@include flexbox-column-width(100% / 3);
 		}
 
-		@media(min-width: $small-desktop) {
+		@media(min-width: $medium-desktop) {
 			@include flexbox-column($padding: 0 modular-scale(1));
 			@include flexbox-column-width(100% / 6);
 		}

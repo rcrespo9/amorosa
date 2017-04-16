@@ -56,7 +56,7 @@
 .header__nav {
 	display: none;
 
-	@media(min-width: $small-tablet) {
+	@media(min-width: $tablet) {
 		display: flex;
 	}
 }
@@ -113,7 +113,7 @@
 .header__controls {
 	display: flex;
 
-	@media(min-width: $small-tablet) {
+	@media(min-width: $tablet) {
 		display: none;
 	}
 }

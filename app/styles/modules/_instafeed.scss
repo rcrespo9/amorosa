@@ -80,7 +80,7 @@
 						}
 
 				.instafeed__link:hover .instafeed__overlay {
-					@media(min-width: $tablet) {
+					@media(min-width: $small-desktop) {
 						opacity: 1;
 					}
 				}

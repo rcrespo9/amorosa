@@ -42,21 +42,6 @@ a {
 		@include font-weight(regular);
 	}
 
-.section__header--left {
-	@media(min-width: $small-tablet) {
-		text-align: left;
-
-		&:after {
-			content: "";
-			display: block;
-			width: modular-scale(5);
-			height: modular-scale(2);
-			margin-bottom: modular-scale(-4);
-			border-bottom: 3px solid;
-		}
-	}
-}
-
 /*------------------------------------*\
   #PARAGRAPHS
 \*------------------------------------*/
