@@ -21,11 +21,17 @@
 		@include flexbox-row;
 	}
 
-		.header__logo,
-		.header__nav {
-			@include flexbox-column($padding: null);
-			@include flexbox-column-width(50%);
-		}
+	.header__logo,
+	.header__nav,
+	.header__controls {
+		@include flexbox-column($padding: null);
+		@include flexbox-column-width(50%);
+	}
+
+	.header__nav,
+	.header__controls {
+		text-align: right;
+	}
 
 
 /*------------------------------------*\
@@ -48,7 +54,11 @@
 \*------------------------------------*/
 
 .header__nav {
-	text-align: right;
+	display: none;
+
+	@media(min-width: $small-tablet) {
+		display: flex;
+	}
 }
 
 	.nav__list {
@@ -95,3 +105,58 @@
 					height: modular-scale(2);
 					@include svg-icon;
 				}
+
+/*------------------------------------*\
+#NAVIGATION TOGGLE
+\*------------------------------------*/
+
+.header__controls {
+	display: flex;
+
+	@media(min-width: $small-tablet) {
+		display: none;
+	}
+}
+
+	.nav-toggle {
+		position: relative;
+		z-index: 12;
+		width: $burger-icon-width;
+		height: $burger-icon-height + $burger-icon-spacing * 3;
+		margin-left: auto;
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		outline: none;
+		appearance: none;
+		transition: all $anim-speed-ease;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+		.nav-toggle__inner,
+		.nav-toggle__inner:before,
+		.nav-toggle__inner:after {
+			position: absolute;
+			display: block;
+			width: $burger-icon-width;
+			height: $burger-icon-height;
+			background-color: rgba($gray, 1);
+			transition: all $anim-speed-ease;
+		}
+
+		.nav-toggle__inner:before,
+		.nav-toggle__inner:after {
+			content: "";
+			left: 0;
+		}
+
+		.nav-toggle__inner:before {
+			bottom: $burger-icon-spacing;
+		}
+
+		.nav-toggle__inner:after {
+			top: $burger-icon-spacing;
+		}
