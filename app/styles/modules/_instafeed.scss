@@ -18,7 +18,7 @@
 			@include flexbox-column;
 			@include flexbox-column-width(100% / 2);
 
-			@media(min-width: $tablet) {
+			@media(min-width: $mobile) {
 				@include flexbox-column-width(100% / 4);
 			}
 		}
@@ -80,7 +80,7 @@
 						}
 
 				.instafeed__link:hover .instafeed__overlay {
-					@media(min-width: $mobile) {
+					@media(min-width: $tablet) {
 						opacity: 1;
 					}
 				}

@@ -2,53 +2,35 @@
   #CONTACTO
 \*------------------------------------*/
 
-.contact {
-	text-align: center;
-	@include flexbox-row(column);
-
-	@media(min-width: $small-tablet) {
-		text-align: initial;
-		@include flexbox-row(row-reverse);
-	}
-}
-
-	.contact__map,
-	.contact__info {
-		@media(min-width: $small-tablet) {
-			@include flexbox-column($padding: null);
-			@include flexbox-column-width(50%);
-		}
-	}
-
 	.contact__map {
 		margin: 0;
 		height: modular-scale(13);
-
-		@media(min-width: $small-tablet) {
-			height: auto;
-		}
 	}
 
-	.contact__info {
-		@include text-content;
-
-		@media(min-width: $small-tablet) {
-			padding: modular-scale(6);
-		}
+	.contact__sections {
+		@include flexbox-row;
 	}
 
-		.contact__section:not(:last-child) {
-			margin-bottom: modular-scale(2);
-
-			@media(min-width: $small-tablet) {
-				margin-bottom: modular-scale(1);
-			}
+		.contact__section {
+			text-align: center;
+			@include flexbox-column;
+			@include flexbox-column-width(100% / 3);
 		}
 
 			.contact__header {
-				margin-bottom: modular-scale(-7);
+				margin-bottom: modular-scale(-11);
 				font-family: $body-font;
+				font-size: modular-scale(1);
 				@include font-weight(semi-bold);
+
+				&:after {
+					content: "";
+					display: block;
+					width: modular-scale(3);
+					height: modular-scale(1);
+					margin: 0 auto modular-scale(0);
+					border-bottom: 3px solid $light-pink;
+				}
 			}
 
 			.contact__section p {
