@@ -85,12 +85,6 @@
 	@include font-weight($font-weight);
 }
 
-@mixin section-title {
-	font-family: $body-font;
-	font-size: modular-scale(-1);
-	@include uppercase-text;
-}
-
 @mixin link($color, $hover-color) {
 	padding-bottom: modular-scale(-11);
 	border-bottom: 1px solid rgba($color, .3);

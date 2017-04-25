@@ -4,7 +4,7 @@
 
 	.contact__map {
 		margin: 0;
-		height: modular-scale(13);
+		height: modular-scale(14);
 	}
 
 	.contact__sections {
@@ -17,20 +17,18 @@
 			@include flexbox-column-width(100% / 3);
 		}
 
+			.contact__icon {
+				width: modular-scale(6);
+				height: modular-scale(6);
+				margin-bottom: modular-scale(1);
+				@include svg-icon;
+			}
+
 			.contact__header {
-				margin-bottom: modular-scale(-11);
+				margin-bottom: modular-scale(-1);
 				font-family: $body-font;
 				font-size: modular-scale(1);
 				@include font-weight(semi-bold);
-
-				&:after {
-					content: "";
-					display: block;
-					width: modular-scale(3);
-					height: modular-scale(1);
-					margin: 0 auto modular-scale(0);
-					border-bottom: 3px solid $light-pink;
-				}
 			}
 
 			.contact__section p {
@@ -39,11 +37,6 @@
 
 			.contact__section p ~ p {
 				margin-top: modular-scale(-2);
-			}
-
-			.contact__icon,
-			.contact__copy {
-				display: inline-block;
 			}
 
 			abbr.contact__abbr {
