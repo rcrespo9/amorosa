@@ -7,14 +7,16 @@
 		height: modular-scale(14);
 	}
 
-	.contact__sections {
+	.contact__row {
 		@include flexbox-row;
 	}
+		.contact__col {
+			@include flexbox-column-width(100% / 2);
+		}
 
 		.contact__section {
-			text-align: center;
 			@include flexbox-column;
-			@include flexbox-column-width(100% / 3);
+			text-align: center;
 		}
 
 			.contact__icon {
@@ -25,7 +27,7 @@
 			}
 
 			.contact__header {
-				margin-bottom: modular-scale(-2);
+				margin-bottom: modular-scale(-4);
 				font-family: $body-font;
 				font-size: modular-scale(1);
 				@include font-weight(semi-bold);
@@ -33,10 +35,6 @@
 
 			.contact__section p {
 				@include no-margin;
-			}
-
-			.contact__section p ~ p {
-				margin-top: modular-scale(-2);
 			}
 
 			abbr.contact__abbr {
