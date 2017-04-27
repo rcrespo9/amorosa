@@ -18,7 +18,7 @@
 }
 
 @mixin text-content {
-	padding: modular-scale(6) modular-scale(7, 1vw);
+	padding: modular-scale(6) 0;
 }
 
 @mixin flexbox-row($direction: row) {
@@ -39,6 +39,11 @@
 @mixin flexbox-column-width($width) {
 	flex-basis: $width;
 	max-width: $width;
+}
+
+@mixin element-padding() {
+	padding-right: modular-scale(1);
+	padding-left: modular-scale(1);
 }
 
 @mixin no-margin() {
