@@ -1,14 +1,27 @@
 (function() {
 	'use strict';
 
-	class AnchorLinks {
+	class Navigation {
 		constructor() {
 			this.anchorLinks = $('.js-anchor-link');
+			this.navToggle = $('#js-nav-toggle');
+		}
+
+		mobileNavToggle() {
+			const $theBody = $('body');
+			const $document = $(document);
+
+			$theBody.toggleClass('open-nav');
+			$document.scrollTop(0);
 		}
 
 		goToElement() {
 			const $htmlBody = $('html, body');
 			const target = $(this.hash);
+
+			if($htmlBody.hasClass('open-nav')) {
+				$htmlBody.removeClass('open-nav');
+			}
 
 			if(target.length) {
 				$htmlBody.animate({
@@ -21,6 +34,7 @@
 
 		init() {
 			this.anchorLinks.on('click', this.goToElement);
+			this.navToggle.on('click', this.mobileNavToggle);
 		}
 	}
 
@@ -36,8 +50,8 @@
 			});
 			userFeed.run();
 
-			const anchorLinks = new AnchorLinks();
-			anchorLinks.init();
+			const navigation = new Navigation();
+			navigation.init();
 		}
 	}
 

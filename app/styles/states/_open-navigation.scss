@@ -19,9 +19,9 @@
 		opacity: 1;
 		transform: translateY(0);
 
-		@for $nav-item from 1 through 3 {
+		@for $nav-item from 1 through 4 {
 			&:nth-child(#{$nav-item}) {
-				transition-delay: (#{$nav-item / 4}s);
+				transition-delay: (#{$nav-item / 5}s);
 			}
 		}
 	}
