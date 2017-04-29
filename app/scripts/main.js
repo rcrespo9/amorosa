@@ -34,12 +34,7 @@
 
 		init() {
 			this.anchorLinks.on('click', this.goToElement);
-
-			if (window.matchMedia("(min-width: 750px)").matches) {
-			  this.navToggle.off('click', this.mobileNavToggle);
-			} else {
-				this.navToggle.on('click', this.mobileNavToggle);
-			}
+			this.navToggle.on('click', this.mobileNavToggle);
 		}
 	}
 
