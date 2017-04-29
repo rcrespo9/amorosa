@@ -30,6 +30,10 @@
 			@include font-weight(black);
 
 			@media(min-width: $tablet) {
+				font-size: modular-scale(6);
+			}
+
+			@media(min-width: $small-desktop) {
 				font-size: modular-scale(7);
 			}
 		}
