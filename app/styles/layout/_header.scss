@@ -107,7 +107,7 @@
 				padding: modular-scale(2, 1vh) 0;
 				color: $white;
 				font-family: $header-font;
-				font-size: modular-scale(5);
+				font-size: modular-scale(10, 1vmin);
 				transition: all $anim-speed-ease;
 				@include font-weight(bold);
 
