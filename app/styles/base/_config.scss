@@ -32,7 +32,7 @@ $modular-scale-base: rem($em-base);
   #NAVIGATION VARIABLES
 \*------------------------------------*/
 
-$header-height: modular-scale(8);
+$header-height: modular-scale(8, 1em);
 $offcanvas-nav-width: modular-scale(15);
 
 $burger-icon-width: 33px;

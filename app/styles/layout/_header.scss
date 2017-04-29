@@ -10,7 +10,11 @@
 	width: 100%;
 	height: $header-height;
 	background-color: $white;
-	font-size: 30px;
+	font-size: rem(14px);
+
+	@media(min-width: $mobile) {
+		font-size: inherit;
+	}
 }
 
 	.header__inner {
@@ -44,8 +48,8 @@
 
 	.logo__img {
 		display: inherit;
-		width: ceil(rem(205px));
-		height: ceil(rem(67px));
+		width: ceil(em(205px));
+		height: ceil(em(67px));
 	}
 
 
