@@ -6,21 +6,43 @@
 	padding-top: modular-scale(2);
 	padding-bottom: modular-scale(1);
 	color: $gray;
+	text-align: center;
+
+	@media(min-width: $mobile) {
+		text-align: initial;
+	}
 }
 
 	.footer__inner {
 		@include l-container;
 	}
 
-	.footer__col--copyright {
-		float: left;
-	}
+		.footer__col {
+			float: none;
+		}
 
-	.footer__col--attribution {
-		float: right;
-	}
+			.footer__text {
+				margin: 0;
+				font-size: modular-scale(0);
+			}
 
-	.footer__text {
-		margin: 0;
-		font-size: modular-scale(0);
-	}
+		.footer__col--copyright {
+			margin-bottom: modular-scale(-3);
+
+			@media(min-width: $mobile) {
+				float: left;
+				margin-bottom: 0;
+			}
+		}
+
+		.footer__col--copyright br {
+			@media(min-width: $mobile) {
+				display: none;
+			}
+		}
+
+		.footer__col--attribution {
+			@media(min-width: $mobile) {
+				float: right;
+			}
+		}

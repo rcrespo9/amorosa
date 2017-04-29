@@ -4,46 +4,57 @@
 
 	.contact__map {
 		margin: 0;
-		height: modular-scale(14);
+
+		height: modular-scale(13);
+
+		@media(min-width: $mobile) {
+			height: modular-scale(14);
+		}
 	}
 
 	.contact__row {
-		@include flexbox-row;
+		@include flexbox-row(column);
+
+		@media(min-width: $mobile) {
+			@include flexbox-row;
+		}
 	}
 		.contact__col {
-			@include flexbox-column-width(100% / 2);
+			@media(min-width: $mobile) {
+				@include flexbox-column-width(100% / 2);
+			}
 		}
 
-		.contact__section {
-			@include flexbox-column;
-			text-align: center;
-		}
-
-			.contact__icon {
-				width: modular-scale(6);
-				height: modular-scale(6);
-				margin-bottom: modular-scale(1);
-				@include svg-icon;
+			.contact__section {
+				@include flexbox-column;
+				text-align: center;
 			}
 
-			.contact__header {
-				margin-bottom: modular-scale(-4);
-				font-family: $body-font;
-				font-size: modular-scale(1);
-				@include font-weight(semi-bold);
-			}
+				.contact__icon {
+					width: modular-scale(6);
+					height: modular-scale(6);
+					margin-bottom: modular-scale(1);
+					@include svg-icon;
+				}
 
-			.contact__section p {
-				@include no-margin;
-			}
+				.contact__header {
+					margin-bottom: modular-scale(-4);
+					font-family: $body-font;
+					font-size: modular-scale(1);
+					@include font-weight(semi-bold);
+				}
 
-			abbr.contact__abbr {
-				display: inline-block;
-				width: modular-scale(-1);
-				color: $light-pink;
-				text-decoration: none;
-			}
+				.contact__section p {
+					@include no-margin;
+				}
 
-			.contact__divider {
-				margin: 0 modular-scale(-8);
-			}
+				abbr.contact__abbr {
+					display: inline-block;
+					width: modular-scale(-1);
+					color: $light-pink;
+					text-decoration: none;
+				}
+
+				.contact__divider {
+					margin: 0 modular-scale(-8);
+				}
