@@ -24,7 +24,7 @@
 		}
 
 		@media(min-width: $medium-desktop) {
-			@include flexbox-column($padding: 0 modular-scale(1));
+			@include flexbox-column($vert-padding: null);
 			@include flexbox-column-width(100% / 6);
 		}
 

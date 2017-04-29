@@ -24,7 +24,7 @@
 	.header__logo,
 	.header__nav,
 	.header__controls {
-		@include flexbox-column($padding: null);
+		@include flexbox-column($vert-padding: null, $horiz-padding: false);
 		@include flexbox-column-width(50%);
 	}
 
