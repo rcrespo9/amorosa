@@ -9,22 +9,18 @@
 }
 
 	.footer__inner {
-		width: inherit;
-		height: 100%;
-		align-items: center;
 		@include l-container;
-		@include flexbox-row;
 	}
 
-	.footer__col {
-		@include flexbox-column-width(50%);
+	.footer__col--copyright {
+		float: left;
 	}
-
-		.footer__text {
-			margin: 0;
-			font-size: modular-scale(0);
-		}
 
 	.footer__col--attribution {
-		text-align: right;
+		float: right;
+	}
+
+	.footer__text {
+		margin: 0;
+		font-size: modular-scale(0);
 	}
