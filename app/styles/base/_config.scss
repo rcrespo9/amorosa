@@ -43,12 +43,12 @@ $burger-icon-spacing: 8px;
   #BREAKPOINTS
 \*------------------------------------*/
 
-$x-large-desktop: rem(1600px);
-$large-desktop: rem(1280px);
-$medium-desktop: rem(1080px);
-$small-desktop: rem(960px);
-$tablet: rem(750px);
-$mobile: rem(660px);
+$x-large-desktop: em(1600px);
+$large-desktop: em(1280px);
+$medium-desktop: em(1080px);
+$small-desktop: em(960px);
+$tablet: em(750px);
+$mobile: em(660px);
 
 /*------------------------------------*\
   #ANIMATIONS
