@@ -8,7 +8,7 @@
 	align-items: center;
 	height: 100vh;
 	padding-top: $header-height;
-	background-image: url(https://static.pexels.com/photos/94589/pexels-photo-94589.jpeg);
+	background-image: url(../../images/lingerie-model-640.jpg);
 	background-position: center center;
 	background-size: cover;
 	color: $white;
@@ -18,7 +18,24 @@
 	font-size: rem(14px); // accounting for header height
 
 	@media(min-width: $mobile) {
+		background-image: url(../../images/lingerie-model-1024.jpg);
 		font-size: inherit;
+	}
+
+	@media(min-width: $medium-desktop) {
+		background-image: url(../../images/lingerie-model-1440.jpg);
+	}
+
+	@media only screen and (min-device-pixel-ratio: 2) and (min-width: $medium-desktop),
+	only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $medium-desktop),
+	only screen and (min-resolution: 192dpi) and (min-width: $medium-desktop),
+	only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $medium-desktop),
+	only screen and (min-resolution: 2dppx) and (min-width: $medium-desktop) {
+		background-image: url(../../images/lingerie-model-2560.jpg);
+	}
+
+	@media(min-width: $x-large-desktop) {
+		background-image: url(../../images/lingerie-model-2560.jpg);
 	}
 }
 
