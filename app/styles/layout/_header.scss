@@ -109,7 +109,7 @@
 				font-family: $header-font;
 				font-size: modular-scale(10, 1vmin);
 				transition: all $anim-speed-ease;
-				@include font-weight(bold);
+				@include font-weight(black);
 
 				&:hover {
 					background-color: $white;
