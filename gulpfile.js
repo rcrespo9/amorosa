@@ -174,7 +174,7 @@ gulp.task('deploy', ['default'], () => {
   // create a new publisher
   const publisher = $.awspublish.create({
     params: {
-      'Bucket': 'amorosalingerie.com.s3-website-us-east-1.amazonaws.com'
+      'Bucket': 'amorosalingerie.com',
     }
   });
 
