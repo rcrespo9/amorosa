@@ -175,10 +175,16 @@ function initMap() {
 		scrollwheel: false
 	});
 
+	const markerImg = {
+		url: 'http://amorosalingerie.com.s3-website-us-east-1.amazonaws.com/images/heart-map-marker.svg',
+		scaledSize: new google.maps.Size(45, 68)
+	};
+
 	const marker = new google.maps.Marker({
 		position: amorosaLocation,
 		map: map,
-		icon: '../images/heart-map-marker.svg'
+		icon: markerImg,
+		optimized: false
 	});
 
 	map.mapTypes.set('styled_map', styledMapType);
